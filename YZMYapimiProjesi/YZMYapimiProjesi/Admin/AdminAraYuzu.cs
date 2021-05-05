@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YZMYapimiProjesi
+namespace YZMYapimiProjesi.Admin
 {
-    public partial class Form1 : Form
+    public partial class AdminAraYuzu : Form
     {
-        public Form1()
+        public AdminAraYuzu()
         {
             InitializeComponent();
+        }
+
+        private void AdminAraYuzu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void geriDonButonu(object sender, EventArgs e)
+        {
+
         }
     }
 }
