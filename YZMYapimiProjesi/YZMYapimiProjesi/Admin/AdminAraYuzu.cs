@@ -26,15 +26,5 @@ namespace YZMYapimiProjesi.Admin
         {
 
         }
-
-        private void kullanicilarListesiKaydet(object sender, EventArgs e)
-        {
-
-        }
-
-        private void alimSatimRaporuKaydet(object sender, EventArgs e)
-        {
-
-        }
     }
 }
