@@ -16,7 +16,7 @@ namespace YZMYapimiProjesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignUp.SignUpFormu());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -51,3 +51,4 @@ C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\YZ
 C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\YZMYapimiProjesi.exe
 C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\YZMYapimiProjesi.pdb
 C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.SignUp.SignUpFormu.resources
+C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.SignUp.SignUpFormu.resources
