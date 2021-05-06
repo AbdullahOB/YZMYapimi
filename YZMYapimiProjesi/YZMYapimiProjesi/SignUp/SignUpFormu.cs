@@ -46,6 +46,7 @@ namespace YZMYapimiProjesi.SignUp
         private void PBimageGeriDon_Click(object sender, EventArgs e)
         {
             this.Hide();
+            MessageBox.Show("hello");
             LoginForm frm = new LoginForm();
             frm.Show();
         }
