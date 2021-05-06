@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using YZMYapimiProjesi.SignUp;
 
 namespace YZMYapimiProjesi.Login
 {
@@ -64,6 +65,11 @@ namespace YZMYapimiProjesi.Login
 
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUpFormu sgnFrm = new SignUpFormu();
+            sgnFrm.ShowDialog();
+        }
     }
 }
