@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace YZMYapimiProjesi.Login
 {
@@ -15,6 +17,8 @@ namespace YZMYapimiProjesi.Login
         public LoginForm()
         {
             InitializeComponent();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,7 +28,42 @@ namespace YZMYapimiProjesi.Login
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'modelDataSet.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.modelDataSet.Table);
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;");
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From [Table] where KullaniciAdi ='" + textBox1.Text + "' and Sifre = '" + textBox2.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                Admin.AdminAraYuzu T = new Admin.AdminAraYuzu();
+                T.Show();
+            }
+            else
+            {
+                MessageBox.Show("Your Password Or Username is wrong");
+            }
+        }
+
+        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.modelDataSet);
+
+        }
+
+        private void SaticiCheck(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
