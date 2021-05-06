@@ -33,3 +33,5 @@ C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\o
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.pdb
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Admin.ParaEkle.resources
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Admin.UrnBilgileri.resources
+C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\Database1.mdf
+C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\Database1_log.ldf
