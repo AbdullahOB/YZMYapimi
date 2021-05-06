@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
 using YZMYapimiProjesi.Login;
+using System.Data.SqlClient;
 
 namespace YZMYapimiProjesi.SignUp
 {
@@ -18,9 +18,14 @@ namespace YZMYapimiProjesi.SignUp
         {
             InitializeComponent();
         }
-        
-
+        bool kullaniciTipi;
         //Build Data base connection
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+
+        SqlCommand cmd = new SqlCommand();
+        SqlDataAdapter da = new SqlDataAdapter();
+
+      
 
         private void btnSgnUp_Click(object sender, EventArgs e)
         {
@@ -30,9 +35,17 @@ namespace YZMYapimiProjesi.SignUp
             }
             else if (txtSifre1.Text == txtSifre2.Text)
             {
-                //TO DO: Open database and save the values
+                con.Open();
+
+                string query = "INSERT INTO [Table](kullaniciAdi,Sifre,Adi,Soyadi,Email,TCKimlik,Tel,Adres,KullaniciTipi) VALUES('" + txtKullaniciAdi.Text+ "', '" + txtSifre1.Text + "', '" + txtAd.Text+ "',  '" + txtSoyad.Text+ "', '" +txtEposta.Text+ "', '" + txtTC.Text+ "', '" +txtTelNo.Text+ "',  '" +txtAdres.Text+ "', '" + kullaniciTipi+ "')";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
 
                 MessageBox.Show("Kayıdınız Başarıyla Tamamlanmıştır!", "Kayıt Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                LoginForm frm = new LoginForm();
+                frm.Show();
             }
             else
             {
@@ -46,9 +59,69 @@ namespace YZMYapimiProjesi.SignUp
         private void PBimageGeriDon_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MessageBox.Show("hello");
             LoginForm frm = new LoginForm();
             frm.Show();
+        }
+
+        public void AllowNumberOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
+        {
+            string Numbers = "0123456789" + "\b" + "\t";
+            if (Numbers.IndexOf(e.KeyChar) == -1)
+            {
+                e.Handled = true;
+                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
+            }
+            else
+            {
+                e.Handled = false;
+                err.SetError(txt, "");
+            }
+
+        }
+        public void AllowTextOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
+        {
+            string Numbers = "0123456789";
+            if (Numbers.IndexOf(e.KeyChar) == -1)
+            {
+                e.Handled = false;
+                err.SetError(txt, "");
+            }
+            else
+            { 
+                e.Handled = true;
+                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
+            }
+
+        }
+
+        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumberOnly(e, txtTC, errorProvider1);
+        }
+
+        private void txtTelNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumberOnly(e, txtTelNo, errorProvider2);
+        }
+
+        private void txtAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowTextOnly(e, txtAd, errorProvider3);
+        }
+
+        private void txtSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowTextOnly(e, txtSoyad, errorProvider3);
+        }
+
+        private void RBsatici_CheckedChanged(object sender, EventArgs e)
+        {
+            kullaniciTipi = true;
+        }
+
+        private void RBalici_CheckedChanged(object sender, EventArgs e)
+        {
+            kullaniciTipi = false;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace YZMYapimiProjesi.SignUp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpFormu));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,29 +66,33 @@ namespace YZMYapimiProjesi.SignUp
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -185,7 +190,7 @@ namespace YZMYapimiProjesi.SignUp
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(88, 549);
+            this.label11.Location = new System.Drawing.Point(88, 553);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 23);
             this.label11.TabIndex = 10;
@@ -195,6 +200,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAd.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAd.Location = new System.Drawing.Point(56, 158);
@@ -202,11 +208,13 @@ namespace YZMYapimiProjesi.SignUp
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(140, 31);
             this.txtAd.TabIndex = 0;
+            this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAd_KeyPress);
             // 
             // txtSoyad
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSoyad.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoyad.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSoyad.Location = new System.Drawing.Point(202, 158);
@@ -214,11 +222,13 @@ namespace YZMYapimiProjesi.SignUp
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(202, 31);
             this.txtSoyad.TabIndex = 1;
+            this.txtSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyad_KeyPress);
             // 
             // txtTC
             // 
             this.txtTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtTC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTC.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTC.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTC.Location = new System.Drawing.Point(56, 215);
@@ -226,11 +236,13 @@ namespace YZMYapimiProjesi.SignUp
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(348, 31);
             this.txtTC.TabIndex = 2;
+            this.txtTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTC_KeyPress);
             // 
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(56, 273);
@@ -243,6 +255,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtAdres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtAdres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdres.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAdres.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAdres.Location = new System.Drawing.Point(56, 331);
@@ -255,6 +268,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtTelNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtTelNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelNo.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelNo.Location = new System.Drawing.Point(56, 391);
@@ -262,11 +276,13 @@ namespace YZMYapimiProjesi.SignUp
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.Size = new System.Drawing.Size(348, 31);
             this.txtTelNo.TabIndex = 5;
+            this.txtTelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelNo_KeyPress);
             // 
             // txtEposta
             // 
             this.txtEposta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtEposta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEposta.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEposta.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEposta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEposta.Location = new System.Drawing.Point(56, 451);
@@ -279,6 +295,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtSifre1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSifre1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSifre1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSifre1.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSifre1.Location = new System.Drawing.Point(56, 511);
@@ -291,6 +308,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtSifre2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSifre2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSifre2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSifre2.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifre2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSifre2.Location = new System.Drawing.Point(231, 511);
@@ -303,25 +321,27 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.RBsatici.AutoSize = true;
             this.RBsatici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RBsatici.Location = new System.Drawing.Point(183, 549);
+            this.RBsatici.Location = new System.Drawing.Point(183, 551);
             this.RBsatici.Name = "RBsatici";
             this.RBsatici.Size = new System.Drawing.Size(75, 27);
             this.RBsatici.TabIndex = 9;
             this.RBsatici.TabStop = true;
             this.RBsatici.Text = "Satıcı";
             this.RBsatici.UseVisualStyleBackColor = true;
+            this.RBsatici.CheckedChanged += new System.EventHandler(this.RBsatici_CheckedChanged);
             // 
             // RBalici
             // 
             this.RBalici.AutoSize = true;
             this.RBalici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RBalici.Location = new System.Drawing.Point(275, 549);
+            this.RBalici.Location = new System.Drawing.Point(275, 551);
             this.RBalici.Name = "RBalici";
             this.RBalici.Size = new System.Drawing.Size(66, 27);
             this.RBalici.TabIndex = 10;
             this.RBalici.TabStop = true;
             this.RBalici.Text = "Alıcı";
             this.RBalici.UseVisualStyleBackColor = true;
+            this.RBalici.CheckedChanged += new System.EventHandler(this.RBalici_CheckedChanged);
             // 
             // btnSgnUp
             // 
@@ -342,7 +362,7 @@ namespace YZMYapimiProjesi.SignUp
             this.PBimageGeriDon.Image = ((System.Drawing.Image)(resources.GetObject("PBimageGeriDon.Image")));
             this.PBimageGeriDon.Location = new System.Drawing.Point(8, 12);
             this.PBimageGeriDon.Name = "PBimageGeriDon";
-            this.PBimageGeriDon.Size = new System.Drawing.Size(42, 42);
+            this.PBimageGeriDon.Size = new System.Drawing.Size(35, 36);
             this.PBimageGeriDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBimageGeriDon.TabIndex = 17;
             this.PBimageGeriDon.TabStop = false;
@@ -436,19 +456,10 @@ namespace YZMYapimiProjesi.SignUp
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Controls.Add(this.panel12);
             this.panel11.Location = new System.Drawing.Point(56, 419);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(348, 3);
             this.panel11.TabIndex = 23;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Black;
-            this.panel12.Location = new System.Drawing.Point(150, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(140, 3);
-            this.panel12.TabIndex = 19;
             // 
             // panel13
             // 
@@ -477,14 +488,6 @@ namespace YZMYapimiProjesi.SignUp
             this.panel15.Size = new System.Drawing.Size(169, 3);
             this.panel15.TabIndex = 22;
             // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Black;
-            this.panel16.Location = new System.Drawing.Point(150, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(140, 3);
-            this.panel16.TabIndex = 19;
-            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Black;
@@ -501,6 +504,14 @@ namespace YZMYapimiProjesi.SignUp
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(140, 3);
             this.panel18.TabIndex = 19;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Black;
+            this.panel16.Location = new System.Drawing.Point(150, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(140, 3);
+            this.panel16.TabIndex = 19;
             // 
             // panel19
             // 
@@ -537,12 +548,24 @@ namespace YZMYapimiProjesi.SignUp
             this.panel22.Size = new System.Drawing.Size(140, 3);
             this.panel22.TabIndex = 19;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
             // SignUpFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(462, 681);
+            this.ClientSize = new System.Drawing.Size(460, 694);
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel13);
@@ -589,12 +612,14 @@ namespace YZMYapimiProjesi.SignUp
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,7 +662,6 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
@@ -648,5 +672,8 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }
