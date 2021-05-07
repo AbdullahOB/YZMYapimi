@@ -98,12 +98,6 @@
     <Compile Include="Admin\backgroundStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Admin\KullanicilarExport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\KullanicilarExport.Designer.cs">
-      <DependentUpon>KullanicilarExport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\ParaEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,52 +110,11 @@
     <Compile Include="Admin\UrnBilgileri.Designer.cs">
       <DependentUpon>UrnBilgileri.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppData.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Database1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Database1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetAlici.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetAlici.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetWithSatici.cs">
-      <DependentUpon>DataSetWithSatici.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetWithSatici.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetWithSatici.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDataSet.cs">
-      <DependentUpon>ModelDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ModelDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,11 +122,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SignupAppData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SignupAppData.xsd</DependentUpon>
     </Compile>
     <Compile Include="SignUp\SignUpFormu.cs">
       <SubType>Form</SubType>
@@ -183,9 +131,6 @@
     </Compile>
     <EmbeddedResource Include="Admin\AdminAraYuzu.resx">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\KullanicilarExport.resx">
-      <DependentUpon>KullanicilarExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ParaEkle.resx">
       <DependentUpon>ParaEkle.cs</DependentUpon>
@@ -204,83 +149,6 @@
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="AppData.xsc">
-      <DependentUpon>AppData.xsd</DependentUpon>
-    </None>
-    <None Include="AppData.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AppData.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AppData.xss">
-      <DependentUpon>AppData.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet1.xsc">
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet1.xss">
-      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet.xsc">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet.xss">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetAlici.xsc">
-      <DependentUpon>DataSetAlici.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetAlici.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetAlici.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSetAlici.xss">
-      <DependentUpon>DataSetAlici.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetWithSatici.xsc">
-      <DependentUpon>DataSetWithSatici.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetWithSatici.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetWithSatici.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSetWithSatici.xss">
-      <DependentUpon>DataSetWithSatici.xsd</DependentUpon>
-    </None>
-    <None Include="ModelDataSet.xsc">
-      <DependentUpon>ModelDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ModelDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ModelDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ModelDataSet.xss">
-      <DependentUpon>ModelDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -291,17 +159,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SignupAppData.xsc">
-      <DependentUpon>SignupAppData.xsd</DependentUpon>
-    </None>
-    <None Include="SignupAppData.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SignupAppData.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SignupAppData.xss">
-      <DependentUpon>SignupAppData.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -311,13 +168,6 @@
     <Content Include="Admin\Assets\images\backGradient.png" />
     <Content Include="Admin\Assets\images\bg.jfif" />
     <Content Include="Admin\Assets\images\gradienta-ix_kUDzCczo-unsplash.jpg" />
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>

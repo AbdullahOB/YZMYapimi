@@ -35,8 +35,8 @@ namespace YZMYapimiProjesi.Admin
 
         private void kullanicilarListesiKaydet(object sender, EventArgs e)
         {
-            KullanicilarExport kullanicilarExport = new KullanicilarExport();
-            kullanicilarExport.Show();
+           
+           
 
            
         }

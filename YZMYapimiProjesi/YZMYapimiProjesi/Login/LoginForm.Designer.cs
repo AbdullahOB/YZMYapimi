@@ -39,13 +39,11 @@ namespace YZMYapimiProjesi.Login
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.modelDataSet = new YZMYapimiProjesi.ModelDataSet();
-            this.tableTableAdapter = new YZMYapimiProjesi.ModelDataSetTableAdapters.TableTableAdapter();
-            this.tableAdapterManager = new YZMYapimiProjesi.ModelDataSetTableAdapters.TableAdapterManager();
+           
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
+         
             this.SuspendLayout();
             // 
             // label1
@@ -138,23 +136,19 @@ namespace YZMYapimiProjesi.Login
             // tableBindingSource
             // 
             this.tableBindingSource.DataMember = "Table";
-            this.tableBindingSource.DataSource = this.modelDataSet;
+            
             // 
             // modelDataSet
             // 
-            this.modelDataSet.DataSetName = "ModelDataSet";
-            this.modelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // tableTableAdapter
             // 
-            this.tableTableAdapter.ClearBeforeFill = true;
+           
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = YZMYapimiProjesi.ModelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
+        
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(165, 103);
@@ -189,7 +183,7 @@ namespace YZMYapimiProjesi.Login
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).EndInit();
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,10 +199,10 @@ namespace YZMYapimiProjesi.Login
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private ModelDataSet modelDataSet;
+        
         private System.Windows.Forms.BindingSource tableBindingSource;
-        private ModelDataSetTableAdapters.TableTableAdapter tableTableAdapter;
-        private ModelDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        
+      
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
     }
