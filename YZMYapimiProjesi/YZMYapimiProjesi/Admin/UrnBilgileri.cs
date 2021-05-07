@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace YZMYapimiProjesi.Admin
 {
-    public partial class UrnBilgileri : UserControl
+    public partial class UrnBilgileri : Form
     {
         public UrnBilgileri()
         {
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+        
 
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

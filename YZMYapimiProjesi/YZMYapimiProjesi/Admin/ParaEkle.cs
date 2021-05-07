@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace YZMYapimiProjesi.Admin
 {
-    public partial class ParaEkle : UserControl
+    public partial class ParaEkle : Form
     {
         public ParaEkle()
         {
             InitializeComponent();
         }
 
-        private void geriDon(object sender, EventArgs e)
+        private void ExitBtnFun(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

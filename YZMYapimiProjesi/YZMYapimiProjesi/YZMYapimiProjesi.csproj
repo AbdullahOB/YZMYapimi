@@ -48,8 +48,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +81,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\AdminAraYuzu.cs">
@@ -67,20 +90,34 @@
     <Compile Include="Admin\AdminAraYuzu.Designer.cs">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Assets\TextStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Admin\backgroundStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Admin\KullanicilarExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\KullanicilarExport.Designer.cs">
+      <DependentUpon>KullanicilarExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ParaEkle.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\ParaEkle.Designer.cs">
       <DependentUpon>ParaEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\UrnBilgileri.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\UrnBilgileri.Designer.cs">
       <DependentUpon>UrnBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppData.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
@@ -112,6 +149,9 @@
     <EmbeddedResource Include="Admin\AdminAraYuzu.resx">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\KullanicilarExport.resx">
+      <DependentUpon>KullanicilarExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ParaEkle.resx">
       <DependentUpon>ParaEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +169,17 @@
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AppData.xsc">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
+    <None Include="AppData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppData.xss">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
     <None Include="ModelDataSet.xsc">
       <DependentUpon>ModelDataSet.xsd</DependentUpon>
     </None>
@@ -140,6 +191,7 @@
     <None Include="ModelDataSet.xss">
       <DependentUpon>ModelDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
