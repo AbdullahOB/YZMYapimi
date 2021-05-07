@@ -36,10 +36,11 @@ namespace YZMYapimiProjesi.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.KullaniciLstBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.onayBekleyenUrnLst = new System.Windows.Forms.ListBox();
+            this.ExitBtn = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +88,7 @@ namespace YZMYapimiProjesi.Admin
             this.aliciParaEklemeLst.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.aliciParaEklemeLst.Size = new System.Drawing.Size(279, 258);
             this.aliciParaEklemeLst.TabIndex = 5;
+            this.aliciParaEklemeLst.SelectedIndexChanged += new System.EventHandler(this.aliciParaEklemeLst_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -94,7 +96,7 @@ namespace YZMYapimiProjesi.Admin
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("D-DIN Condensed", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(497, 32);
+            this.label1.Location = new System.Drawing.Point(518, 12);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(7);
             this.label1.Size = new System.Drawing.Size(218, 52);
@@ -110,7 +112,7 @@ namespace YZMYapimiProjesi.Admin
             this.KullaniciLstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KullaniciLstBtn.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KullaniciLstBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.KullaniciLstBtn.Location = new System.Drawing.Point(952, 78);
+            this.KullaniciLstBtn.Location = new System.Drawing.Point(952, 139);
             this.KullaniciLstBtn.Name = "KullaniciLstBtn";
             this.KullaniciLstBtn.Size = new System.Drawing.Size(263, 43);
             this.KullaniciLstBtn.TabIndex = 12;
@@ -127,7 +129,7 @@ namespace YZMYapimiProjesi.Admin
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(952, 12);
+            this.button1.Location = new System.Drawing.Point(952, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(263, 43);
             this.button1.TabIndex = 12;
@@ -135,26 +137,13 @@ namespace YZMYapimiProjesi.Admin
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.alimSatimRaporuKaydet);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.geriDonButonu);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(697, 323);
+            this.label4.Location = new System.Drawing.Point(728, 275);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(7);
             this.label4.Size = new System.Drawing.Size(387, 47);
@@ -167,7 +156,7 @@ namespace YZMYapimiProjesi.Admin
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(829, 370);
+            this.label5.Location = new System.Drawing.Point(855, 322);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(7);
             this.label5.Size = new System.Drawing.Size(120, 47);
@@ -192,6 +181,33 @@ namespace YZMYapimiProjesi.Admin
             this.onayBekleyenUrnLst.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.onayBekleyenUrnLst.Size = new System.Drawing.Size(279, 258);
             this.onayBekleyenUrnLst.TabIndex = 5;
+            this.onayBekleyenUrnLst.SelectedIndexChanged += new System.EventHandler(this.onayBekleyenUrnLst_SelectedIndexChanged);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.AutoSize = true;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.ExitBtn.Location = new System.Drawing.Point(1189, 9);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(42, 45);
+            this.ExitBtn.TabIndex = 13;
+            this.ExitBtn.Text = "X";
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtnFun);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.geriDonButonu);
             // 
             // AdminAraYuzu
             // 
@@ -199,6 +215,7 @@ namespace YZMYapimiProjesi.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1243, 628);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.KullaniciLstBtn);
             this.Controls.Add(this.label3);
@@ -230,5 +247,6 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox onayBekleyenUrnLst;
+        private System.Windows.Forms.Label ExitBtn;
     }
 }
