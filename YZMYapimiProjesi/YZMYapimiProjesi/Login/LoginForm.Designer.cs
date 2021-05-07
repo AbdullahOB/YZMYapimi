@@ -39,11 +39,9 @@ namespace YZMYapimiProjesi.Login
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-           
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
-         
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +50,7 @@ namespace YZMYapimiProjesi.Login
             this.label1.BackColor = System.Drawing.Color.Bisque;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(336, 23);
+            this.label1.Location = new System.Drawing.Point(184, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 1;
@@ -136,19 +134,7 @@ namespace YZMYapimiProjesi.Login
             // tableBindingSource
             // 
             this.tableBindingSource.DataMember = "Table";
-            
             // 
-            // modelDataSet
-            // 
-           
-            // 
-            // tableTableAdapter
-            // 
-           
-            // 
-            // tableAdapterManager
-            // 
-        
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(165, 103);
@@ -183,7 +169,6 @@ namespace YZMYapimiProjesi.Login
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 
