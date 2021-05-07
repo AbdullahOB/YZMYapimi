@@ -19,14 +19,53 @@ namespace YZMYapimiProjesi.Alici
 
         }
 
+
+        public int Cuzdan;
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void btnAl_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void labelClose_Click(object sender, EventArgs e)
+        private void PBimageGeriDon_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            Login.LoginForm log = new Login.LoginForm();
+            log.Show();
         }
+
+        public void AllowNumberOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
+        {
+            string Numbers = "0123456789" + "\b" + "\t";
+            if (Numbers.IndexOf(e.KeyChar) == -1)
+            {
+                e.Handled = true;
+                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
+            }
+            else
+            {
+                e.Handled = false;
+                err.SetError(txt, "");
+            }
+
+        }
+
+        private void TbMiktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
+        }
+
     }
 }
