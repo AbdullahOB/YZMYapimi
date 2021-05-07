@@ -36,5 +36,10 @@ namespace YZMYapimiProjesi.Admin
         {
 
         }
+
+        private void backgroundStyle1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
