@@ -108,3 +108,4 @@ C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjes
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.csproj.CopyComplete
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.exe
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.pdb
+C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\Database1.mdf
