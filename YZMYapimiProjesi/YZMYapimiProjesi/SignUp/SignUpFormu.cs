@@ -37,7 +37,7 @@ namespace YZMYapimiProjesi.SignUp
             {
                 con.Open();
 
-                string query = "INSERT INTO [Table](kullaniciAdi,Sifre,Adi,Soyadi,Email,TCKimlik,Tel,Adres,KullaniciTipi) VALUES('" + txtKullaniciAdi.Text+ "', '" + txtSifre1.Text + "', '" + txtAd.Text+ "',  '" + txtSoyad.Text+ "', '" +txtEposta.Text+ "', '" + txtTC.Text+ "', '" +txtTelNo.Text+ "',  '" +txtAdres.Text+ "', '" + kullaniciTipi+ "')";
+                string query = "INSERT INTO [KullaniciTable](kullaniciAdi,Sifre,Adi,Soyadi,Email,TCKimlik,Tel,Adres,KullaniciTipi) VALUES('" + txtKullaniciAdi.Text+ "', '" + txtSifre1.Text + "', '" + txtAd.Text+ "',  '" + txtSoyad.Text+ "', '" +txtEposta.Text+ "', '" + txtTC.Text+ "', '" +txtTelNo.Text+ "',  '" +txtAdres.Text+ "', '" + kullaniciTipi+ "')";
                 cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();

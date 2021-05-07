@@ -41,7 +41,6 @@ namespace YZMYapimiProjesi.SignUp
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtTC = new System.Windows.Forms.TextBox();
@@ -51,8 +50,6 @@ namespace YZMYapimiProjesi.SignUp
             this.txtEposta = new System.Windows.Forms.TextBox();
             this.txtSifre1 = new System.Windows.Forms.TextBox();
             this.txtSifre2 = new System.Windows.Forms.TextBox();
-            this.RBsatici = new System.Windows.Forms.RadioButton();
-            this.RBalici = new System.Windows.Forms.RadioButton();
             this.btnSgnUp = new System.Windows.Forms.Button();
             this.PBimageGeriDon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -79,6 +76,9 @@ namespace YZMYapimiProjesi.SignUp
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.RBalici = new System.Windows.Forms.RadioButton();
+            this.RBsatici = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,7 +102,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(115, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 71);
+            this.label1.Size = new System.Drawing.Size(207, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kayıt Formu";
             // 
@@ -111,7 +111,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(52, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 23);
+            this.label2.Size = new System.Drawing.Size(28, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ad";
             // 
@@ -120,7 +120,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(198, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 23);
+            this.label3.Size = new System.Drawing.Size(51, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Soyad";
             // 
@@ -129,7 +129,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(52, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 23);
+            this.label4.Size = new System.Drawing.Size(92, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Kullanıcı Adı";
             // 
@@ -138,7 +138,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(52, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 23);
+            this.label5.Size = new System.Drawing.Size(143, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "T.C Kimlik Numarası";
             // 
@@ -147,7 +147,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(52, 368);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 23);
+            this.label6.Size = new System.Drawing.Size(100, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tel. Numarası";
             // 
@@ -156,7 +156,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(52, 428);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 23);
+            this.label7.Size = new System.Drawing.Size(106, 19);
             this.label7.TabIndex = 6;
             this.label7.Text = "E-posta Adresi";
             // 
@@ -165,7 +165,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(52, 308);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 23);
+            this.label8.Size = new System.Drawing.Size(48, 19);
             this.label8.TabIndex = 7;
             this.label8.Text = "Adres";
             // 
@@ -174,7 +174,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(52, 488);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 23);
+            this.label9.Size = new System.Drawing.Size(42, 19);
             this.label9.TabIndex = 8;
             this.label9.Text = "Şifre";
             // 
@@ -183,18 +183,9 @@ namespace YZMYapimiProjesi.SignUp
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(227, 488);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 23);
+            this.label10.Size = new System.Drawing.Size(93, 19);
             this.label10.TabIndex = 9;
             this.label10.Text = "Şifre Tekrarı";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(88, 553);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 23);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Üye Tipi:";
             // 
             // txtAd
             // 
@@ -316,32 +307,6 @@ namespace YZMYapimiProjesi.SignUp
             this.txtSifre2.Name = "txtSifre2";
             this.txtSifre2.Size = new System.Drawing.Size(173, 31);
             this.txtSifre2.TabIndex = 8;
-            // 
-            // RBsatici
-            // 
-            this.RBsatici.AutoSize = true;
-            this.RBsatici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RBsatici.Location = new System.Drawing.Point(183, 551);
-            this.RBsatici.Name = "RBsatici";
-            this.RBsatici.Size = new System.Drawing.Size(75, 27);
-            this.RBsatici.TabIndex = 9;
-            this.RBsatici.TabStop = true;
-            this.RBsatici.Text = "Satıcı";
-            this.RBsatici.UseVisualStyleBackColor = true;
-            this.RBsatici.CheckedChanged += new System.EventHandler(this.RBsatici_CheckedChanged);
-            // 
-            // RBalici
-            // 
-            this.RBalici.AutoSize = true;
-            this.RBalici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RBalici.Location = new System.Drawing.Point(275, 551);
-            this.RBalici.Name = "RBalici";
-            this.RBalici.Size = new System.Drawing.Size(66, 27);
-            this.RBalici.TabIndex = 10;
-            this.RBalici.TabStop = true;
-            this.RBalici.Text = "Alıcı";
-            this.RBalici.UseVisualStyleBackColor = true;
-            this.RBalici.CheckedChanged += new System.EventHandler(this.RBalici_CheckedChanged);
             // 
             // btnSgnUp
             // 
@@ -560,9 +525,44 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.errorProvider3.ContainerControl = this;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(88, 553);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 19);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Üye Tipi:";
+            // 
+            // RBalici
+            // 
+            this.RBalici.AutoSize = true;
+            this.RBalici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RBalici.Location = new System.Drawing.Point(275, 551);
+            this.RBalici.Name = "RBalici";
+            this.RBalici.Size = new System.Drawing.Size(56, 23);
+            this.RBalici.TabIndex = 10;
+            this.RBalici.TabStop = true;
+            this.RBalici.Text = "Alıcı";
+            this.RBalici.UseVisualStyleBackColor = true;
+            this.RBalici.CheckedChanged += new System.EventHandler(this.RBalici_CheckedChanged);
+            // 
+            // RBsatici
+            // 
+            this.RBsatici.AutoSize = true;
+            this.RBsatici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RBsatici.Location = new System.Drawing.Point(183, 551);
+            this.RBsatici.Name = "RBsatici";
+            this.RBsatici.Size = new System.Drawing.Size(63, 23);
+            this.RBsatici.TabIndex = 9;
+            this.RBsatici.TabStop = true;
+            this.RBsatici.Text = "Satıcı";
+            this.RBsatici.UseVisualStyleBackColor = true;
+            this.RBsatici.CheckedChanged += new System.EventHandler(this.RBsatici_CheckedChanged);
+            // 
             // SignUpFormu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(460, 694);
@@ -637,7 +637,6 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtTC;
@@ -647,8 +646,6 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.TextBox txtEposta;
         private System.Windows.Forms.TextBox txtSifre1;
         private System.Windows.Forms.TextBox txtSifre2;
-        private System.Windows.Forms.RadioButton RBsatici;
-        private System.Windows.Forms.RadioButton RBalici;
         private System.Windows.Forms.Button btnSgnUp;
         private System.Windows.Forms.PictureBox PBimageGeriDon;
         private System.Windows.Forms.Panel panel1;
@@ -675,5 +672,8 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.RadioButton RBalici;
+        private System.Windows.Forms.RadioButton RBsatici;
+        private System.Windows.Forms.Label label11;
     }
 }

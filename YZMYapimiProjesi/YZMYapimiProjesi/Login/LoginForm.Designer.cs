@@ -54,10 +54,9 @@ namespace YZMYapimiProjesi.Login
             this.label1.BackColor = System.Drawing.Color.Bisque;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(245, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(336, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 39);
+            this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -66,10 +65,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(63, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "User Name";
             // 
@@ -77,10 +75,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 166);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(63, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 22);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             // 
@@ -88,10 +85,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.Login.BackColor = System.Drawing.Color.Lime;
             this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.Location = new System.Drawing.Point(272, 217);
-            this.Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login.Location = new System.Drawing.Point(204, 176);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(103, 42);
+            this.Login.Size = new System.Drawing.Size(77, 34);
             this.Login.TabIndex = 6;
             this.Login.Text = "Login";
             this.Login.UseVisualStyleBackColor = false;
@@ -101,10 +97,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(216, 295);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(162, 240);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 22);
+            this.label4.Size = new System.Drawing.Size(164, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "don\'t have an account ? ";
             // 
@@ -112,10 +107,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(272, 346);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(204, 281);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 42);
+            this.button4.Size = new System.Drawing.Size(77, 34);
             this.button4.TabIndex = 6;
             this.button4.Text = "Sign Up";
             this.button4.UseVisualStyleBackColor = false;
@@ -125,10 +119,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(216, 295);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(162, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 22);
+            this.label5.Size = new System.Drawing.Size(164, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "don\'t have an account ? ";
             // 
@@ -136,10 +129,9 @@ namespace YZMYapimiProjesi.Login
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(216, 295);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(162, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 22);
+            this.label6.Size = new System.Drawing.Size(164, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "don\'t have an account ? ";
             // 
@@ -165,26 +157,24 @@ namespace YZMYapimiProjesi.Login
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(220, 127);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(165, 103);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
+            this.textBox1.Size = new System.Drawing.Size(145, 20);
             this.textBox1.TabIndex = 31;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(220, 166);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(165, 135);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 22);
+            this.textBox2.Size = new System.Drawing.Size(145, 20);
             this.textBox2.TabIndex = 32;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(643, 491);
+            this.ClientSize = new System.Drawing.Size(463, 399);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -195,7 +185,6 @@ namespace YZMYapimiProjesi.Login
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
