@@ -22,10 +22,7 @@ namespace YZMYapimiProjesi.SignUp
         //Build Data base connection
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlCommand cmd = new SqlCommand();
-        SqlDataAdapter da = new SqlDataAdapter();
-
-      
+        SqlCommand cmd = new SqlCommand();    
 
         private void btnSgnUp_Click(object sender, EventArgs e)
         {
