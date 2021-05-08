@@ -210,7 +210,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\close_window_32px.png" />
+
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>
