@@ -116,9 +116,9 @@ namespace YZMYapimiProjesi.Alici
             this.lblPara.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPara.Location = new System.Drawing.Point(167, 110);
             this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(92, 36);
+            this.lblPara.Size = new System.Drawing.Size(94, 45);
             this.lblPara.TabIndex = 26;
-            this.lblPara.Text = "6155,12";
+            this.lblPara.Text = "00000";
             // 
             // label4
             // 
@@ -133,14 +133,15 @@ namespace YZMYapimiProjesi.Alici
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(106, 179);
+            this.button1.Location = new System.Drawing.Point(70, 179);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 40);
+            this.button1.Size = new System.Drawing.Size(204, 60);
             this.button1.TabIndex = 23;
-            this.button1.Text = "Para Ekle";
+            this.button1.Text = "Para Yükle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -256,7 +257,7 @@ namespace YZMYapimiProjesi.Alici
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 600);
+            this.ClientSize = new System.Drawing.Size(952, 600);
             this.Controls.Add(this.btnAl);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.CbOnayla);
@@ -268,7 +269,7 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PBimageGeriDon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AliciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

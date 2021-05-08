@@ -109,3 +109,14 @@ C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjes
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.exe
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.pdb
 C:\Users\Abdullah\OneDrive\Desktop\ff\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\Database1.mdf
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\ClosedXML.dll
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\System.IO.Packaging.dll
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\ClosedXML.pdb
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\ClosedXML.xml
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Alici.AliciForm.resources
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Alici.ParaEkleForm.resources
+C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.csproj.CopyComplete

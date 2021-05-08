@@ -79,6 +79,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label11 = new System.Windows.Forms.Label();
             this.RBalici = new System.Windows.Forms.RadioButton();
             this.RBsatici = new System.Windows.Forms.RadioButton();
+            this.errProvKullaniciAdi = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,6 +94,7 @@ namespace YZMYapimiProjesi.SignUp
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvKullaniciAdi)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -241,6 +243,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(348, 31);
             this.txtKullaniciAdi.TabIndex = 3;
+            this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciAdi_KeyPress);
             // 
             // txtAdres
             // 
@@ -516,14 +519,17 @@ namespace YZMYapimiProjesi.SignUp
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
             // 
             // errorProvider3
             // 
             this.errorProvider3.ContainerControl = this;
+            this.errorProvider3.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider3.Icon")));
             // 
             // label11
             // 
@@ -559,6 +565,11 @@ namespace YZMYapimiProjesi.SignUp
             this.RBsatici.Text = "Satıcı";
             this.RBsatici.UseVisualStyleBackColor = true;
             this.RBsatici.CheckedChanged += new System.EventHandler(this.RBsatici_CheckedChanged);
+            // 
+            // errProvKullaniciAdi
+            // 
+            this.errProvKullaniciAdi.ContainerControl = this;
+            this.errProvKullaniciAdi.Icon = ((System.Drawing.Icon)(resources.GetObject("errProvKullaniciAdi.Icon")));
             // 
             // SignUpFormu
             // 
@@ -619,6 +630,7 @@ namespace YZMYapimiProjesi.SignUp
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvKullaniciAdi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -674,5 +686,6 @@ namespace YZMYapimiProjesi.SignUp
         private System.Windows.Forms.RadioButton RBalici;
         private System.Windows.Forms.RadioButton RBsatici;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ErrorProvider errProvKullaniciAdi;
     }
 }

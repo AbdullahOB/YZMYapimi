@@ -12,12 +12,22 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class AliciForm : Form
     {
-         public AliciForm(string userName)
+        public void getName(string username)
+        {
+            lblName.Text = username;
+        }
+        
+        public void getToplam(string toplam)
+        {
+            lblName.Text = toplam;
+        }
+        
+         public AliciForm()
         {  
             InitializeComponent();
-            lblName.Text = userName;
-
         }
+
+
 
         private void btnAl_Click(object sender, EventArgs e)
         {
@@ -31,26 +41,18 @@ namespace YZMYapimiProjesi.Alici
             log.Show();
         }
 
-        public void AllowNumberOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
-        {
-            string Numbers = "0123456789" + "\b" + "\t";
-            if (Numbers.IndexOf(e.KeyChar) == -1)
-            {
-                e.Handled = true;
-                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
-            }
-            else
-            {
-                e.Handled = false;
-                err.SetError(txt, "");
-            }
 
-        }
+        readonly YaziSartlari sart = new YaziSartlari();
 
         private void TbMiktar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
+            sart.AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var formPopup = new ParaEkleForm();
+            formPopup.Show();
+        }
     }
 }
