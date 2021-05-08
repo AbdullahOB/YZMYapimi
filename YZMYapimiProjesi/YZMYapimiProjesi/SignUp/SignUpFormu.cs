@@ -18,14 +18,13 @@ namespace YZMYapimiProjesi.SignUp
         {
             InitializeComponent();
         }
-        bool kullaniciTipi;
+
+        string kullaniciTipi;
+
+
         //Build Data base connection
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;Connect Timeout=30");
-
-        SqlCommand cmd = new SqlCommand();
-        SqlDataAdapter da = new SqlDataAdapter();
-
-      
+        SqlCommand cmd = new SqlCommand();    
 
         private void btnSgnUp_Click(object sender, EventArgs e)
         {
@@ -63,65 +62,40 @@ namespace YZMYapimiProjesi.SignUp
             frm.Show();
         }
 
-        public void AllowNumberOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
-        {
-            string Numbers = "0123456789" + "\b" + "\t";
-            if (Numbers.IndexOf(e.KeyChar) == -1)
-            {
-                e.Handled = true;
-                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
-            }
-            else
-            {
-                e.Handled = false;
-                err.SetError(txt, "");
-            }
-
-        }
-        public void AllowTextOnly(KeyPressEventArgs e, TextBox txt, ErrorProvider err)
-        {
-            string Numbers = "0123456789";
-            if (Numbers.IndexOf(e.KeyChar) == -1)
-            {
-                e.Handled = false;
-                err.SetError(txt, "");
-            }
-            else
-            { 
-                e.Handled = true;
-                err.SetError(txt, "Sadece Rakam Girebilirsiniz!");
-            }
-
-        }
-
+        readonly YaziSartlari sart = new YaziSartlari();
         private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AllowNumberOnly(e, txtTC, errorProvider1);
+            sart.AllowNumberOnly(e, txtTC, errorProvider1);
         }
 
         private void txtTelNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AllowNumberOnly(e, txtTelNo, errorProvider2);
+            sart.AllowNumberOnly(e, txtTelNo, errorProvider2);
         }
 
         private void txtAd_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AllowTextOnly(e, txtAd, errorProvider3);
+            sart.AllowTextOnly(e, txtAd, errorProvider3);
         }
 
         private void txtSoyad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AllowTextOnly(e, txtSoyad, errorProvider3);
+            sart.AllowTextOnly(e, txtSoyad, errorProvider3);
         }
-
+        private void txtKullaniciAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            sart.denaySpace(e, txtKullaniciAdi, errProvKullaniciAdi);
+        }
         private void RBsatici_CheckedChanged(object sender, EventArgs e)
         {
-            kullaniciTipi = true;
+            kullaniciTipi = "Satici";
         }
 
         private void RBalici_CheckedChanged(object sender, EventArgs e)
         {
-            kullaniciTipi = false;
+            kullaniciTipi = "Alici";
         }
+
+
     }
 }
