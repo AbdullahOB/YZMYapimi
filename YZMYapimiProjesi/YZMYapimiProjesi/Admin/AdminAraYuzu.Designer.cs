@@ -112,7 +112,7 @@ namespace YZMYapimiProjesi.Admin
             this.KullaniciLstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KullaniciLstBtn.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KullaniciLstBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.KullaniciLstBtn.Location = new System.Drawing.Point(952, 139);
+            this.KullaniciLstBtn.Location = new System.Drawing.Point(952, 152);
             this.KullaniciLstBtn.Name = "KullaniciLstBtn";
             this.KullaniciLstBtn.Size = new System.Drawing.Size(263, 43);
             this.KullaniciLstBtn.TabIndex = 12;
