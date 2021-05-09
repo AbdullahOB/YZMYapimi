@@ -40,6 +40,7 @@ namespace YZMYapimiProjesi.Alici
             this.btnYukle = new System.Windows.Forms.Button();
             this.errProvParaEkle = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvParaEkle)).BeginInit();
             this.SuspendLayout();
@@ -139,12 +140,24 @@ namespace YZMYapimiProjesi.Alici
             this.label3.TabIndex = 25;
             this.label3.Text = "Günlük limit: 1000 TL";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(163, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 30);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "*";
+            // 
             // ParaEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(449, 327);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnYukle);
@@ -174,5 +187,6 @@ namespace YZMYapimiProjesi.Alici
         private System.Windows.Forms.Button btnYukle;
         private System.Windows.Forms.ErrorProvider errProvParaEkle;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
