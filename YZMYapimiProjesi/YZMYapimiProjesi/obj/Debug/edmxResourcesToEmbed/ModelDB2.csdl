@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YzmDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KullaniciRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="KullaniciTable" Relationship="Self.FK_KullaniciRole_KullaniciTable" FromRole="KullaniciRole" ToRole="KullaniciTable" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_KullaniciRole_Role" FromRole="KullaniciRole" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="KullaniciTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TCKimlikNo" Type="Int64" Nullable="false" />
+    <Property Name="Tel" Type="Int64" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciTipi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="KullaniciRoles" Relationship="Self.FK_KullaniciRole_KullaniciTable" FromRole="KullaniciTable" ToRole="KullaniciRole" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="KullaniciRoles" Relationship="Self.FK_KullaniciRole_Role" FromRole="Role" ToRole="KullaniciRole" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_KullaniciRole_KullaniciTable">
+    <End Role="KullaniciTable" Type="Self.KullaniciTable" Multiplicity="1" />
+    <End Role="KullaniciRole" Type="Self.KullaniciRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KullaniciTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KullaniciRole">
+        <PropertyRef Name="KullaniciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KullaniciRole_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="KullaniciRole" Type="Self.KullaniciRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KullaniciRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YZMOnlineDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KullaniciRoles" EntityType="Self.KullaniciRole" />
+    <EntitySet Name="KullaniciTables" EntityType="Self.KullaniciTable" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <AssociationSet Name="FK_KullaniciRole_KullaniciTable" Association="Self.FK_KullaniciRole_KullaniciTable">
+      <End Role="KullaniciTable" EntitySet="KullaniciTables" />
+      <End Role="KullaniciRole" EntitySet="KullaniciRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KullaniciRole_Role" Association="Self.FK_KullaniciRole_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="KullaniciRole" EntitySet="KullaniciRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
