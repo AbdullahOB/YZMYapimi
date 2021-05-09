@@ -16,5 +16,19 @@ namespace YZMYapimiProjesi.Satici
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login.LoginForm obj = new Login.LoginForm();
+            obj.Show();
+        }
+
+        private void UrunEkbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+          
+        }
     }
 }
