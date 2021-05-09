@@ -7,23 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using YZMYapimiProjesi.DB;
+using YZMYapimiProjesi.Login;
 namespace YZMYapimiProjesi.Alici
 {
     public partial class AliciForm : Form
     {
-        public void getName(string username)
-        {
-            lblName.Text = username;
-        }
+        private readonly DBEntity1 _db;
+        public LoginForm _login;
+        public string _ad;
+        public int _walletBalance;
+        public int _id;
+
+        //public void getName(string username)
+        //{
+        //    lblName.Text = username;
+        //}
         
-        public void getToplam(string toplam)
+        //public void getToplam()
+        //{
+            
+          
+            
+           
+
+        //}
+        public AliciForm(LoginForm login, string Ad ,int walletBalance,int id)
         {
-            lblName.Text = toplam;
+            InitializeComponent();
+            _db = new DBEntity1();
+            _login = login;
+            _ad = Ad;
+            _walletBalance = walletBalance;
+            _id = id;
+            
+           
         }
-        
          public AliciForm()
-        {  
+        {
+          
             InitializeComponent();
         }
 
@@ -31,6 +53,11 @@ namespace YZMYapimiProjesi.Alici
 
         private void btnAl_Click(object sender, EventArgs e)
         {
+           var user = _db.KullaniciTables.Find(_id);
+            user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
+
+
+            _db.SaveChanges();
 
         }
 
@@ -53,6 +80,24 @@ namespace YZMYapimiProjesi.Alici
         {
             var formPopup = new ParaEkleForm();
             formPopup.Show();
+        }
+
+       
+
+        private void AliciForm_Load(object sender, EventArgs e)
+        {
+            lblName.Text = _ad;
+            lblPara.Text = _walletBalance.ToString();
+                
+         
+            
+        }
+
+        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var users = _db.KullaniciTables.Find(_id);
+            lblPara.Text = users.WalletBalance.ToString();
         }
     }
 }

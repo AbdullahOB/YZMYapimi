@@ -30,6 +30,7 @@ namespace YZMYapimiProjesi.DB
         public long Tel { get; set; }
         public string Adres { get; set; }
         public string KullaniciTipi { get; set; }
+        public Nullable<int> WalletBalance { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KullaniciRole> KullaniciRoles { get; set; }

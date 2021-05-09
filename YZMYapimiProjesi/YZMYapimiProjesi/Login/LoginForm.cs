@@ -19,13 +19,13 @@ namespace YZMYapimiProjesi.Login
 {
     public partial class LoginForm : Form
     {
-        private readonly DBEntity _db;
+        private readonly DBEntity1 _db;
         
 
         public LoginForm()
         {
             InitializeComponent();
-            _db = new DBEntity();
+            _db = new DBEntity1();
 
 
         }
@@ -50,6 +50,8 @@ namespace YZMYapimiProjesi.Login
                 var kullanici = textBox1.Text.Trim();
                 var sifre = textBox2.Text;
                 var user = _db.KullaniciTables.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
+                
+                
                 if(user == null)
                 {
                     MessageBox.Show("Hatali Sifre Veya Kullanici Adi Girdiniz ...");
@@ -58,7 +60,8 @@ namespace YZMYapimiProjesi.Login
                 {
                     var role = user.KullaniciRoles.FirstOrDefault();
                     var roleNm = role.Role.KullaniciTipi;
-                    if(roleNm == "Admin")
+                    var userWallet = user.WalletBalance;
+                    if (roleNm == "Admin")
                     {
                         this.Hide();
                         AdminAraYuzu admin = new AdminAraYuzu();
@@ -72,9 +75,11 @@ namespace YZMYapimiProjesi.Login
                     }
                    else if (roleNm == "Alici")
                     {
-                        this.Hide();
-                        AliciForm alici = new AliciForm();
+                        AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet) , user.Id);
+                        
                         alici.Show();
+
+                        Hide();
                     }
                     
                 }

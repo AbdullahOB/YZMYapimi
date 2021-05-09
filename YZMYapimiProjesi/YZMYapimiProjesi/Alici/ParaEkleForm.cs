@@ -43,7 +43,7 @@ namespace YZMYapimiProjesi.Alici
                 con.Close();
 
                 Alici.AliciForm frm = new Alici.AliciForm();
-                frm.getToplam(Toplam.ToString());
+                
                 MessageBox.Show("Paranız Yüklendi!", "Yükleme Başarlı", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
                 this.Hide();
 

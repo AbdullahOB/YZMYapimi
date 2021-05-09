@@ -132,31 +132,31 @@
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DB\database_firewall_rules.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>DBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\KullaniciRole.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\KullaniciTable.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\ModelDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\ModelDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\ModelDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
@@ -213,12 +213,12 @@
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\ModelDB.edmx">
+    <EntityDeploy Include="DB\DBEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\ModelDB.edmx.diagram">
-      <DependentUpon>ModelDB.edmx</DependentUpon>
+    <None Include="DB\DBEntity.edmx.diagram">
+      <DependentUpon>DBEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -239,15 +239,16 @@
     <Content Include="Admin\Assets\images\backGradient.png" />
     <Content Include="Admin\Assets\images\bg.jfif" />
     <Content Include="Admin\Assets\images\gradienta-ix_kUDzCczo-unsplash.jpg" />
-    <Content Include="DB\ModelDB.Context.tt">
+    <Content Include="Alici\Assets\refresh.png" />
+    <Content Include="DB\DBEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
+      <DependentUpon>DBEntity.edmx</DependentUpon>
+      <LastGenOutput>DBEntity.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DB\ModelDB.tt">
+    <Content Include="DB\DBEntity.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.cs</LastGenOutput>
+      <DependentUpon>DBEntity.edmx</DependentUpon>
+      <LastGenOutput>DBEntity.cs</LastGenOutput>
     </Content>
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>

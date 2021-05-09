@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="YZMYapimiDB1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="YZMModelDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="KullaniciRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,6 +27,7 @@
           <Property Name="Tel" Type="bigint" Nullable="false" />
           <Property Name="Adres" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="KullaniciTipi" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="WalletBalance" Type="int" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -77,7 +78,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="YZMYapimiDB1ModelStoreContainer">
+        <EntityContainer Name="YZMModelDBStoreContainer">
           <EntitySet Name="KullaniciRole" EntityType="Self.KullaniciRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KullaniciTable" EntityType="Self.KullaniciTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
@@ -104,7 +105,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="YZMYapimiDB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="YZMModelDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="KullaniciRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -129,6 +130,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Name="Tel" Type="Int64" Nullable="false" />
           <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="KullaniciTipi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="WalletBalance" Type="Int32" />
           <NavigationProperty Name="KullaniciRoles" Relationship="Self.FK_KullaniciRole_KullaniciTable" FromRole="KullaniciTable" ToRole="KullaniciRole" />
         </EntityType>
         <EntityType Name="Role">
@@ -179,7 +181,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBEntity" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBEntity1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="KullaniciRoles" EntityType="Self.KullaniciRole" />
           <EntitySet Name="KullaniciTables" EntityType="Self.KullaniciTable" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
@@ -198,9 +200,9 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="YZMYapimiDB1ModelStoreContainer" CdmEntityContainer="DBEntity">
+        <EntityContainerMapping StorageEntityContainer="YZMModelDBStoreContainer" CdmEntityContainer="DBEntity1">
           <EntitySetMapping Name="KullaniciRoles">
-            <EntityTypeMapping TypeName="YZMYapimiDB1Model.KullaniciRole">
+            <EntityTypeMapping TypeName="YZMModelDB.KullaniciRole">
               <MappingFragment StoreEntitySet="KullaniciRole">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
@@ -209,7 +211,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KullaniciTables">
-            <EntityTypeMapping TypeName="YZMYapimiDB1Model.KullaniciTable">
+            <EntityTypeMapping TypeName="YZMModelDB.KullaniciTable">
               <MappingFragment StoreEntitySet="KullaniciTable">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
@@ -221,11 +223,12 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
                 <ScalarProperty Name="Tel" ColumnName="Tel" />
                 <ScalarProperty Name="Adres" ColumnName="Adres" />
                 <ScalarProperty Name="KullaniciTipi" ColumnName="KullaniciTipi" />
+                <ScalarProperty Name="WalletBalance" ColumnName="WalletBalance" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="YZMYapimiDB1Model.Role">
+            <EntityTypeMapping TypeName="YZMModelDB.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="KullaniciTipi" ColumnName="KullaniciTipi" />
@@ -233,7 +236,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="database_firewall_rules">
-            <EntityTypeMapping TypeName="YZMYapimiDB1Model.database_firewall_rules">
+            <EntityTypeMapping TypeName="YZMModelDB.database_firewall_rules">
               <MappingFragment StoreEntitySet="database_firewall_rules">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />

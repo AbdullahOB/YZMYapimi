@@ -13,10 +13,10 @@ namespace YZMYapimiProjesi.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEntity : DbContext
+    public partial class DBEntity1 : DbContext
     {
-        public DBEntity()
-            : base("name=DBEntity")
+        public DBEntity1()
+            : base("name=DBEntity1")
         {
         }
     
