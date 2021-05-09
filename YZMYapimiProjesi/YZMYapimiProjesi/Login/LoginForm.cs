@@ -20,28 +20,12 @@ namespace YZMYapimiProjesi.Login
     public partial class LoginForm : Form
     {
         private readonly DBEntity1 _db;
-        
 
         public LoginForm()
         {
             InitializeComponent();
             _db = new DBEntity1();
-
-
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-          
-         
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -90,9 +74,6 @@ namespace YZMYapimiProjesi.Login
                 MessageBox.Show(ex.Message);
             }
         }
-
-       
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
