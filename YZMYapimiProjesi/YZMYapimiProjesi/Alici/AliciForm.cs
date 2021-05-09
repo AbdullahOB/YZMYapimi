@@ -38,7 +38,7 @@ namespace YZMYapimiProjesi.Alici
         {
            var user = _db.KullaniciTables.Find(_id);
             user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
-            MessageBox.Show("S");
+            
 
             _db.SaveChanges();
 
