@@ -17,7 +17,7 @@ namespace YZMYapimiProjesi.Alici
         public LoginForm _login;
         public string _ad;
         public int _walletBalance;
-        public int _id;
+        public int _id, _id2;
 
         public AliciForm(LoginForm login, string Ad ,int walletBalance,int id)
         {
@@ -26,8 +26,10 @@ namespace YZMYapimiProjesi.Alici
             _login = login;
             _ad = Ad;
             _walletBalance = walletBalance;
-            _id = id; 
+            _id = id;
+            
         }
+
          public AliciForm()
         {
           
@@ -36,12 +38,9 @@ namespace YZMYapimiProjesi.Alici
 
         private void btnAl_Click(object sender, EventArgs e)
         {
-           var user = _db.KullaniciTables.Find(_id);
+            var user = _db.KullaniciTables.Find(_id);
             user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
-            
-
             _db.SaveChanges();
-
         }
 
         private void PBimageGeriDon_Click(object sender, EventArgs e)
@@ -59,28 +58,26 @@ namespace YZMYapimiProjesi.Alici
             sart.AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnParaYukle_Click(object sender, EventArgs e)
         {
-            var formPopup = new ParaEkleForm();
+            var formPopup = new ParaEkleForm(_id);
             formPopup.Show();
         }
 
-       
+        private void PbRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: check if this is true use of new databse 
+            DBEntity1 db2 = new DBEntity1();
+            var user = db2.KullaniciTables.Find(_id);
+            lblPara.Text = user.WalletBalance.ToString();
+        }
 
         private void AliciForm_Load(object sender, EventArgs e)
         {
             lblName.Text = _ad;
             lblPara.Text = _walletBalance.ToString();
-                
-         
-            
         }
 
-        
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            var users = _db.KullaniciTables.Find(_id);
-            lblPara.Text = users.WalletBalance.ToString();
-        }
+
     }
 }
