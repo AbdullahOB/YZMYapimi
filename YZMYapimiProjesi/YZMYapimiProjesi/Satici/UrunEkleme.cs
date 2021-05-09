@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YZMYapimiProjesi.Satici
 {
-    public partial class SaticiForm : Form
+    public partial class UrunEkleme : Form
     {
-        public SaticiForm()
+        public UrunEkleme()
         {
             InitializeComponent();
         }
@@ -20,15 +20,19 @@ namespace YZMYapimiProjesi.Satici
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login.LoginForm obj = new Login.LoginForm();
-            obj.Show();
+            SaticiForm obj2 = new SaticiForm();
+            obj2.Show();
+
         }
 
-        private void UrunEkbtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UrunEkleme obj3 = new UrunEkleme();
-            obj3.Show();
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

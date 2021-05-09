@@ -29,7 +29,6 @@ namespace YZMYapimiProjesi.Satici
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.isimlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,10 +37,10 @@ namespace YZMYapimiProjesi.Satici
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.UrunEkbtn = new System.Windows.Forms.Button();
             this.UrunSilbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-           
             // label1
             // 
             this.label1.AutoSize = true;
@@ -107,6 +106,7 @@ namespace YZMYapimiProjesi.Satici
             this.UrunEkbtn.TabIndex = 7;
             this.UrunEkbtn.Text = "Ürün Ekle";
             this.UrunEkbtn.UseVisualStyleBackColor = true;
+            this.UrunEkbtn.Click += new System.EventHandler(this.UrunEkbtn_Click);
             // 
             // UrunSilbtn
             // 
@@ -117,6 +117,17 @@ namespace YZMYapimiProjesi.Satici
             this.UrunSilbtn.TabIndex = 7;
             this.UrunSilbtn.Text = "Ürün Sil";
             this.UrunSilbtn.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::YZMYapimiProjesi.Properties.Resources.iconfinder_arrow_left_circle_1303871;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SaticiForm
             // 

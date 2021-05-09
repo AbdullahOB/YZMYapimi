@@ -140,6 +140,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Satici\SaticiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\SaticiForm.Designer.cs">
+      <DependentUpon>SaticiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satici\ComboStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Satici\UrunEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\UrunEkleme.Designer.cs">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp\SignUpFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +184,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\SaticiForm.resx">
+      <DependentUpon>SaticiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\UrunEkleme.resx">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
@@ -210,7 +231,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>
@@ -225,5 +245,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
