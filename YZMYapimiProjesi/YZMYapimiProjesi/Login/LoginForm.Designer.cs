@@ -55,7 +55,6 @@ namespace YZMYapimiProjesi.Login
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -168,7 +167,6 @@ namespace YZMYapimiProjesi.Login
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

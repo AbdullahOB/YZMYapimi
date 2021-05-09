@@ -19,19 +19,6 @@ namespace YZMYapimiProjesi.Alici
         public int _walletBalance;
         public int _id;
 
-        //public void getName(string username)
-        //{
-        //    lblName.Text = username;
-        //}
-        
-        //public void getToplam()
-        //{
-            
-          
-            
-           
-
-        //}
         public AliciForm(LoginForm login, string Ad ,int walletBalance,int id)
         {
             InitializeComponent();
@@ -39,17 +26,13 @@ namespace YZMYapimiProjesi.Alici
             _login = login;
             _ad = Ad;
             _walletBalance = walletBalance;
-            _id = id;
-            
-           
+            _id = id; 
         }
          public AliciForm()
         {
           
             InitializeComponent();
         }
-
-
 
         private void btnAl_Click(object sender, EventArgs e)
         {

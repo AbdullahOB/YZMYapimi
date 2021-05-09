@@ -31,7 +31,7 @@ namespace YZMYapimiProjesi.Alici
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParaEkleForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TbPara = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,22 +40,22 @@ namespace YZMYapimiProjesi.Alici
             this.btnYukle = new System.Windows.Forms.Button();
             this.errProvParaEkle = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvParaEkle)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // PbClose
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = global::YZMYapimiProjesi.Properties.Resources.close_window_32px;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PbClose.BackColor = System.Drawing.Color.Transparent;
+            this.PbClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PbClose.ErrorImage")));
+            this.PbClose.Image = global::YZMYapimiProjesi.Properties.Resources.close_window_32px;
+            this.PbClose.Location = new System.Drawing.Point(403, 12);
+            this.PbClose.Name = "PbClose";
+            this.PbClose.Size = new System.Drawing.Size(32, 32);
+            this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbClose.TabIndex = 0;
+            this.PbClose.TabStop = false;
+            this.PbClose.Click += new System.EventHandler(this.PbClose_Click);
             // 
             // label1
             // 
@@ -152,11 +152,11 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TbPara);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PbClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ParaEkleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvParaEkle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,7 +165,7 @@ namespace YZMYapimiProjesi.Alici
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PbClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TbPara;
         private System.Windows.Forms.Panel panel1;
