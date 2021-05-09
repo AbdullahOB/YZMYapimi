@@ -31,7 +31,6 @@ namespace YZMYapimiProjesi.Alici
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AliciForm));
-            this.PBimageGeriDon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,23 +48,13 @@ namespace YZMYapimiProjesi.Alici
             this.label7 = new System.Windows.Forms.Label();
             this.btnAl = new System.Windows.Forms.Button();
             this.errorProviderMiktar = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
+            this.PBimageGeriDon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PBimageGeriDon
-            // 
-            this.PBimageGeriDon.BackColor = System.Drawing.Color.Transparent;
-            this.PBimageGeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PBimageGeriDon.Image = ((System.Drawing.Image)(resources.GetObject("PBimageGeriDon.Image")));
-            this.PBimageGeriDon.Location = new System.Drawing.Point(12, 12);
-            this.PBimageGeriDon.Name = "PBimageGeriDon";
-            this.PBimageGeriDon.Size = new System.Drawing.Size(30, 31);
-            this.PBimageGeriDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBimageGeriDon.TabIndex = 18;
-            this.PBimageGeriDon.TabStop = false;
-            this.PBimageGeriDon.Click += new System.EventHandler(this.PBimageGeriDon_Click);
             // 
             // label1
             // 
@@ -97,7 +86,8 @@ namespace YZMYapimiProjesi.Alici
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(563, 162);
+            this.panel1.Location = new System.Drawing.Point(581, 66);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 276);
             this.panel1.TabIndex = 21;
@@ -106,8 +96,9 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(172, 135);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(102, 2);
+            this.panel2.Size = new System.Drawing.Size(101, 2);
             this.panel2.TabIndex = 27;
             // 
             // lblPara
@@ -116,7 +107,7 @@ namespace YZMYapimiProjesi.Alici
             this.lblPara.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPara.Location = new System.Drawing.Point(167, 110);
             this.lblPara.Name = "lblPara";
-            this.lblPara.Size = new System.Drawing.Size(94, 45);
+            this.lblPara.Size = new System.Drawing.Size(75, 36);
             this.lblPara.TabIndex = 26;
             this.lblPara.Text = "00000";
             // 
@@ -124,7 +115,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(273, 115);
+            this.label4.Location = new System.Drawing.Point(273, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 36);
             this.label4.TabIndex = 25;
@@ -135,7 +126,8 @@ namespace YZMYapimiProjesi.Alici
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(70, 179);
+            this.button1.Location = new System.Drawing.Point(69, 178);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 60);
             this.button1.TabIndex = 23;
@@ -169,7 +161,7 @@ namespace YZMYapimiProjesi.Alici
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(38, 175);
+            this.label5.Location = new System.Drawing.Point(42, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(304, 36);
             this.label5.TabIndex = 22;
@@ -186,7 +178,8 @@ namespace YZMYapimiProjesi.Alici
             "Yulaf",
             "Pilav",
             "Bulgur"});
-            this.CbUrun.Location = new System.Drawing.Point(44, 205);
+            this.CbUrun.Location = new System.Drawing.Point(49, 116);
+            this.CbUrun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbUrun.Name = "CbUrun";
             this.CbUrun.Size = new System.Drawing.Size(360, 40);
             this.CbUrun.TabIndex = 23;
@@ -196,7 +189,7 @@ namespace YZMYapimiProjesi.Alici
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(38, 255);
+            this.label6.Location = new System.Drawing.Point(42, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 36);
             this.label6.TabIndex = 24;
@@ -207,7 +200,8 @@ namespace YZMYapimiProjesi.Alici
             this.TbMiktar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TbMiktar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbMiktar.Font = new System.Drawing.Font("Myanmar Text", 10.8F);
-            this.TbMiktar.Location = new System.Drawing.Point(44, 285);
+            this.TbMiktar.Location = new System.Drawing.Point(49, 196);
+            this.TbMiktar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbMiktar.Name = "TbMiktar";
             this.TbMiktar.Size = new System.Drawing.Size(360, 34);
             this.TbMiktar.TabIndex = 25;
@@ -217,7 +211,8 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.CbOnayla.AutoSize = true;
             this.CbOnayla.ForeColor = System.Drawing.Color.Black;
-            this.CbOnayla.Location = new System.Drawing.Point(44, 334);
+            this.CbOnayla.Location = new System.Drawing.Point(49, 244);
+            this.CbOnayla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbOnayla.Name = "CbOnayla";
             this.CbOnayla.Size = new System.Drawing.Size(248, 21);
             this.CbOnayla.TabIndex = 26;
@@ -229,7 +224,7 @@ namespace YZMYapimiProjesi.Alici
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(285, 331);
+            this.label7.Location = new System.Drawing.Point(290, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 36);
             this.label7.TabIndex = 27;
@@ -240,9 +235,10 @@ namespace YZMYapimiProjesi.Alici
             this.btnAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAl.Location = new System.Drawing.Point(152, 370);
+            this.btnAl.Location = new System.Drawing.Point(157, 280);
+            this.btnAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAl.Name = "btnAl";
-            this.btnAl.Size = new System.Drawing.Size(140, 40);
+            this.btnAl.Size = new System.Drawing.Size(140, 39);
             this.btnAl.TabIndex = 28;
             this.btnAl.Text = "AL";
             this.btnAl.UseVisualStyleBackColor = false;
@@ -252,12 +248,40 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.errorProviderMiktar.ContainerControl = this;
             // 
+            // PBimageGeriDon
+            // 
+            this.PBimageGeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.PBimageGeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PBimageGeriDon.Image = ((System.Drawing.Image)(resources.GetObject("PBimageGeriDon.Image")));
+            this.PBimageGeriDon.Location = new System.Drawing.Point(12, 12);
+            this.PBimageGeriDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PBimageGeriDon.Name = "PBimageGeriDon";
+            this.PBimageGeriDon.Size = new System.Drawing.Size(29, 31);
+            this.PBimageGeriDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBimageGeriDon.TabIndex = 18;
+            this.PBimageGeriDon.TabStop = false;
+            this.PBimageGeriDon.Click += new System.EventHandler(this.PBimageGeriDon_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::YZMYapimiProjesi.Properties.Resources.refresh;
+            this.pictureBox1.Location = new System.Drawing.Point(890, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // AliciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(952, 600);
+            this.ClientSize = new System.Drawing.Size(952, 399);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAl);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.CbOnayla);
@@ -271,13 +295,16 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.PBimageGeriDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AliciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALICI";
-            ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).EndInit();
+            this.Load += new System.EventHandler(this.AliciForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +330,6 @@ namespace YZMYapimiProjesi.Alici
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAl;
         private System.Windows.Forms.ErrorProvider errorProviderMiktar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

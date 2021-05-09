@@ -63,7 +63,7 @@ namespace YZMYapimiProjesi.Admin
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(73, 232);
+            this.label2.Location = new System.Drawing.Point(90, 232);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(7);
             this.label2.Size = new System.Drawing.Size(301, 40);
@@ -96,12 +96,13 @@ namespace YZMYapimiProjesi.Admin
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("D-DIN Condensed", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(518, 12);
+            this.label1.Location = new System.Drawing.Point(519, 12);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(7);
             this.label1.Size = new System.Drawing.Size(218, 52);
             this.label1.TabIndex = 1;
             this.label1.Text = "Merhaba, Admin";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // KullaniciLstBtn
             // 

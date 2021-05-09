@@ -8,24 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YZMYapimiProjesi.DB;
 
 namespace YZMYapimiProjesi.Alici
 {
     public partial class ParaEkleForm : Form
     {
-        private int Toplam;
-
+        private readonly DBEntity1 _db;
+        private int ParaMiktari;
         public ParaEkleForm()
         {
             InitializeComponent();
+            _db = new DBEntity1();
         }
-        private int ParaMiktari;
-
-        //Database Connection
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand cmd = new SqlCommand();
-
-
+        
         private void btnYukle_Click(object sender, EventArgs e)
         {
             ParaMiktari = Int32.Parse(TbPara.Text);
@@ -36,14 +32,7 @@ namespace YZMYapimiProjesi.Alici
             else
             {
 
-                con.Open();
-                string query = "INSERT INTO [AliciTable](WalletBalance) VALUES('" + ParaMiktari + "')";
-                cmd = new SqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-
                 Alici.AliciForm frm = new Alici.AliciForm();
-                frm.getToplam(Toplam.ToString());
                 MessageBox.Show("Paranız Yüklendi!", "Yükleme Başarlı", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
                 this.Hide();
 
@@ -56,7 +45,7 @@ namespace YZMYapimiProjesi.Alici
             sart.AllowNumberOnly(e, TbPara, errProvParaEkle);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PbClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
