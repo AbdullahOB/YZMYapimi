@@ -74,7 +74,7 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(135, 154);
+            this.textBox1.Location = new System.Drawing.Point(135, 148);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceHolderText = "Ürün Miktarı (kg)";
             this.textBox1.Size = new System.Drawing.Size(180, 26);
