@@ -14,6 +14,7 @@ namespace YZMYapimiProjesi
         [STAThread]
         static void Main()
         {
+            /*Starts From Login*/
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login.LoginForm());
