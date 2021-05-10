@@ -123,7 +123,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label3.Location = new System.Drawing.Point(199, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 23);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Soyad";
             // 
             // label4
@@ -199,7 +199,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtSoyad.Location = new System.Drawing.Point(203, 94);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(201, 44);
-            this.txtSoyad.TabIndex = 1;
+            this.txtSoyad.TabIndex = 5;
             this.txtSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyad_KeyPress);
             // 
             // txtTC
@@ -212,7 +212,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtTC.Location = new System.Drawing.Point(56, 164);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(348, 44);
-            this.txtTC.TabIndex = 2;
+            this.txtTC.TabIndex = 6;
             this.txtTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTC_KeyPress);
             // 
             // txtKullaniciAdi
@@ -225,7 +225,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtKullaniciAdi.Location = new System.Drawing.Point(56, 234);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(348, 44);
-            this.txtKullaniciAdi.TabIndex = 3;
+            this.txtKullaniciAdi.TabIndex = 7;
             this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciAdi_KeyPress);
             // 
             // txtAdres
@@ -238,7 +238,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtAdres.Location = new System.Drawing.Point(56, 303);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(348, 44);
-            this.txtAdres.TabIndex = 4;
+            this.txtAdres.TabIndex = 8;
             // 
             // txtTelNo
             // 
@@ -250,7 +250,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtTelNo.Location = new System.Drawing.Point(56, 373);
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.Size = new System.Drawing.Size(348, 44);
-            this.txtTelNo.TabIndex = 5;
+            this.txtTelNo.TabIndex = 9;
             this.txtTelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelNo_KeyPress);
             // 
             // txtEposta
@@ -263,7 +263,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtEposta.Location = new System.Drawing.Point(56, 443);
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.Size = new System.Drawing.Size(348, 44);
-            this.txtEposta.TabIndex = 6;
+            this.txtEposta.TabIndex = 10;
             // 
             // txtSifre1
             // 
@@ -275,7 +275,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtSifre1.Location = new System.Drawing.Point(57, 515);
             this.txtSifre1.Name = "txtSifre1";
             this.txtSifre1.Size = new System.Drawing.Size(169, 44);
-            this.txtSifre1.TabIndex = 7;
+            this.txtSifre1.TabIndex = 11;
             // 
             // txtSifre2
             // 
@@ -287,7 +287,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtSifre2.Location = new System.Drawing.Point(231, 515);
             this.txtSifre2.Name = "txtSifre2";
             this.txtSifre2.Size = new System.Drawing.Size(173, 44);
-            this.txtSifre2.TabIndex = 8;
+            this.txtSifre2.TabIndex = 12;
             // 
             // btnSgnUp
             // 
@@ -296,7 +296,7 @@ namespace YZMYapimiProjesi.SignUp
             this.btnSgnUp.Location = new System.Drawing.Point(56, 630);
             this.btnSgnUp.Name = "btnSgnUp";
             this.btnSgnUp.Size = new System.Drawing.Size(348, 51);
-            this.btnSgnUp.TabIndex = 11;
+            this.btnSgnUp.TabIndex = 15;
             this.btnSgnUp.Text = "ÜYE OL";
             this.btnSgnUp.UseVisualStyleBackColor = false;
             this.btnSgnUp.Click += new System.EventHandler(this.btnSgnUp_Click);
@@ -508,7 +508,7 @@ namespace YZMYapimiProjesi.SignUp
             this.RBalici.Location = new System.Drawing.Point(275, 584);
             this.RBalici.Name = "RBalici";
             this.RBalici.Size = new System.Drawing.Size(66, 27);
-            this.RBalici.TabIndex = 10;
+            this.RBalici.TabIndex = 14;
             this.RBalici.TabStop = true;
             this.RBalici.Text = "Alıcı";
             this.RBalici.UseVisualStyleBackColor = true;
@@ -521,7 +521,7 @@ namespace YZMYapimiProjesi.SignUp
             this.RBsatici.Location = new System.Drawing.Point(183, 584);
             this.RBsatici.Name = "RBsatici";
             this.RBsatici.Size = new System.Drawing.Size(75, 27);
-            this.RBsatici.TabIndex = 9;
+            this.RBsatici.TabIndex = 13;
             this.RBsatici.TabStop = true;
             this.RBsatici.Text = "Satıcı";
             this.RBsatici.UseVisualStyleBackColor = true;
@@ -542,7 +542,7 @@ namespace YZMYapimiProjesi.SignUp
             this.txtAd.Location = new System.Drawing.Point(57, 94);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(140, 44);
-            this.txtAd.TabIndex = 0;
+            this.txtAd.TabIndex = 4;
             this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAd_KeyPress);
             // 
             // panel2

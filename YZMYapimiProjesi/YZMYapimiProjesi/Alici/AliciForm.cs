@@ -14,6 +14,7 @@ namespace YZMYapimiProjesi.Alici
     public partial class AliciForm : Form
     {
         private readonly DbEntity _db;
+        private YaziSartlari sart;
         public LoginForm _login;
         public string _ad;
         public int _walletBalance;
@@ -29,20 +30,11 @@ namespace YZMYapimiProjesi.Alici
             _id = id;
             
         }
-
          public AliciForm()
         {
           
             InitializeComponent();
         }
-
-        private void btnAl_Click(object sender, EventArgs e)
-        {
-            var user = _db.KullaniciTables.Find(_id);
-            user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
-            _db.SaveChanges();
-        }
-
         private void PBimageGeriDon_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -50,40 +42,54 @@ namespace YZMYapimiProjesi.Alici
             log.Show();
         }
 
-
-        readonly YaziSartlari sart = new YaziSartlari();
-
         private void TbMiktar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            sart.AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
+            sart = new YaziSartlari();
+            sart.AllowNumberOnly(e, TbMiktar, errorProviderMiktar);
         }
 
         private void btnParaYukle_Click(object sender, EventArgs e)
         {
-            var formPopup = new ParaEkleForm(_id , _ad);
+            var formPopup = new ParaEkleForm(_id, _ad);
             formPopup.Show();
         }
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
-            // TODO: check if this is true use of new databse 
-            DbEntity db2 = new DbEntity();
-            var req = db2.RequestTables.FirstOrDefault(q => q.KullaniciId == _id);
-            var statue = req.statueId;
-            var paraMiktari = req.ParaMiktari;
-            var user = db2.KullaniciTables.Find(_id);
-            if (statue == 1)
+            var req = _db.RequestTables.FirstOrDefault(q => q.KullaniciId == _id);
+            var user = _db.KullaniciTables.Find(_id);
+            if (req != null)
             {
-                user.WalletBalance += paraMiktari;
+                var statue = req.Statue.Id;
+                var paraMiktari = req.ParaMiktari;
+                
+                if (statue == 1)
+                {
+                    MessageBox.Show(paraMiktari + " TL Olan Talebiniz Kabul Edilmistir!", "Onay", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    user.WalletBalance += paraMiktari;
+                    _db.RequestTables.Remove(req);
+                }
+                else if (statue == 2)
+                {
+                    MessageBox.Show(paraMiktari +" TL Olan Talebiniz Red Edilmistir!", "Red", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    user.WalletBalance += 0;
+                    _db.RequestTables.Remove(req);
+                }
+                else
+                {
+                    MessageBox.Show("Geçmiş Talebleriniz Beklemede! Lütfen Daha Sonra Deneyniz", "Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                _db.SaveChanges();
+                lblPara.Text = user.WalletBalance.ToString();
             }
-            else if(statue == 2)
+            else
             {
-                user.WalletBalance += 0;
+                lblPara.Text = user.WalletBalance.ToString();
+                MessageBox.Show("Paranız Güncellenmiştir !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
 
-            lblPara.Text = user.WalletBalance.ToString();
-            
         }
 
         private void AliciForm_Load(object sender, EventArgs e)
@@ -91,6 +97,18 @@ namespace YZMYapimiProjesi.Alici
             lblName.Text = _ad;
             lblPara.Text = _walletBalance.ToString();
         }
+        private void btnAl_Click(object sender, EventArgs e)
+        {
+            var user = _db.KullaniciTables.Find(_id);
+            user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
+            _db.SaveChanges();
+
+            AlimRapor rpr = new AlimRapor(CbUrun.Text, Convert.ToInt32(TbMiktar.Text));
+            rpr.Show();
+
+        }
+
+
 
 
     }
