@@ -56,40 +56,8 @@ namespace YZMYapimiProjesi.Alici
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
-            var req = _db.RequestTables.FirstOrDefault(q => q.KullaniciId == _id);
             var user = _db.KullaniciTables.Find(_id);
-            if (req != null)
-            {
-                var statue = req.Statue.Id;
-                var paraMiktari = req.ParaMiktari;
-                
-                if (statue == 1)
-                {
-                    MessageBox.Show(paraMiktari + " TL Olan Talebiniz Kabul Edilmistir!", "Onay", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    user.WalletBalance += paraMiktari;
-                    _db.RequestTables.Remove(req);
-                }
-                else if (statue == 2)
-                {
-                    MessageBox.Show(paraMiktari +" TL Olan Talebiniz Red Edilmistir!", "Red", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    user.WalletBalance += 0;
-                    _db.RequestTables.Remove(req);
-                }
-                else
-                {
-                    MessageBox.Show("Geçmiş Talebleriniz Beklemede! Lütfen Daha Sonra Deneyniz", "Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                _db.SaveChanges();
-                lblPara.Text = user.WalletBalance.ToString();
-            }
-            else
-            {
-                lblPara.Text = user.WalletBalance.ToString();
-                MessageBox.Show("Paranız Güncellenmiştir !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
-
+            lblPara.Text = user.WalletBalance.ToString();
         }
 
         private void AliciForm_Load(object sender, EventArgs e)
