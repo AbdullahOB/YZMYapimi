@@ -15,6 +15,7 @@ namespace YZMYapimiProjesi.Satici
         public SaticiForm()
         {
             InitializeComponent();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -27,8 +28,22 @@ namespace YZMYapimiProjesi.Satici
         private void UrunEkbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            UrunEkForm obj = new UrunEkForm();
+            obj.Show();
             
           
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SaticiForm_Load(object sender, EventArgs e)
+        {
+            
+            
+        }
+
     }
 }

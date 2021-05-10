@@ -96,6 +96,7 @@ namespace YZMYapimiProjesi.Satici
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(247, 329);
             this.listBox2.TabIndex = 6;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // UrunEkbtn
             // 
@@ -145,6 +146,7 @@ namespace YZMYapimiProjesi.Satici
             this.Controls.Add(this.pictureBox1);
             this.Name = "SaticiForm";
             this.Text = "SaticiForm";
+            this.Load += new System.EventHandler(this.SaticiForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,10 +159,10 @@ namespace YZMYapimiProjesi.Satici
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label isimlabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button UrunEkbtn;
         private System.Windows.Forms.Button UrunSilbtn;
+        public System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.ListBox listBox2;
     }
 }
