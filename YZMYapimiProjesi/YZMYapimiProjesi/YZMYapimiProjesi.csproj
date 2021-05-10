@@ -201,11 +201,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Satici\cmb.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Satici\Düzeltme Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\Düzeltme Form.Designer.cs">
+      <DependentUpon>Düzeltme Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Satici\SaticiForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Satici\SaticiForm.Designer.cs">
       <DependentUpon>SaticiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satici\UrunEkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\UrunEkForm.Designer.cs">
+      <DependentUpon>UrunEkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp\SignUpFormu.cs">
       <SubType>Form</SubType>
@@ -240,8 +255,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Satici\Düzeltme Form.resx">
+      <DependentUpon>Düzeltme Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Satici\SaticiForm.resx">
       <DependentUpon>SaticiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\UrunEkForm.resx">
+      <DependentUpon>UrunEkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
