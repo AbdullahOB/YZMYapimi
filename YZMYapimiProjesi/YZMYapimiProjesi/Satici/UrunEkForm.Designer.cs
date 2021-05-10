@@ -35,6 +35,7 @@ namespace YZMYapimiProjesi.Satici
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
             this.textBox1 = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +83,20 @@ namespace YZMYapimiProjesi.Satici
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Ürün Miktarı (kg)";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(93, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(152, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
             // UrunEkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -106,5 +116,6 @@ namespace YZMYapimiProjesi.Satici
         private PHTextBox textBox2;
         private System.Windows.Forms.Button button1;
         private PHTextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

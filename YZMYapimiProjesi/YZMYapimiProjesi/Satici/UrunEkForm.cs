@@ -7,20 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using YZMYapimiProjesi.DB;
 namespace YZMYapimiProjesi.Satici
 {
     public partial class UrunEkForm : Form
     {
-        public UrunEkForm()
+        private readonly DbEntity _db;
+        public int _id;
+        
+        public UrunEkForm(int id )
         {
             InitializeComponent();
+
+            _db = new DbEntity();
+            _id = id;
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SaticiForm obj1 = new SaticiForm();
+            SaticiForm obj1 = new SaticiForm(_id);
             obj1.Show();
         }
 
@@ -38,15 +45,20 @@ namespace YZMYapimiProjesi.Satici
 
         public void button1_Click(object sender, EventArgs e)
         {
-            SaticiForm ek = new SaticiForm();
-            if (ek.ShowDialog(this) == DialogResult.OK)
-            {
-                // Read the contents of form2's TextBox. 
-                ek.listBox2.Items.Add(textBox1.Text);
-               
-            }
 
-            ek.Dispose();
+            var users = _db.KullaniciTables.Find(_id);
+            var satReq = _db.SaticiRequest.Create();
+            satReq.Id += 1;
+            satReq.KullaniciId = _id;
+            satReq.urnAdi = comboBox1.SelectedIndex.ToString();
+            satReq.urnMiktari = Convert.ToInt32(textBox1.Text);
+            satReq.urnFiyati = Convert.ToInt32(textBox2.Text);
+            satReq.StatueId = 3;
+            satReq.Message = users.KullaniciAdi + " Urun Ekleme Telpi Gonderdi ";
+            _db.SaticiRequest.Add(satReq);
+            _db.SaveChanges();
+
+
         }
     }
 }

@@ -19,9 +19,9 @@ namespace YZMYapimiProjesi.Satici
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SaticiForm satici = new SaticiForm();
-            satici.Show();
+            //this.Hide();
+            //SaticiForm satici = new SaticiForm();
+            //satici.Show();
 
         }
     }
