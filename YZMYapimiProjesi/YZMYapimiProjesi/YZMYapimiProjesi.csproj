@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
@@ -121,6 +124,12 @@
     </Compile>
     <Compile Include="Alici\AliciForm.Designer.cs">
       <DependentUpon>AliciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alici\AlimRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alici\AlimRapor.Designer.cs">
+      <DependentUpon>AlimRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Alici\ParaEkleForm.cs">
       <SubType>Form</SubType>
@@ -217,6 +226,9 @@
     <EmbeddedResource Include="Alici\AliciForm.resx">
       <DependentUpon>AliciForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alici\AlimRapor.resx">
+      <DependentUpon>AlimRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alici\ParaEkleForm.resx">
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +289,8 @@
     </Content>
     <None Include="Resources\icons8_refresh_641.png" />
     <None Include="Resources\icons8_downward_arrow_641.png" />
+    <None Include="Resources\icons8_save_64.png" />
+    <None Include="Resources\icons8_save_32.png" />
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>

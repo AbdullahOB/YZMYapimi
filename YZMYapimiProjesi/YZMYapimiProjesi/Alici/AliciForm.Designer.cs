@@ -37,6 +37,7 @@ namespace YZMYapimiProjesi.Alici
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPara = new System.Windows.Forms.Label();
+            this.PbRefresh = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnParaYukle = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,12 +52,11 @@ namespace YZMYapimiProjesi.Alici
             this.errorProviderMiktar = new System.Windows.Forms.ErrorProvider(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PbRefresh = new System.Windows.Forms.PictureBox();
             this.PBimageGeriDon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,11 +119,24 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.lblPara.AutoSize = true;
             this.lblPara.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPara.Location = new System.Drawing.Point(181, 110);
+            this.lblPara.Location = new System.Drawing.Point(183, 110);
             this.lblPara.Name = "lblPara";
             this.lblPara.Size = new System.Drawing.Size(75, 36);
             this.lblPara.TabIndex = 26;
             this.lblPara.Text = "00000";
+            // 
+            // PbRefresh
+            // 
+            this.PbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbRefresh.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_refresh_641;
+            this.PbRefresh.Location = new System.Drawing.Point(318, 4);
+            this.PbRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.PbRefresh.Name = "PbRefresh";
+            this.PbRefresh.Size = new System.Drawing.Size(40, 34);
+            this.PbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbRefresh.TabIndex = 29;
+            this.PbRefresh.TabStop = false;
+            this.PbRefresh.Click += new System.EventHandler(this.PbRefresh_Click);
             // 
             // label4
             // 
@@ -153,7 +166,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 111);
+            this.label3.Location = new System.Drawing.Point(39, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 36);
             this.label3.TabIndex = 22;
@@ -286,19 +299,6 @@ namespace YZMYapimiProjesi.Alici
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
-            // PbRefresh
-            // 
-            this.PbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbRefresh.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_refresh_641;
-            this.PbRefresh.Location = new System.Drawing.Point(318, 4);
-            this.PbRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.PbRefresh.Name = "PbRefresh";
-            this.PbRefresh.Size = new System.Drawing.Size(40, 34);
-            this.PbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbRefresh.TabIndex = 29;
-            this.PbRefresh.TabStop = false;
-            this.PbRefresh.Click += new System.EventHandler(this.PbRefresh_Click);
-            // 
             // PBimageGeriDon
             // 
             this.PBimageGeriDon.BackColor = System.Drawing.Color.Transparent;
@@ -341,9 +341,9 @@ namespace YZMYapimiProjesi.Alici
             this.Load += new System.EventHandler(this.AliciForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBimageGeriDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

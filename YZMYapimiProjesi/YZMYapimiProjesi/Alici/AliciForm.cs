@@ -14,6 +14,7 @@ namespace YZMYapimiProjesi.Alici
     public partial class AliciForm : Form
     {
         private readonly DbEntity _db;
+        private YaziSartlari sart;
         public LoginForm _login;
         public string _ad;
         public int _walletBalance;
@@ -29,20 +30,11 @@ namespace YZMYapimiProjesi.Alici
             _id = id;
             
         }
-
          public AliciForm()
         {
           
             InitializeComponent();
         }
-
-        private void btnAl_Click(object sender, EventArgs e)
-        {
-            var user = _db.KullaniciTables.Find(_id);
-            user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
-            _db.SaveChanges();
-        }
-
         private void PBimageGeriDon_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -50,28 +42,25 @@ namespace YZMYapimiProjesi.Alici
             log.Show();
         }
 
-
-        readonly YaziSartlari sart = new YaziSartlari();
-
         private void TbMiktar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            sart.AllowNumberOnly(e, TbMiktar , errorProviderMiktar);
+            sart = new YaziSartlari();
+            sart.AllowNumberOnly(e, TbMiktar, errorProviderMiktar);
         }
 
         private void btnParaYukle_Click(object sender, EventArgs e)
         {
-            var formPopup = new ParaEkleForm(_id , _ad);
+            var formPopup = new ParaEkleForm(_id, _ad);
             formPopup.Show();
         }
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
-            // TODO: check if this is true use of new databse 
 
             var user = _db.KullaniciTables.Find(_id);
 
+
             lblPara.Text = user.WalletBalance.ToString();
-            
         }
 
         private void AliciForm_Load(object sender, EventArgs e)
@@ -81,6 +70,18 @@ namespace YZMYapimiProjesi.Alici
             lblPara.Text = _walletBalance.ToString();
 
         }
+        private void btnAl_Click(object sender, EventArgs e)
+        {
+            var user = _db.KullaniciTables.Find(_id);
+            user.WalletBalance -= Convert.ToInt32(TbMiktar.Text);
+            _db.SaveChanges();
+
+            AlimRapor rpr = new AlimRapor(CbUrun.Text, Convert.ToInt32(TbMiktar.Text));
+            rpr.Show();
+
+        }
+
+
 
 
     }
