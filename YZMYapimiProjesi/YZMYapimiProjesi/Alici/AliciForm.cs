@@ -67,20 +67,8 @@ namespace YZMYapimiProjesi.Alici
         private void PbRefresh_Click(object sender, EventArgs e)
         {
             // TODO: check if this is true use of new databse 
-            DbEntity db2 = new DbEntity();
-            var req = db2.RequestTables.FirstOrDefault(q => q.KullaniciId == _id);
-            var statue = req.statueId;
-            var paraMiktari = req.ParaMiktari;
-            var user = db2.KullaniciTables.Find(_id);
-            if (statue == 1)
-            {
-                user.WalletBalance += paraMiktari;
-            }
-            else if(statue == 2)
-            {
-                user.WalletBalance += 0;
-            }
-            
+
+            var user = _db.KullaniciTables.Find(_id);
 
             lblPara.Text = user.WalletBalance.ToString();
             
