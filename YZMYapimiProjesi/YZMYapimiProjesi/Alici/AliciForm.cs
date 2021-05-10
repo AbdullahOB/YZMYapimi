@@ -89,7 +89,9 @@ namespace YZMYapimiProjesi.Alici
         private void AliciForm_Load(object sender, EventArgs e)
         {
             lblName.Text = _ad;
+
             lblPara.Text = _walletBalance.ToString();
+
         }
 
 

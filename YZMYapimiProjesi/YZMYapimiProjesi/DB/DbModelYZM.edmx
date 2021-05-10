@@ -46,6 +46,36 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="KullaniciTipi" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="SaticiRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="KullaniciId" Type="int" Nullable="false" />
+          <Property Name="urnAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="urnMiktari" Type="int" Nullable="false" />
+          <Property Name="urnFiyati" Type="int" Nullable="false" />
+          <Property Name="StatueId" Type="int" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SaticiStatueId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaticiVarliklari">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciId" Type="int" Nullable="false" />
+          <Property Name="urnAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="urnMiktari" Type="int" Nullable="false" />
+          <Property Name="urnFiyat" Type="float" Nullable="false" />
+          <Property Name="SaticiStatueId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Statue">
           <Key>
             <PropertyRef Name="Id" />
@@ -129,6 +159,42 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SaticiRequest_KullaniciTable">
+          <End Role="KullaniciTable" Type="Self.KullaniciTable" Multiplicity="1" />
+          <End Role="SaticiRequest" Type="Self.SaticiRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KullaniciTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiRequest">
+              <PropertyRef Name="KullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaticiRequest_SaticiStatueId">
+          <End Role="SaticiStatueId" Type="Self.SaticiStatueId" Multiplicity="1" />
+          <End Role="SaticiRequest" Type="Self.SaticiRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaticiStatueId">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiRequest">
+              <PropertyRef Name="StatueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaticiVarliklari_KullaniciTable">
+          <End Role="KullaniciTable" Type="Self.KullaniciTable" Multiplicity="1" />
+          <End Role="SaticiVarliklari" Type="Self.SaticiVarliklari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KullaniciTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiVarliklari">
+              <PropertyRef Name="KullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -165,6 +231,9 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <EntitySet Name="KullaniciTable" EntityType="Self.KullaniciTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RequestTable" EntityType="Self.RequestTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaticiRequest" EntityType="Self.SaticiRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaticiStatueId" EntityType="Self.SaticiStatueId" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaticiVarliklari" EntityType="Self.SaticiVarliklari" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Statue" EntityType="Self.Statue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
@@ -192,6 +261,18 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <AssociationSet Name="FK_RequestTable_Statue" Association="Self.FK_RequestTable_Statue">
             <End Role="Statue" EntitySet="Statue" />
             <End Role="RequestTable" EntitySet="RequestTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaticiRequest_KullaniciTable" Association="Self.FK_SaticiRequest_KullaniciTable">
+            <End Role="KullaniciTable" EntitySet="KullaniciTable" />
+            <End Role="SaticiRequest" EntitySet="SaticiRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaticiRequest_SaticiStatueId" Association="Self.FK_SaticiRequest_SaticiStatueId">
+            <End Role="SaticiStatueId" EntitySet="SaticiStatueId" />
+            <End Role="SaticiRequest" EntitySet="SaticiRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaticiVarliklari_KullaniciTable" Association="Self.FK_SaticiVarliklari_KullaniciTable">
+            <End Role="KullaniciTable" EntitySet="KullaniciTable" />
+            <End Role="SaticiVarliklari" EntitySet="SaticiVarliklari" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -225,6 +306,8 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Name="WalletBalance" Type="Int32" />
           <NavigationProperty Name="KullaniciRoles" Relationship="Self.FK_KullaniciRole_KullaniciTable" FromRole="KullaniciTable" ToRole="KullaniciRole" />
           <NavigationProperty Name="RequestTables" Relationship="Self.FK_RequestTable_KullaniciTable" FromRole="KullaniciTable" ToRole="RequestTable" />
+          <NavigationProperty Name="SaticiRequest" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_KullaniciTable" FromRole="KullaniciTable" ToRole="SaticiRequest" />
+          <NavigationProperty Name="SaticiVarliklari" Relationship="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable" FromRole="KullaniciTable" ToRole="SaticiVarliklari" />
         </EntityType>
         <EntityType Name="RequestTable">
           <Key>
@@ -382,6 +465,21 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="SaticiStatueId" EntityType="YZMYapimiDB1Model.SaticiStatueId" />
+          <EntitySet Name="SaticiVarliklari" EntityType="YZMYapimiDB1Model.SaticiVarliklari" />
+          <EntitySet Name="SaticiRequest" EntityType="YZMYapimiDB1Model.SaticiRequest" />
+          <AssociationSet Name="FK_SaticiRequest_KullaniciTable" Association="YZMYapimiDB1Model.FK_SaticiRequest_KullaniciTable">
+            <End Role="KullaniciTable" EntitySet="KullaniciTables" />
+            <End Role="SaticiRequest" EntitySet="SaticiRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaticiVarliklari_KullaniciTable" Association="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable">
+            <End Role="KullaniciTable" EntitySet="KullaniciTables" />
+            <End Role="SaticiVarliklari" EntitySet="SaticiVarliklari" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaticiRequest_SaticiStatueId" Association="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId">
+            <End Role="SaticiStatueId" EntitySet="SaticiStatueId" />
+            <End Role="SaticiRequest" EntitySet="SaticiRequest" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -394,6 +492,81 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="SaticiStatueId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SaticiRequest" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId" FromRole="SaticiStatueId" ToRole="SaticiRequest" />
+        </EntityType>
+        <EntityType Name="SaticiVarliklari">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciId" Type="Int32" Nullable="false" />
+          <Property Name="urnAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urnMiktari" Type="Int32" Nullable="false" />
+          <Property Name="urnFiyat" Type="Double" Nullable="false" />
+          <Property Name="SaticiStatueId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="KullaniciTable" Relationship="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable" FromRole="SaticiVarliklari" ToRole="KullaniciTable" />
+        </EntityType>
+        <EntityType Name="SaticiRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="KullaniciId" />
+            <PropertyRef Name="urnAdi" />
+            <PropertyRef Name="urnMiktari" />
+            <PropertyRef Name="urnFiyati" />
+            <PropertyRef Name="StatueId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="KullaniciId" Type="Int32" Nullable="false" />
+          <Property Name="urnAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urnMiktari" Type="Int32" Nullable="false" />
+          <Property Name="urnFiyati" Type="Int32" Nullable="false" />
+          <Property Name="StatueId" Type="Int32" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="KullaniciTable" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_KullaniciTable" FromRole="SaticiRequest" ToRole="KullaniciTable" />
+          <NavigationProperty Name="SaticiStatueId" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId" FromRole="SaticiRequest" ToRole="SaticiStatueId" />
+        </EntityType>
+        <Association Name="FK_SaticiRequest_KullaniciTable">
+          <End Type="YZMYapimiDB1Model.KullaniciTable" Role="KullaniciTable" Multiplicity="1" />
+          <End Type="YZMYapimiDB1Model.SaticiRequest" Role="SaticiRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KullaniciTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiRequest">
+              <PropertyRef Name="KullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaticiVarliklari_KullaniciTable">
+          <End Type="YZMYapimiDB1Model.KullaniciTable" Role="KullaniciTable" Multiplicity="1" />
+          <End Type="YZMYapimiDB1Model.SaticiVarliklari" Role="SaticiVarliklari" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KullaniciTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiVarliklari">
+              <PropertyRef Name="KullaniciId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaticiRequest_SaticiStatueId">
+          <End Type="YZMYapimiDB1Model.SaticiStatueId" Role="SaticiStatueId" Multiplicity="1" />
+          <End Type="YZMYapimiDB1Model.SaticiRequest" Role="SaticiRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaticiStatueId">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaticiRequest">
+              <PropertyRef Name="StatueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -500,6 +673,39 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="YZMYapimiDB1Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="YZMYapimiDB1Model.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="SaticiStatueId">
+            <EntityTypeMapping TypeName="YZMYapimiDB1Model.SaticiStatueId">
+              <MappingFragment StoreEntitySet="SaticiStatueId">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaticiVarliklari">
+            <EntityTypeMapping TypeName="YZMYapimiDB1Model.SaticiVarliklari">
+              <MappingFragment StoreEntitySet="SaticiVarliklari">
+                <ScalarProperty Name="SaticiStatueId" ColumnName="SaticiStatueId" />
+                <ScalarProperty Name="urnFiyat" ColumnName="urnFiyat" />
+                <ScalarProperty Name="urnMiktari" ColumnName="urnMiktari" />
+                <ScalarProperty Name="urnAdi" ColumnName="urnAdi" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaticiRequest">
+            <EntityTypeMapping TypeName="YZMYapimiDB1Model.SaticiRequest">
+              <MappingFragment StoreEntitySet="SaticiRequest">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="StatueId" ColumnName="StatueId" />
+                <ScalarProperty Name="urnFiyati" ColumnName="urnFiyati" />
+                <ScalarProperty Name="urnMiktari" ColumnName="urnMiktari" />
+                <ScalarProperty Name="urnAdi" ColumnName="urnAdi" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -514,7 +720,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

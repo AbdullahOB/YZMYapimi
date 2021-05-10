@@ -104,9 +104,6 @@
     <Compile Include="Admin\Assets\TextStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Admin\backgroundStyle.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Admin\ParaEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +156,15 @@
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiRequest.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiStatueId.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiVarliklari.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">

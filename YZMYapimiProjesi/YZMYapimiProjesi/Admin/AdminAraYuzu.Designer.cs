@@ -32,7 +32,6 @@ namespace YZMYapimiProjesi.Admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAraYuzu));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.aliciParaEklemeLst = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.KullaniciLstBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,6 +40,10 @@ namespace YZMYapimiProjesi.Admin
             this.onayBekleyenUrnLst = new System.Windows.Forms.ListBox();
             this.ExitBtn = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ParaEklemeLst = new System.Windows.Forms.ListView();
+            this.KullaniciIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MesajCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +53,7 @@ namespace YZMYapimiProjesi.Admin
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(404, 232);
+            this.label3.Location = new System.Drawing.Point(588, 232);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(7);
             this.label3.Size = new System.Drawing.Size(294, 40);
@@ -63,32 +66,12 @@ namespace YZMYapimiProjesi.Admin
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(90, 232);
+            this.label2.Location = new System.Drawing.Point(25, 232);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(7);
             this.label2.Size = new System.Drawing.Size(301, 40);
             this.label2.TabIndex = 8;
             this.label2.Text = "Onay Bekleyen Ürün Listesi";
-            // 
-            // aliciParaEklemeLst
-            // 
-            this.aliciParaEklemeLst.AllowDrop = true;
-            this.aliciParaEklemeLst.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.aliciParaEklemeLst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.aliciParaEklemeLst.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aliciParaEklemeLst.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.aliciParaEklemeLst.FormattingEnabled = true;
-            this.aliciParaEklemeLst.ItemHeight = 16;
-            this.aliciParaEklemeLst.Items.AddRange(new object[] {
-            "Abdullah 300TL Ekleme İstedi",
-            "Mahmoud 200TL Ekleme İstedi",
-            "Abdulselam 200TL Ekleme İstedi"});
-            this.aliciParaEklemeLst.Location = new System.Drawing.Point(419, 275);
-            this.aliciParaEklemeLst.Name = "aliciParaEklemeLst";
-            this.aliciParaEklemeLst.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.aliciParaEklemeLst.Size = new System.Drawing.Size(279, 258);
-            this.aliciParaEklemeLst.TabIndex = 5;
-            this.aliciParaEklemeLst.SelectedIndexChanged += new System.EventHandler(this.aliciParaEklemeLst_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -144,7 +127,7 @@ namespace YZMYapimiProjesi.Admin
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(728, 275);
+            this.label4.Location = new System.Drawing.Point(145, 87);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(7);
             this.label4.Size = new System.Drawing.Size(387, 47);
@@ -157,7 +140,7 @@ namespace YZMYapimiProjesi.Admin
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(855, 322);
+            this.label5.Location = new System.Drawing.Point(254, 134);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(7);
             this.label5.Size = new System.Drawing.Size(120, 47);
@@ -177,10 +160,10 @@ namespace YZMYapimiProjesi.Admin
             "Ahmet 300KG Buğday Eklemek İstedi",
             "Halit 200KG Pamuk Eklemek İstedi",
             "Muhammet 100KG Yulaf Eklemek İstedi"});
-            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(95, 275);
+            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(30, 275);
             this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
             this.onayBekleyenUrnLst.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(279, 258);
+            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(541, 258);
             this.onayBekleyenUrnLst.TabIndex = 5;
             this.onayBekleyenUrnLst.SelectedIndexChanged += new System.EventHandler(this.onayBekleyenUrnLst_SelectedIndexChanged);
             // 
@@ -210,19 +193,53 @@ namespace YZMYapimiProjesi.Admin
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.geriDonButonu);
             // 
+            // ParaEklemeLst
+            // 
+            this.ParaEklemeLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ReqId,
+            this.KullaniciIdCol,
+            this.MesajCol});
+            this.ParaEklemeLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParaEklemeLst.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.ParaEklemeLst.FullRowSelect = true;
+            this.ParaEklemeLst.HideSelection = false;
+            this.ParaEklemeLst.Location = new System.Drawing.Point(593, 275);
+            this.ParaEklemeLst.Name = "ParaEklemeLst";
+            this.ParaEklemeLst.Size = new System.Drawing.Size(594, 258);
+            this.ParaEklemeLst.TabIndex = 14;
+            this.ParaEklemeLst.UseCompatibleStateImageBehavior = false;
+            this.ParaEklemeLst.View = System.Windows.Forms.View.Details;
+            this.ParaEklemeLst.SelectedIndexChanged += new System.EventHandler(this.ParaEklemeLst_SelectedIndexChanged);
+            this.ParaEklemeLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ParaEklemeLst_MouseDoubleClick);
+            // 
+            // KullaniciIdCol
+            // 
+            this.KullaniciIdCol.Text = "Kullanici Id";
+            this.KullaniciIdCol.Width = 93;
+            // 
+            // MesajCol
+            // 
+            this.MesajCol.Text = "Mesaj";
+            this.MesajCol.Width = 378;
+            // 
+            // ReqId
+            // 
+            this.ReqId.Text = "Request Id";
+            this.ReqId.Width = 89;
+            // 
             // AdminAraYuzu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1243, 628);
+            this.Controls.Add(this.ParaEklemeLst);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.KullaniciLstBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.onayBekleyenUrnLst);
-            this.Controls.Add(this.aliciParaEklemeLst);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -231,6 +248,8 @@ namespace YZMYapimiProjesi.Admin
             this.Name = "AdminAraYuzu";
             this.Text = "AdminAraYuzu";
             this.Load += new System.EventHandler(this.AdminAraYuzu_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminAraYuzu_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminAraYuzu_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,7 +258,6 @@ namespace YZMYapimiProjesi.Admin
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox aliciParaEklemeLst;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button KullaniciLstBtn;
@@ -249,5 +267,9 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox onayBekleyenUrnLst;
         private System.Windows.Forms.Label ExitBtn;
+        public System.Windows.Forms.ListView ParaEklemeLst;
+        private System.Windows.Forms.ColumnHeader KullaniciIdCol;
+        private System.Windows.Forms.ColumnHeader MesajCol;
+        private System.Windows.Forms.ColumnHeader ReqId;
     }
 }

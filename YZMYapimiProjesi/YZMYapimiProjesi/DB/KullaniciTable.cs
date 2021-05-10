@@ -19,6 +19,8 @@ namespace YZMYapimiProjesi.DB
         {
             this.KullaniciRoles = new HashSet<KullaniciRole>();
             this.RequestTables = new HashSet<RequestTable>();
+            this.SaticiRequest = new HashSet<SaticiRequest>();
+            this.SaticiVarliklari = new HashSet<SaticiVarliklari>();
         }
     
         public int Id { get; set; }
@@ -37,5 +39,9 @@ namespace YZMYapimiProjesi.DB
         public virtual ICollection<KullaniciRole> KullaniciRoles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestTable> RequestTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SaticiRequest> SaticiRequest { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SaticiVarliklari> SaticiVarliklari { get; set; }
     }
 }
