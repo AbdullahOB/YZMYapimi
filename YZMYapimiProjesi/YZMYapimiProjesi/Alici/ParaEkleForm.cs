@@ -14,14 +14,14 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class ParaEkleForm : Form
     {
-        private readonly DBEntity _db;
+        private readonly DbEntity _db;
         private int ParaMiktari = 0;
         public int _id;
         public string _ad;
         public ParaEkleForm(int UserId , string ad)
         {
             InitializeComponent();
-            _db = new DBEntity();
+            _db = new DbEntity();
             _ad = ad;
             _id = UserId;
 

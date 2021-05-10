@@ -19,12 +19,12 @@ namespace YZMYapimiProjesi.Login
 {
     public partial class LoginForm : Form
     {
-        private readonly DBEntity _db;
+        private readonly DbEntity _db;
 
         public LoginForm()
         {
             InitializeComponent();
-            _db = new DBEntity();
+            _db = new DbEntity();
         }
         private void button3_Click(object sender, EventArgs e)
         {
