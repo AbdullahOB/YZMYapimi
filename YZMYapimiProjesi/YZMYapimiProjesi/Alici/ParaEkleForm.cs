@@ -40,18 +40,12 @@ namespace YZMYapimiProjesi.Alici
                 if (ParaMiktari< 1000 && ParaMiktari>0)
                 {
 
-
-
-
-
-
                     var req = _db.RequestTables.Create();
                     req.KullaniciId = _id;
                     req.statueId = 3;
-                    req.MsgSubject = _ad + "isimli kullanici" + ParaMiktari + " Para Talepi Gonderdi";
+                    req.MsgSubject = _ad + " isimli kullanici " + ParaMiktari + " TL Para Talepi Gonderdi";
                     req.ParaMiktari = ParaMiktari;
                     _db.RequestTables.Add(req);
-
 
 
                     MessageBox.Show("Talebiniz Alinmistir", "Yükleme Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);

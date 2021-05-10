@@ -269,6 +269,8 @@
       <DependentUpon>DbModelYZM.edmx</DependentUpon>
       <LastGenOutput>DbModelYZM.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_refresh_641.png" />
+    <None Include="Resources\icons8_downward_arrow_641.png" />
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>

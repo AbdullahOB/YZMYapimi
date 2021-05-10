@@ -34,6 +34,7 @@ namespace YZMYapimiProjesi.Alici
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPara = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace YZMYapimiProjesi.Alici
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PbRefresh = new System.Windows.Forms.PictureBox();
             this.PBimageGeriDon = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,6 +97,14 @@ namespace YZMYapimiProjesi.Alici
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(363, 276);
             this.panel1.TabIndex = 21;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Location = new System.Drawing.Point(35, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(269, 4);
+            this.panel3.TabIndex = 31;
             // 
             // panel2
             // 
@@ -269,7 +277,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_downward_arrow_48;
+            this.pictureBox1.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_downward_arrow_641;
             this.pictureBox1.Location = new System.Drawing.Point(878, 34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -281,7 +289,7 @@ namespace YZMYapimiProjesi.Alici
             // PbRefresh
             // 
             this.PbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbRefresh.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_refresh_64;
+            this.PbRefresh.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_refresh_641;
             this.PbRefresh.Location = new System.Drawing.Point(318, 4);
             this.PbRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.PbRefresh.Name = "PbRefresh";
@@ -304,14 +312,6 @@ namespace YZMYapimiProjesi.Alici
             this.PBimageGeriDon.TabIndex = 18;
             this.PBimageGeriDon.TabStop = false;
             this.PBimageGeriDon.Click += new System.EventHandler(this.PBimageGeriDon_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Location = new System.Drawing.Point(35, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 4);
-            this.panel3.TabIndex = 31;
             // 
             // AliciForm
             // 

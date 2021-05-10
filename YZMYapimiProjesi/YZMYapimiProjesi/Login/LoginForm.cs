@@ -20,11 +20,17 @@ namespace YZMYapimiProjesi.Login
     public partial class LoginForm : Form
     {
         private readonly DbEntity _db;
-
+ 
         public LoginForm()
         {
             InitializeComponent();
             _db = new DbEntity();
+        }
+        public LoginForm(string name)
+        {
+            InitializeComponent();
+            _db = new DbEntity();
+            textBox1.Text = name;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -34,8 +40,6 @@ namespace YZMYapimiProjesi.Login
                 var kullanici = textBox1.Text.Trim();
                 var sifre = textBox2.Text;
                 var user = _db.KullaniciTables.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
-                
-                
                 if(user == null)
                 {
                     MessageBox.Show("Hatali Sifre Veya Kullanici Adi Girdiniz ...");

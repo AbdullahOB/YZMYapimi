@@ -120,7 +120,7 @@ namespace YZMYapimiProjesi.Alici
             this.btnYukle.Name = "btnYukle";
             this.btnYukle.Size = new System.Drawing.Size(323, 47);
             this.btnYukle.TabIndex = 24;
-            this.btnYukle.Text = "Para Yükle";
+            this.btnYukle.Text = "Talep Gönder";
             this.btnYukle.UseVisualStyleBackColor = false;
             this.btnYukle.Click += new System.EventHandler(this.btnYukle_Click);
             // 
