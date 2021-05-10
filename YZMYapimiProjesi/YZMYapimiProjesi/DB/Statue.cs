@@ -12,29 +12,17 @@ namespace YZMYapimiProjesi.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class KullaniciTable
+    public partial class Statue
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KullaniciTable()
+        public Statue()
         {
-            this.KullaniciRoles = new HashSet<KullaniciRole>();
             this.RequestTables = new HashSet<RequestTable>();
         }
     
         public int Id { get; set; }
-        public string KullaniciAdi { get; set; }
-        public string Sifre { get; set; }
-        public string Ad { get; set; }
-        public string Soyad { get; set; }
-        public string Email { get; set; }
-        public long TCKimlikNo { get; set; }
-        public long Tel { get; set; }
-        public string Adres { get; set; }
-        public string KullaniciTipi { get; set; }
-        public Nullable<int> WalletBalance { get; set; }
+        public string Name { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KullaniciRole> KullaniciRoles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestTable> RequestTables { get; set; }
     }

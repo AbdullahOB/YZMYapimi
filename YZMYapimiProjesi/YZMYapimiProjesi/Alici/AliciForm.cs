@@ -13,7 +13,7 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class AliciForm : Form
     {
-        private readonly DBEntity1 _db;
+        private readonly DbEntity _db;
         public LoginForm _login;
         public string _ad;
         public int _walletBalance;
@@ -22,7 +22,7 @@ namespace YZMYapimiProjesi.Alici
         public AliciForm(LoginForm login, string Ad ,int walletBalance,int id)
         {
             InitializeComponent();
-            _db = new DBEntity1();
+            _db = new DbEntity();
             _login = login;
             _ad = Ad;
             _walletBalance = walletBalance;
@@ -60,16 +60,30 @@ namespace YZMYapimiProjesi.Alici
 
         private void btnParaYukle_Click(object sender, EventArgs e)
         {
-            var formPopup = new ParaEkleForm(_id);
+            var formPopup = new ParaEkleForm(_id , _ad);
             formPopup.Show();
         }
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
             // TODO: check if this is true use of new databse 
-            DBEntity1 db2 = new DBEntity1();
+            DbEntity db2 = new DbEntity();
+            var req = db2.RequestTables.FirstOrDefault(q => q.KullaniciId == _id);
+            var statue = req.statueId;
+            var paraMiktari = req.ParaMiktari;
             var user = db2.KullaniciTables.Find(_id);
+            if (statue == 1)
+            {
+                user.WalletBalance += paraMiktari;
+            }
+            else if(statue == 2)
+            {
+                user.WalletBalance += 0;
+            }
+            
+
             lblPara.Text = user.WalletBalance.ToString();
+            
         }
 
         private void AliciForm_Load(object sender, EventArgs e)

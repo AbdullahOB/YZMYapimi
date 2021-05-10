@@ -14,17 +14,21 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class ParaEkleForm : Form
     {
-        private readonly DBEntity1 _db;
+        private readonly DbEntity _db;
         private int ParaMiktari = 0;
         public int _id;
-        public ParaEkleForm(int UserId)
+        public string _ad;
+        public ParaEkleForm(int UserId , string ad)
         {
             InitializeComponent();
-            _db = new DBEntity1();
+            _db = new DbEntity();
+            _ad = ad;
             _id = UserId;
+
         }
         private void btnYukle_Click(object sender, EventArgs e)
         {
+
             if (TbPara.Text != "")
             {
                 ParaMiktari = Int32.Parse(TbPara.Text);
@@ -35,10 +39,21 @@ namespace YZMYapimiProjesi.Alici
                 
                 if (ParaMiktari< 1000 && ParaMiktari>0)
                 {
+
                     
-                    MessageBox.Show("Paranız Yüklendi!", "Yükleme Başarlı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    var users = _db.KullaniciTables.Find(_id);
-                    users.WalletBalance += ParaMiktari;
+
+                    var reqstat = _db.RequestTables.FirstOrDefault(p=> p.KullaniciId == _id);
+
+                   
+                    reqstat.ParaMiktari = ParaMiktari;
+                    var msg = _ad + "isimli kullanici" + ParaMiktari + " Para Talepi Gonderdi";
+                    reqstat.MsgSubject = msg;
+                    reqstat.statueId = 3;
+
+
+
+                    MessageBox.Show("Talebiniz Alinmistir", "Yükleme Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     _db.SaveChanges();
                     this.Hide();
                 }
