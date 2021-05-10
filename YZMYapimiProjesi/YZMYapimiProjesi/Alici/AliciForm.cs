@@ -56,14 +56,19 @@ namespace YZMYapimiProjesi.Alici
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
+
             var user = _db.KullaniciTables.Find(_id);
+
+
             lblPara.Text = user.WalletBalance.ToString();
         }
 
         private void AliciForm_Load(object sender, EventArgs e)
         {
             lblName.Text = _ad;
+
             lblPara.Text = _walletBalance.ToString();
+
         }
         private void btnAl_Click(object sender, EventArgs e)
         {
