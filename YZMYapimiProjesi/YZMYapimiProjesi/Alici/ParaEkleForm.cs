@@ -14,14 +14,14 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class ParaEkleForm : Form
     {
-        private readonly DbEntity _db;
+        private readonly DBEntity _db;
         private int ParaMiktari = 0;
         public int _id;
         public string _ad;
         public ParaEkleForm(int UserId , string ad)
         {
             InitializeComponent();
-            _db = new DbEntity();
+            _db = new DBEntity();
             _ad = ad;
             _id = UserId;
 
@@ -40,15 +40,17 @@ namespace YZMYapimiProjesi.Alici
                 if (ParaMiktari< 1000 && ParaMiktari>0)
                 {
 
-                    
 
-                    var reqstat = _db.RequestTables.FirstOrDefault(p=> p.KullaniciId == _id);
 
-                   
-                    reqstat.ParaMiktari = ParaMiktari;
-                    var msg = _ad + "isimli kullanici" + ParaMiktari + " Para Talepi Gonderdi";
-                    reqstat.MsgSubject = msg;
-                    reqstat.statueId = 3;
+
+
+
+                    var req = _db.RequestTables.Create();
+                    req.KullaniciId = _id;
+                    req.statueId = 3;
+                    req.MsgSubject = _ad + "isimli kullanici" + ParaMiktari + " Para Talepi Gonderdi";
+                    req.ParaMiktari = ParaMiktari;
+                    _db.RequestTables.Add(req);
 
 
 
