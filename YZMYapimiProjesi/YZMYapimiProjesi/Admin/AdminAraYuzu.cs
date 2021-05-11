@@ -65,7 +65,9 @@ namespace YZMYapimiProjesi.Admin
 
         private void geriDonButonu(object sender, EventArgs e)
         {
-
+            Login.LoginForm log = new Login.LoginForm();
+            log.Show();
+            Close();
         }
 
         private void kullanicilarListesiKaydet(object sender, EventArgs e)

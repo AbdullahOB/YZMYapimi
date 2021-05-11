@@ -29,34 +29,43 @@ namespace YZMYapimiProjesi.Satici
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.urnTipiCmb = new System.Windows.Forms.ComboBox();
+            this.TalepGonder = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.redSebebiTxt = new System.Windows.Forms.Label();
-            this.textBox2 = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
-            this.textBox1 = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
+            this.urnFiyatiTxt = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
+            this.urnMiktariTxt = new YZMYapimiProjesi.Admin.Assets.PHTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // urnTipiCmb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.urnTipiCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.urnTipiCmb.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnTipiCmb.FormattingEnabled = true;
+            this.urnTipiCmb.Items.AddRange(new object[] {
+            "Buğday",
+            "Pamuk",
+            "Yulaf"});
+            this.urnTipiCmb.Location = new System.Drawing.Point(106, 121);
+            this.urnTipiCmb.Name = "urnTipiCmb";
+            this.urnTipiCmb.Size = new System.Drawing.Size(152, 31);
+            this.urnTipiCmb.Sorted = true;
+            this.urnTipiCmb.TabIndex = 9;
             // 
-            // button1
+            // TalepGonder
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(115, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 50);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Talep Gönder";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.TalepGonder.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TalepGonder.Location = new System.Drawing.Point(115, 333);
+            this.TalepGonder.Name = "TalepGonder";
+            this.TalepGonder.Size = new System.Drawing.Size(132, 50);
+            this.TalepGonder.TabIndex = 8;
+            this.TalepGonder.Text = "Talep Gönder";
+            this.TalepGonder.UseVisualStyleBackColor = true;
+            this.TalepGonder.Click += new System.EventHandler(this.TalepGonderBtn);
             // 
             // pictureBox1
             // 
@@ -73,46 +82,77 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.redSebebiTxt.AutoSize = true;
             this.redSebebiTxt.Font = new System.Drawing.Font("D-DIN Exp", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redSebebiTxt.Location = new System.Drawing.Point(114, 61);
+            this.redSebebiTxt.Location = new System.Drawing.Point(114, 24);
             this.redSebebiTxt.Name = "redSebebiTxt";
             this.redSebebiTxt.Size = new System.Drawing.Size(144, 28);
             this.redSebebiTxt.TabIndex = 10;
             this.redSebebiTxt.Text = "Red Sebebi";
             // 
-            // textBox2
+            // urnFiyatiTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(106, 259);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceHolderText = "Birim Fıyatı(TL)";
-            this.textBox2.Size = new System.Drawing.Size(152, 26);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Birim Fıyatı(TL)";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.urnFiyatiTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnFiyatiTxt.ForeColor = System.Drawing.Color.Gray;
+            this.urnFiyatiTxt.Location = new System.Drawing.Point(106, 282);
+            this.urnFiyatiTxt.Name = "urnFiyatiTxt";
+            this.urnFiyatiTxt.PlaceHolderText = "";
+            this.urnFiyatiTxt.Size = new System.Drawing.Size(152, 26);
+            this.urnFiyatiTxt.TabIndex = 6;
+            this.urnFiyatiTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.urnFiyatiTxt_KeyPress);
             // 
-            // textBox1
+            // urnMiktariTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(106, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceHolderText = "Ürün Miktarı (kg)";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Ürün Miktarı (kg)";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.urnMiktariTxt.Location = new System.Drawing.Point(106, 202);
+            this.urnMiktariTxt.MaximumSize = new System.Drawing.Size(1000, 200);
+            this.urnMiktariTxt.MinimumSize = new System.Drawing.Size(0, 30);
+            this.urnMiktariTxt.Name = "urnMiktariTxt";
+            this.urnMiktariTxt.PlaceHolderText = "dvsdv";
+            this.urnMiktariTxt.Size = new System.Drawing.Size(152, 30);
+            this.urnMiktariTxt.TabIndex = 11;
+            this.urnMiktariTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.urnMiktariTxt_KeyPress_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(129, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Ürün Seçin";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(126, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 24);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Ürün Miktarı";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 255);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Ürün Birim Fiyati";
             // 
             // DuzetlmeFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 425);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.urnMiktariTxt);
             this.Controls.Add(this.redSebebiTxt);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.urnTipiCmb);
+            this.Controls.Add(this.TalepGonder);
+            this.Controls.Add(this.urnFiyatiTxt);
             this.Controls.Add(this.pictureBox1);
             this.Name = "DuzetlmeFormu";
             this.Text = "DuzetlmeFormu";
@@ -125,11 +165,14 @@ namespace YZMYapimiProjesi.Satici
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private Admin.Assets.PHTextBox textBox2;
-        private Admin.Assets.PHTextBox textBox1;
+        private System.Windows.Forms.ComboBox urnTipiCmb;
+        private System.Windows.Forms.Button TalepGonder;
+        private Admin.Assets.PHTextBox urnFiyatiTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label redSebebiTxt;
+        private Admin.Assets.PHTextBox urnMiktariTxt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

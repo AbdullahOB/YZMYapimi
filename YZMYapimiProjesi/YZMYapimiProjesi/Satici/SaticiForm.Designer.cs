@@ -36,16 +36,17 @@ namespace YZMYapimiProjesi.Satici
             this.UrunEkbtn = new System.Windows.Forms.Button();
             this.UrunSilbtn = new System.Windows.Forms.Button();
             this.onayBekleyenUrnLst = new System.Windows.Forms.ListView();
+            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.urnAdiCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.urnMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.urnFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stoktaLst = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stoktaUrnSilBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,12 +104,13 @@ namespace YZMYapimiProjesi.Satici
             // UrunSilbtn
             // 
             this.UrunSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrunSilbtn.Location = new System.Drawing.Point(470, 247);
+            this.UrunSilbtn.Location = new System.Drawing.Point(24, 435);
             this.UrunSilbtn.Name = "UrunSilbtn";
             this.UrunSilbtn.Size = new System.Drawing.Size(102, 42);
             this.UrunSilbtn.TabIndex = 7;
             this.UrunSilbtn.Text = "Ürün Sil";
             this.UrunSilbtn.UseVisualStyleBackColor = true;
+            this.UrunSilbtn.Click += new System.EventHandler(this.UrunSilbtn_Click);
             // 
             // onayBekleyenUrnLst
             // 
@@ -128,6 +130,11 @@ namespace YZMYapimiProjesi.Satici
             this.onayBekleyenUrnLst.UseCompatibleStateImageBehavior = false;
             this.onayBekleyenUrnLst.View = System.Windows.Forms.View.Details;
             this.onayBekleyenUrnLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.onayBekleyenUrnLst_MouseDoubleClick);
+            // 
+            // ReqId
+            // 
+            this.ReqId.Text = "Request Id";
+            this.ReqId.Width = 94;
             // 
             // urnAdiCol
             // 
@@ -155,11 +162,6 @@ namespace YZMYapimiProjesi.Satici
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // ReqId
-            // 
-            this.ReqId.Text = "Request Id";
-            this.ReqId.Width = 94;
-            // 
             // stoktaLst
             // 
             this.stoktaLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -180,7 +182,7 @@ namespace YZMYapimiProjesi.Satici
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Request Id";
+            this.columnHeader1.Text = "Stok Id";
             this.columnHeader1.Width = 94;
             // 
             // columnHeader2
@@ -198,13 +200,25 @@ namespace YZMYapimiProjesi.Satici
             this.columnHeader4.Text = "Urun Fiyat";
             this.columnHeader4.Width = 94;
             // 
+            // stoktaUrnSilBtn
+            // 
+            this.stoktaUrnSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stoktaUrnSilBtn.Location = new System.Drawing.Point(589, 435);
+            this.stoktaUrnSilBtn.Name = "stoktaUrnSilBtn";
+            this.stoktaUrnSilBtn.Size = new System.Drawing.Size(102, 42);
+            this.stoktaUrnSilBtn.TabIndex = 7;
+            this.stoktaUrnSilBtn.Text = "Ürün Sil";
+            this.stoktaUrnSilBtn.UseVisualStyleBackColor = true;
+            this.stoktaUrnSilBtn.Click += new System.EventHandler(this.StoktaUrunSilbtn_Click);
+            // 
             // SaticiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 499);
+            this.ClientSize = new System.Drawing.Size(1070, 667);
             this.Controls.Add(this.stoktaLst);
             this.Controls.Add(this.onayBekleyenUrnLst);
+            this.Controls.Add(this.stoktaUrnSilBtn);
             this.Controls.Add(this.UrunSilbtn);
             this.Controls.Add(this.UrunEkbtn);
             this.Controls.Add(this.label3);
@@ -240,5 +254,6 @@ namespace YZMYapimiProjesi.Satici
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button stoktaUrnSilBtn;
     }
 }

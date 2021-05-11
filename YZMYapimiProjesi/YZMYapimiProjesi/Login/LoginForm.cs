@@ -58,7 +58,7 @@ namespace YZMYapimiProjesi.Login
                    else if (roleNm == "Satici")
                     {
                         this.Hide();
-                        SaticiForm satici = new SaticiForm(user.Id);
+                        SaticiForm satici = new SaticiForm(user.Id , user.Ad);
                         satici.Show();
                     }
                    else if (roleNm == "Alici")

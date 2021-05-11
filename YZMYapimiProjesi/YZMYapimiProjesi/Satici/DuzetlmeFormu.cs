@@ -14,33 +14,15 @@ namespace YZMYapimiProjesi.Satici
     {
         private readonly DbEntity _db;
         private int _id;
-        
-        public DuzetlmeFormu(int reqId)
+        private string _saticiAdi;
+        YaziSartlari yaz = new YaziSartlari();
+        public DuzetlmeFormu(int reqId , string saticiAdi)
         {
             InitializeComponent();
           
             _id = reqId;
+            _saticiAdi = saticiAdi;
             _db = new DbEntity();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void DuzetlmeFormu_Load(object sender, EventArgs e)
@@ -50,14 +32,44 @@ namespace YZMYapimiProjesi.Satici
             var reqRed = _db.SaticiRequest.Find(_id);
             var redMsg = reqRed.MessageFromAdmin;
             redSebebiTxt.Text = redMsg;
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SaticiForm saticiForm = new SaticiForm(_id);
+            SaticiForm saticiForm = new SaticiForm(_id , _saticiAdi);
             saticiForm.Show();
-
             Hide();
+        }
+
+        private void TalepGonderBtn(object sender, EventArgs e)
+        {
+          
+           
+            var satReq = _db.SaticiRequest.Find(_id);
+            var users = _db.KullaniciTables.Find(satReq.KullaniciId);
+
+            satReq.urnAdi = urnTipiCmb.Text;
+            satReq.urnMiktari = Convert.ToInt32(urnMiktariTxt.Text);
+            satReq.urnFiyati = Convert.ToInt32(urnFiyatiTxt.Text);
+            satReq.StatueId = 3;
+
+            satReq.Message = users.KullaniciAdi + " Ürün Ekleme Talepi Düzetildi... ";
+            
+            _db.SaveChanges();
+        }
+
+      
+        private void urnFiyatiTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider err = new ErrorProvider();
+            yaz.AllowNumberOnly(e, urnFiyatiTxt, err);
+        }
+
+        private void urnMiktariTxt_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider err = new ErrorProvider();
+            yaz.AllowNumberOnly(e, urnMiktariTxt, err);
         }
     }
 }

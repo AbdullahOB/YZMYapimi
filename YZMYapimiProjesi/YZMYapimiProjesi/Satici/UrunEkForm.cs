@@ -14,13 +14,15 @@ namespace YZMYapimiProjesi.Satici
     public partial class UrunEkForm : Form
     {
         private readonly DbEntity _db;
+        private string _saticiAdi;
         public int _id;
         
-        public UrunEkForm(int id )
+        public UrunEkForm(int id , string saticiAdi)
         {
             InitializeComponent();
 
             _db = new DbEntity();
+            _saticiAdi = saticiAdi;
             _id = id;
           
         }
@@ -28,7 +30,7 @@ namespace YZMYapimiProjesi.Satici
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SaticiForm obj1 = new SaticiForm(_id);
+            SaticiForm obj1 = new SaticiForm(_id ,_saticiAdi);
             obj1.Show();
         }
 
@@ -39,16 +41,15 @@ namespace YZMYapimiProjesi.Satici
 
         private void UrunEkForm_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Buğday");
-            comboBox1.Items.Add("Yulaf");
-            comboBox1.Items.Add("Pamuk");
+        
         }
 
         public void button1_Click(object sender, EventArgs e)
         {
 
-            var users = _db.KullaniciTables.Find(_id);
+            
             var satReq = _db.SaticiRequest.Create();
+            var users = _db.KullaniciTables.Find(_id);
             satReq.KullaniciId = _id;
             satReq.urnAdi = comboBox1.Text;
             satReq.urnMiktari = Convert.ToInt32(textBox1.Text);
@@ -59,6 +60,18 @@ namespace YZMYapimiProjesi.Satici
             _db.SaveChanges();
 
 
+        }
+        YaziSartlari yaz = new YaziSartlari();
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider err = new ErrorProvider();
+            yaz.AllowNumberOnly(e, textBox1, err);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider err = new ErrorProvider();
+            yaz.AllowNumberOnly(e, textBox2, err);
         }
     }
 }

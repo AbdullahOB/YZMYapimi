@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqToDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,14 @@ namespace YZMYapimiProjesi.Satici
     public partial class SaticiForm : Form
     {
         private int _id;
+        private string _saticiAdi;
         private readonly DbEntity _db;
-        public SaticiForm(int id)
+        public SaticiForm(int id , string saticiAdi)
         {
             InitializeComponent();
             _db = new DbEntity();
             _id = id;
-           
+            _saticiAdi = saticiAdi;
             
         }
 
@@ -36,7 +38,7 @@ namespace YZMYapimiProjesi.Satici
            
 
             this.Hide();
-            UrunEkForm obj = new UrunEkForm(_id);
+            UrunEkForm obj = new UrunEkForm(_id , _saticiAdi);
             obj.Show();
             
           
@@ -49,24 +51,15 @@ namespace YZMYapimiProjesi.Satici
 
         private void SaticiForm_Load(object sender, EventArgs e)
         {
-            var stoktaUrn = _db.SaticiVarliklari.ToList();
-            foreach (var l in stoktaUrn)
-            {
-               
-                    ListViewItem addStok = new ListViewItem(l.urnAdi.ToString());
-                addStok.SubItems.Add(l.urnMiktari.ToString());
-                addStok.SubItems.Add(l.urnFiyat.ToString());
-                stoktaLst.Items.Add(addStok);
-               
 
+            isimlabel.Text = _saticiAdi;
 
-            }
-
+            //Onay Bekleyen
             var onayBekleyen = _db.SaticiRequest.ToList();
-            
-                foreach (var l in onayBekleyen)
-                {
-                if(l.StatueId == 2)
+
+            foreach (var l in onayBekleyen)
+            {
+                if (l.StatueId == 2)
                 {
                     ListViewItem addStok = new ListViewItem(l.Id.ToString());
                     addStok.BackColor = Color.Red;
@@ -74,13 +67,13 @@ namespace YZMYapimiProjesi.Satici
                     addStok.SubItems.Add(l.urnAdi);
                     addStok.SubItems.Add(l.urnMiktari.ToString());
                     addStok.SubItems.Add(l.urnFiyati.ToString());
-                  
+
                     onayBekleyenUrnLst.Items.Add(addStok);
-                    
+
 
                 }
 
-                else if(l.StatueId == 3)
+                else if (l.StatueId == 3)
                 {
                     ListViewItem addStok = new ListViewItem(l.Id.ToString());
                     addStok.SubItems.Add(l.urnAdi);
@@ -89,24 +82,135 @@ namespace YZMYapimiProjesi.Satici
                     onayBekleyenUrnLst.Items.Add(addStok);
                 }
 
-                   
+            }
 
+            //Stokta
+            var stoktaUrn = _db.SaticiVarliklari.ToList();
+            foreach (var l in stoktaUrn)
+            {
 
+                ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                addStok.SubItems.Add(l.urnAdi.ToString());
+                addStok.SubItems.Add(l.urnMiktari.ToString());
+                addStok.SubItems.Add(l.urnFiyat.ToString());
+                stoktaLst.Items.Add(addStok);
+            }
 
-                }
-            
-            
 
         }
 
         private void onayBekleyenUrnLst_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int reqIds = Convert.ToInt32(onayBekleyenUrnLst.SelectedItems[0].Text);
-            
-            DuzetlmeFormu duzetlmeFormu = new DuzetlmeFormu(reqIds);
-            duzetlmeFormu.Show();
-            Hide();
+            var reqDB = _db.SaticiRequest.Find(reqIds);
+
+            if(reqDB.StatueId == 2)
+            {
+                DuzetlmeFormu duzetlmeFormu = new DuzetlmeFormu(reqIds, _saticiAdi);
+                duzetlmeFormu.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Sadece Rededilmiş Ürünleri Düzeltebilirsiniz..");
+            }
+           
                 
          }
+
+        public void RefreshOnayLists()
+        {
+            onayBekleyenUrnLst.Items.Clear();
+            var onayBekleyen = _db.SaticiRequest.ToList();
+
+            foreach (var l in onayBekleyen)
+            {
+                if (l.StatueId == 2)
+                {
+                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                    addStok.BackColor = Color.Red;
+                    addStok.ForeColor = Color.White;
+                    addStok.SubItems.Add(l.urnAdi);
+                    addStok.SubItems.Add(l.urnMiktari.ToString());
+                    addStok.SubItems.Add(l.urnFiyati.ToString());
+
+                    onayBekleyenUrnLst.Items.Add(addStok);
+
+
+                }
+
+                else if (l.StatueId == 3)
+                {
+                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                    addStok.SubItems.Add(l.urnAdi);
+                    addStok.SubItems.Add(l.urnMiktari.ToString());
+                    addStok.SubItems.Add(l.urnFiyati.ToString());
+                    onayBekleyenUrnLst.Items.Add(addStok);
+                }
+
+            }
+
+
+
+        }
+
+        public void RefreshStokListesi()
+        {
+            //Stokta
+            stoktaLst.Items.Clear();
+            var stoktaUrn = _db.SaticiVarliklari.ToList();
+            foreach (var l in stoktaUrn)
+            {
+
+                ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                addStok.SubItems.Add(l.urnAdi.ToString());
+                addStok.SubItems.Add(l.urnMiktari.ToString());
+                addStok.SubItems.Add(l.urnFiyat.ToString());
+                stoktaLst.Items.Add(addStok);
+            }
+        }
+        private void UrunSilbtn_Click(object sender, EventArgs e)
+        {
+                if (onayBekleyenUrnLst.Items.Count > 0)
+                {
+                    try
+                    {
+                        int reqIds = Convert.ToInt32(onayBekleyenUrnLst.SelectedItems[0].Text);
+                        var SaticiReqId = _db.SaticiRequest.Find(reqIds);
+                        _db.SaticiRequest.Remove(SaticiReqId);
+                        _db.SaveChanges();
+                        RefreshOnayLists();
+                    }
+
+                    catch
+                    {
+                        MessageBox.Show("Bir Urun Seciniz");
+                    }
+
+
+                }
+
+           }
+
+        private void StoktaUrunSilbtn_Click(object sender, EventArgs e)
+        {
+            if (stoktaLst.Items.Count > 0)
+            {
+                try
+                {
+                    int VarlikId = Convert.ToInt32(stoktaLst.SelectedItems[0].Text);
+                    var Stok = _db.SaticiVarliklari.Find(VarlikId);
+                    _db.SaticiVarliklari.Remove(Stok);
+                    _db.SaveChanges();
+                    RefreshStokListesi();
+                }
+
+                catch
+                {
+                    MessageBox.Show("Bir Urun Seciniz");
+                }
+
+            }
+        }
     }
 }
