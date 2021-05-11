@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YZMYapimiProjesi.DB;
+
 namespace YZMYapimiProjesi.Satici
 {
     public partial class UrunEkForm : Form
@@ -48,9 +49,8 @@ namespace YZMYapimiProjesi.Satici
 
             var users = _db.KullaniciTables.Find(_id);
             var satReq = _db.SaticiRequest.Create();
-            satReq.Id += 1;
             satReq.KullaniciId = _id;
-            satReq.urnAdi = comboBox1.SelectedIndex.ToString();
+            satReq.urnAdi = comboBox1.Text;
             satReq.urnMiktari = Convert.ToInt32(textBox1.Text);
             satReq.urnFiyati = Convert.ToInt32(textBox2.Text);
             satReq.StatueId = 3;

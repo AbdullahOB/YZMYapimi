@@ -50,13 +50,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KullaniciId" Type="int" Nullable="false" />
           <Property Name="urnAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="urnMiktari" Type="int" Nullable="false" />
           <Property Name="urnFiyati" Type="int" Nullable="false" />
           <Property Name="StatueId" Type="int" Nullable="false" />
           <Property Name="Message" Type="nvarchar" MaxLength="50" />
+          <Property Name="MessageFromAdmin" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SaticiStatueId">
           <Key>
@@ -74,7 +75,7 @@
           <Property Name="urnAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="urnMiktari" Type="int" Nullable="false" />
           <Property Name="urnFiyat" Type="float" Nullable="false" />
-          <Property Name="SaticiStatueId" Type="int" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Statue">
           <Key>
@@ -509,17 +510,12 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Name="urnAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="urnMiktari" Type="Int32" Nullable="false" />
           <Property Name="urnFiyat" Type="Double" Nullable="false" />
-          <Property Name="SaticiStatueId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="KullaniciTable" Relationship="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable" FromRole="SaticiVarliklari" ToRole="KullaniciTable" />
+          <Property Name="Message" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SaticiRequest">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="KullaniciId" />
-            <PropertyRef Name="urnAdi" />
-            <PropertyRef Name="urnMiktari" />
-            <PropertyRef Name="urnFiyati" />
-            <PropertyRef Name="StatueId" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="KullaniciId" Type="Int32" Nullable="false" />
@@ -530,6 +526,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Name="Message" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="KullaniciTable" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_KullaniciTable" FromRole="SaticiRequest" ToRole="KullaniciTable" />
           <NavigationProperty Name="SaticiStatueId" Relationship="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId" FromRole="SaticiRequest" ToRole="SaticiStatueId" />
+          <Property Name="MessageFromAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_SaticiRequest_KullaniciTable">
           <End Type="YZMYapimiDB1Model.KullaniciTable" Role="KullaniciTable" Multiplicity="1" />
@@ -684,7 +681,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <EntitySetMapping Name="SaticiVarliklari">
             <EntityTypeMapping TypeName="YZMYapimiDB1Model.SaticiVarliklari">
               <MappingFragment StoreEntitySet="SaticiVarliklari">
-                <ScalarProperty Name="SaticiStatueId" ColumnName="SaticiStatueId" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="urnFiyat" ColumnName="urnFiyat" />
                 <ScalarProperty Name="urnMiktari" ColumnName="urnMiktari" />
                 <ScalarProperty Name="urnAdi" ColumnName="urnAdi" />
@@ -696,6 +693,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <EntitySetMapping Name="SaticiRequest">
             <EntityTypeMapping TypeName="YZMYapimiDB1Model.SaticiRequest">
               <MappingFragment StoreEntitySet="SaticiRequest">
+                <ScalarProperty Name="MessageFromAdmin" ColumnName="MessageFromAdmin" />
                 <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="StatueId" ColumnName="StatueId" />
                 <ScalarProperty Name="urnFiyati" ColumnName="urnFiyati" />

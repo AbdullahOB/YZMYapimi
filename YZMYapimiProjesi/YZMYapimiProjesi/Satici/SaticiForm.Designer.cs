@@ -32,12 +32,20 @@ namespace YZMYapimiProjesi.Satici
             this.label1 = new System.Windows.Forms.Label();
             this.isimlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.UrunEkbtn = new System.Windows.Forms.Button();
             this.UrunSilbtn = new System.Windows.Forms.Button();
+            this.onayBekleyenUrnLst = new System.Windows.Forms.ListView();
+            this.urnAdiCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.urnMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.urnFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stoktaLst = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,45 +73,28 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(604, 69);
+            this.label2.Location = new System.Drawing.Point(586, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Stokta Ürünlar";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(520, 100);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(253, 329);
-            this.listBox1.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 69);
+            this.label3.Location = new System.Drawing.Point(21, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Onay Bekleyen Ürün Listesi";
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(12, 100);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(247, 329);
-            this.listBox2.TabIndex = 6;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
             // UrunEkbtn
             // 
             this.UrunEkbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrunEkbtn.Location = new System.Drawing.Point(317, 138);
+            this.UrunEkbtn.Location = new System.Drawing.Point(470, 117);
             this.UrunEkbtn.Name = "UrunEkbtn";
-            this.UrunEkbtn.Size = new System.Drawing.Size(149, 73);
+            this.UrunEkbtn.Size = new System.Drawing.Size(102, 42);
             this.UrunEkbtn.TabIndex = 7;
             this.UrunEkbtn.Text = "Ürün Ekle";
             this.UrunEkbtn.UseVisualStyleBackColor = true;
@@ -112,12 +103,46 @@ namespace YZMYapimiProjesi.Satici
             // UrunSilbtn
             // 
             this.UrunSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrunSilbtn.Location = new System.Drawing.Point(317, 284);
+            this.UrunSilbtn.Location = new System.Drawing.Point(470, 247);
             this.UrunSilbtn.Name = "UrunSilbtn";
-            this.UrunSilbtn.Size = new System.Drawing.Size(149, 73);
+            this.UrunSilbtn.Size = new System.Drawing.Size(102, 42);
             this.UrunSilbtn.TabIndex = 7;
             this.UrunSilbtn.Text = "Ürün Sil";
             this.UrunSilbtn.UseVisualStyleBackColor = true;
+            // 
+            // onayBekleyenUrnLst
+            // 
+            this.onayBekleyenUrnLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ReqId,
+            this.urnAdiCol,
+            this.urnMiktari,
+            this.urnFiyat});
+            this.onayBekleyenUrnLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onayBekleyenUrnLst.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.onayBekleyenUrnLst.FullRowSelect = true;
+            this.onayBekleyenUrnLst.HideSelection = false;
+            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(24, 98);
+            this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
+            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(440, 331);
+            this.onayBekleyenUrnLst.TabIndex = 16;
+            this.onayBekleyenUrnLst.UseCompatibleStateImageBehavior = false;
+            this.onayBekleyenUrnLst.View = System.Windows.Forms.View.Details;
+            this.onayBekleyenUrnLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.onayBekleyenUrnLst_MouseDoubleClick);
+            // 
+            // urnAdiCol
+            // 
+            this.urnAdiCol.Text = "Urun Adi";
+            this.urnAdiCol.Width = 79;
+            // 
+            // urnMiktari
+            // 
+            this.urnMiktari.Text = "Urun Miktari";
+            this.urnMiktari.Width = 100;
+            // 
+            // urnFiyat
+            // 
+            this.urnFiyat.Text = "Urun Fiyat";
+            this.urnFiyat.Width = 94;
             // 
             // pictureBox1
             // 
@@ -130,16 +155,59 @@ namespace YZMYapimiProjesi.Satici
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // ReqId
+            // 
+            this.ReqId.Text = "Request Id";
+            this.ReqId.Width = 94;
+            // 
+            // stoktaLst
+            // 
+            this.stoktaLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.stoktaLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stoktaLst.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.stoktaLst.FullRowSelect = true;
+            this.stoktaLst.HideSelection = false;
+            this.stoktaLst.Location = new System.Drawing.Point(589, 98);
+            this.stoktaLst.Name = "stoktaLst";
+            this.stoktaLst.Size = new System.Drawing.Size(440, 331);
+            this.stoktaLst.TabIndex = 17;
+            this.stoktaLst.UseCompatibleStateImageBehavior = false;
+            this.stoktaLst.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Request Id";
+            this.columnHeader1.Width = 94;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Urun Adi";
+            this.columnHeader2.Width = 79;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Urun Miktari";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Urun Fiyat";
+            this.columnHeader4.Width = 94;
+            // 
             // SaticiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1070, 499);
+            this.Controls.Add(this.stoktaLst);
+            this.Controls.Add(this.onayBekleyenUrnLst);
             this.Controls.Add(this.UrunSilbtn);
             this.Controls.Add(this.UrunEkbtn);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.isimlabel);
             this.Controls.Add(this.label1);
@@ -162,7 +230,15 @@ namespace YZMYapimiProjesi.Satici
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button UrunEkbtn;
         private System.Windows.Forms.Button UrunSilbtn;
-        public System.Windows.Forms.ListBox listBox1;
-        public System.Windows.Forms.ListBox listBox2;
+        public System.Windows.Forms.ListView onayBekleyenUrnLst;
+        private System.Windows.Forms.ColumnHeader urnAdiCol;
+        private System.Windows.Forms.ColumnHeader urnMiktari;
+        private System.Windows.Forms.ColumnHeader urnFiyat;
+        private System.Windows.Forms.ColumnHeader ReqId;
+        public System.Windows.Forms.ListView stoktaLst;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

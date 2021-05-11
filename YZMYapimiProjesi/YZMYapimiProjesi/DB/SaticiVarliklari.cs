@@ -19,7 +19,7 @@ namespace YZMYapimiProjesi.DB
         public string urnAdi { get; set; }
         public int urnMiktari { get; set; }
         public double urnFiyat { get; set; }
-        public int SaticiStatueId { get; set; }
+        public string Message { get; set; }
     
         public virtual KullaniciTable KullaniciTable { get; set; }
     }

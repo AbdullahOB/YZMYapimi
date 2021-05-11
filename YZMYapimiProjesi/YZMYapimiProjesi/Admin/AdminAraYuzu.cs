@@ -26,8 +26,6 @@ namespace YZMYapimiProjesi.Admin
             InitializeComponent();
             _db = new DbEntity();
 
-         
-
         }
 
         private void AdminAraYuzu_Load(object sender, EventArgs e)
@@ -47,7 +45,21 @@ namespace YZMYapimiProjesi.Admin
                 
              
             }
-           
+
+
+            var SatReq = _db.SaticiRequest.ToList();
+            foreach (var l in SatReq)
+            {
+                if (l.StatueId == 3)
+                {
+                    ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
+                    addReqSat.SubItems.Add(l.KullaniciId.ToString());
+                    addReqSat.SubItems.Add(l.Message);
+                    onayBekleyenUrnLst.Items.Add(addReqSat);
+                }
+
+
+            }
 
         }
 
@@ -122,6 +134,17 @@ namespace YZMYapimiProjesi.Admin
             this.Hide();
             
 
+        }
+
+        private void onayBekleyenUrnLst_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int reqId = Convert.ToInt32(onayBekleyenUrnLst.SelectedItems[0].Text);
+
+
+
+            UrnBilgileri urnBilgiler = new UrnBilgileri(reqId);
+            urnBilgiler.Show();
+            this.Hide();
         }
     }
 }
