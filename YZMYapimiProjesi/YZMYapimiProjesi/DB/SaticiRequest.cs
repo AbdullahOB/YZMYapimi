@@ -21,6 +21,7 @@ namespace YZMYapimiProjesi.DB
         public int urnFiyati { get; set; }
         public int StatueId { get; set; }
         public string Message { get; set; }
+        public string MessageFromAdmin { get; set; }
     
         public virtual KullaniciTable KullaniciTable { get; set; }
         public virtual SaticiStatueId SaticiStatueId { get; set; }

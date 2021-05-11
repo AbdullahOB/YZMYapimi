@@ -204,11 +204,11 @@
     <Compile Include="Satici\cmb.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Satici\Düzeltme Form.cs">
+    <Compile Include="Satici\DuzetlmeFormu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Satici\Düzeltme Form.Designer.cs">
-      <DependentUpon>Düzeltme Form.cs</DependentUpon>
+    <Compile Include="Satici\DuzetlmeFormu.Designer.cs">
+      <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
     </Compile>
     <Compile Include="Satici\SaticiForm.cs">
       <SubType>Form</SubType>
@@ -255,8 +255,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Satici\Düzeltme Form.resx">
-      <DependentUpon>Düzeltme Form.cs</DependentUpon>
+    <EmbeddedResource Include="Satici\DuzetlmeFormu.resx">
+      <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Satici\SaticiForm.resx">
       <DependentUpon>SaticiForm.cs</DependentUpon>

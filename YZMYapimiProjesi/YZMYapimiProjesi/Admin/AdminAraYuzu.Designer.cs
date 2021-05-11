@@ -37,13 +37,16 @@ namespace YZMYapimiProjesi.Admin
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.onayBekleyenUrnLst = new System.Windows.Forms.ListBox();
             this.ExitBtn = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ParaEklemeLst = new System.Windows.Forms.ListView();
+            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.KullaniciIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MesajCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.onayBekleyenUrnLst = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,26 +150,6 @@ namespace YZMYapimiProjesi.Admin
             this.label5.TabIndex = 1;
             this.label5.Text = " çift tıkla";
             // 
-            // onayBekleyenUrnLst
-            // 
-            this.onayBekleyenUrnLst.AllowDrop = true;
-            this.onayBekleyenUrnLst.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.onayBekleyenUrnLst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.onayBekleyenUrnLst.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onayBekleyenUrnLst.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.onayBekleyenUrnLst.FormattingEnabled = true;
-            this.onayBekleyenUrnLst.ItemHeight = 16;
-            this.onayBekleyenUrnLst.Items.AddRange(new object[] {
-            "Ahmet 300KG Buğday Eklemek İstedi",
-            "Halit 200KG Pamuk Eklemek İstedi",
-            "Muhammet 100KG Yulaf Eklemek İstedi"});
-            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(30, 275);
-            this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
-            this.onayBekleyenUrnLst.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(541, 258);
-            this.onayBekleyenUrnLst.TabIndex = 5;
-            this.onayBekleyenUrnLst.SelectedIndexChanged += new System.EventHandler(this.onayBekleyenUrnLst_SelectedIndexChanged);
-            // 
             // ExitBtn
             // 
             this.ExitBtn.AutoSize = true;
@@ -212,6 +195,11 @@ namespace YZMYapimiProjesi.Admin
             this.ParaEklemeLst.SelectedIndexChanged += new System.EventHandler(this.ParaEklemeLst_SelectedIndexChanged);
             this.ParaEklemeLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ParaEklemeLst_MouseDoubleClick);
             // 
+            // ReqId
+            // 
+            this.ReqId.Text = "Request Id";
+            this.ReqId.Width = 89;
+            // 
             // KullaniciIdCol
             // 
             this.KullaniciIdCol.Text = "Kullanici Id";
@@ -222,10 +210,38 @@ namespace YZMYapimiProjesi.Admin
             this.MesajCol.Text = "Mesaj";
             this.MesajCol.Width = 378;
             // 
-            // ReqId
+            // onayBekleyenUrnLst
             // 
-            this.ReqId.Text = "Request Id";
-            this.ReqId.Width = 89;
+            this.onayBekleyenUrnLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.onayBekleyenUrnLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onayBekleyenUrnLst.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.onayBekleyenUrnLst.FullRowSelect = true;
+            this.onayBekleyenUrnLst.HideSelection = false;
+            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(30, 275);
+            this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
+            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(537, 258);
+            this.onayBekleyenUrnLst.TabIndex = 15;
+            this.onayBekleyenUrnLst.UseCompatibleStateImageBehavior = false;
+            this.onayBekleyenUrnLst.View = System.Windows.Forms.View.Details;
+            this.onayBekleyenUrnLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.onayBekleyenUrnLst_MouseDoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Request Id";
+            this.columnHeader1.Width = 89;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Kullanici Id";
+            this.columnHeader2.Width = 93;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Mesaj";
+            this.columnHeader3.Width = 315;
             // 
             // AdminAraYuzu
             // 
@@ -233,13 +249,13 @@ namespace YZMYapimiProjesi.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1243, 628);
+            this.Controls.Add(this.onayBekleyenUrnLst);
             this.Controls.Add(this.ParaEklemeLst);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.KullaniciLstBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.onayBekleyenUrnLst);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -265,11 +281,14 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox onayBekleyenUrnLst;
         private System.Windows.Forms.Label ExitBtn;
         public System.Windows.Forms.ListView ParaEklemeLst;
         private System.Windows.Forms.ColumnHeader KullaniciIdCol;
         private System.Windows.Forms.ColumnHeader MesajCol;
         private System.Windows.Forms.ColumnHeader ReqId;
+        public System.Windows.Forms.ListView onayBekleyenUrnLst;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

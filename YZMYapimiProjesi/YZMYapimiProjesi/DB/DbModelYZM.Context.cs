@@ -25,7 +25,6 @@ namespace YZMYapimiProjesi.DB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
-            modelBuilder.Entity<SaticiRequest>().ToTable("SaticiRequest");
         }
     
         public virtual DbSet<KullaniciRole> KullaniciRoles { get; set; }
