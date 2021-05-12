@@ -16,6 +16,8 @@
           <Property Name="SaticiId" Type="int" Nullable="false" />
           <Property Name="Fiyat" Type="float" Nullable="false" />
           <Property Name="Miktar" Type="int" Nullable="false" />
+          <Property Name="urnAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="islemZamani" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="KullaniciRole">
           <Key>
@@ -589,6 +591,8 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <Property Name="SaticiId" Type="Int32" Nullable="false" />
           <Property Name="Fiyat" Type="Double" Nullable="false" />
           <Property Name="Miktar" Type="Int32" Nullable="false" />
+          <Property Name="urnAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="islemZamani" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -733,6 +737,8 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
           <EntitySetMapping Name="AlimSatimIslemler">
             <EntityTypeMapping TypeName="YZMYapimiDB1Model.AlimSatimIslemler">
               <MappingFragment StoreEntitySet="AlimSatimIslemler">
+                <ScalarProperty Name="islemZamani" ColumnName="islemZamani" />
+                <ScalarProperty Name="urnAdi" ColumnName="urnAdi" />
                 <ScalarProperty Name="Miktar" ColumnName="Miktar" />
                 <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
                 <ScalarProperty Name="SaticiId" ColumnName="SaticiId" />

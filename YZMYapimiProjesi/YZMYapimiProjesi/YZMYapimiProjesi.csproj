@@ -308,6 +308,7 @@
     <Content Include="Admin\Assets\images\backGradient.png" />
     <Content Include="Admin\Assets\images\bg.jfif" />
     <Content Include="Admin\Assets\images\gradienta-ix_kUDzCczo-unsplash.jpg" />
+    <Content Include="Alici\Assets\diskette.png" />
     <Content Include="Alici\Assets\refresh.png" />
     <None Include="Resources\icons8_refresh_64.png" />
     <None Include="Resources\icons8_right_64.png" />
@@ -327,6 +328,7 @@
     <None Include="Resources\icons8_downward_arrow_641.png" />
     <None Include="Resources\icons8_save_64.png" />
     <None Include="Resources\icons8_save_32.png" />
+    <None Include="Resources\diskette.png" />
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>

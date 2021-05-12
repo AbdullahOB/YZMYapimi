@@ -73,6 +73,16 @@ namespace YZMYapimiProjesi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diskette {
+            get {
+                object obj = ResourceManager.GetObject("diskette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_arrow_left_circle_1303871 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_arrow_left_circle_1303871", resourceCulture);

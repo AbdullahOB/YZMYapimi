@@ -47,9 +47,10 @@ namespace YZMYapimiProjesi.Alici
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Location = new System.Drawing.Point(45, 76);
+            this.panel1.Location = new System.Drawing.Point(34, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 4);
+            this.panel1.Size = new System.Drawing.Size(242, 3);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -57,9 +58,10 @@ namespace YZMYapimiProjesi.Alici
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(85, 31);
+            this.label1.Location = new System.Drawing.Point(64, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 50);
+            this.label1.Size = new System.Drawing.Size(176, 39);
             this.label1.TabIndex = 4;
             this.label1.Text = "Alım Gerçekleşti";
             // 
@@ -68,9 +70,10 @@ namespace YZMYapimiProjesi.Alici
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.PbSave);
             this.panel2.Controls.Add(this.TbUrunBilgi);
-            this.panel2.Location = new System.Drawing.Point(45, 140);
+            this.panel2.Location = new System.Drawing.Point(34, 114);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(323, 309);
+            this.panel2.Size = new System.Drawing.Size(242, 251);
             this.panel2.TabIndex = 6;
             // 
             // PbSave
@@ -79,10 +82,11 @@ namespace YZMYapimiProjesi.Alici
             this.PbSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbSave.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PbSave.ErrorImage")));
             this.PbSave.Image = global::YZMYapimiProjesi.Properties.Resources.icons8_save_32;
-            this.PbSave.Location = new System.Drawing.Point(283, 269);
+            this.PbSave.Location = new System.Drawing.Point(212, 219);
+            this.PbSave.Margin = new System.Windows.Forms.Padding(2);
             this.PbSave.Name = "PbSave";
             this.PbSave.Size = new System.Drawing.Size(32, 32);
-            this.PbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbSave.TabIndex = 8;
             this.PbSave.TabStop = false;
             this.PbSave.Click += new System.EventHandler(this.PbSave_Click);
@@ -91,20 +95,23 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.TbUrunBilgi.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbUrunBilgi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TbUrunBilgi.Location = new System.Drawing.Point(6, 9);
+            this.TbUrunBilgi.Location = new System.Drawing.Point(4, 7);
+            this.TbUrunBilgi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TbUrunBilgi.Name = "TbUrunBilgi";
-            this.TbUrunBilgi.Size = new System.Drawing.Size(308, 292);
+            this.TbUrunBilgi.Size = new System.Drawing.Size(231, 237);
             this.TbUrunBilgi.TabIndex = 4;
-            this.TbUrunBilgi.Text = "Alım Bilgileri";
+            this.TbUrunBilgi.Text = "Alım Bilgileri ";
+            this.TbUrunBilgi.Click += new System.EventHandler(this.TbUrunBilgi_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(40, 104);
+            this.label2.Location = new System.Drawing.Point(30, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 30);
+            this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Alınan Ürün Bilgisi";
             // 
@@ -113,7 +120,8 @@ namespace YZMYapimiProjesi.Alici
             this.PbClose.BackColor = System.Drawing.Color.Transparent;
             this.PbClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PbClose.ErrorImage")));
             this.PbClose.Image = global::YZMYapimiProjesi.Properties.Resources.close_window_32px;
-            this.PbClose.Location = new System.Drawing.Point(370, 9);
+            this.PbClose.Location = new System.Drawing.Point(278, 7);
+            this.PbClose.Margin = new System.Windows.Forms.Padding(2);
             this.PbClose.Name = "PbClose";
             this.PbClose.Size = new System.Drawing.Size(32, 32);
             this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,10 +145,10 @@ namespace YZMYapimiProjesi.Alici
             // 
             // AlimRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(413, 471);
+            this.ClientSize = new System.Drawing.Size(310, 383);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -148,11 +156,12 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.PbClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AlimRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alım Raporu";
+            this.Load += new System.EventHandler(this.AlimRapor_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();
             this.ResumeLayout(false);

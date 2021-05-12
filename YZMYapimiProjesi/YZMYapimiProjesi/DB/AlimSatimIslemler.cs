@@ -21,5 +21,7 @@ namespace YZMYapimiProjesi.DB
         public int SaticiId { get; set; }
         public double Fiyat { get; set; }
         public int Miktar { get; set; }
+        public string urnAdi { get; set; }
+        public System.DateTime islemZamani { get; set; }
     }
 }
