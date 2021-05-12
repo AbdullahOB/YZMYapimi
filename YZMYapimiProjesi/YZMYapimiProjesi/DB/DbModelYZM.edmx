@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="YZMYapimiDB1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AlimSatimIslemler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AliciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AliciId" Type="int" Nullable="false" />
+          <Property Name="SaticiAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SaticiId" Type="int" Nullable="false" />
+          <Property Name="Fiyat" Type="float" Nullable="false" />
+          <Property Name="Miktar" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="KullaniciRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -228,6 +240,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="YZMYapimiDB1ModelStoreContainer">
+          <EntitySet Name="AlimSatimIslemler" EntityType="Self.AlimSatimIslemler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KullaniciRole" EntityType="Self.KullaniciRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KullaniciTable" EntityType="Self.KullaniciTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RequestTable" EntityType="Self.RequestTable" Schema="dbo" store:Type="Tables" />
@@ -481,6 +494,7 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             <End Role="SaticiStatueId" EntitySet="SaticiStatueId" />
             <End Role="SaticiRequest" EntitySet="SaticiRequest" />
           </AssociationSet>
+          <EntitySet Name="AlimSatimIslemler" EntityType="YZMYapimiDB1Model.AlimSatimIslemler" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -564,6 +578,18 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="AlimSatimIslemler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AliciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AliciId" Type="Int32" Nullable="false" />
+          <Property Name="SaticiAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SaticiId" Type="Int32" Nullable="false" />
+          <Property Name="Fiyat" Type="Double" Nullable="false" />
+          <Property Name="Miktar" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -700,6 +726,19 @@ warning 6002: The table/view 'YZMYapimiDB1.sys.database_firewall_rules' does not
                 <ScalarProperty Name="urnMiktari" ColumnName="urnMiktari" />
                 <ScalarProperty Name="urnAdi" ColumnName="urnAdi" />
                 <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlimSatimIslemler">
+            <EntityTypeMapping TypeName="YZMYapimiDB1Model.AlimSatimIslemler">
+              <MappingFragment StoreEntitySet="AlimSatimIslemler">
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="SaticiId" ColumnName="SaticiId" />
+                <ScalarProperty Name="SaticiAdi" ColumnName="SaticiAdi" />
+                <ScalarProperty Name="AliciId" ColumnName="AliciId" />
+                <ScalarProperty Name="AliciAdi" ColumnName="AliciAdi" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

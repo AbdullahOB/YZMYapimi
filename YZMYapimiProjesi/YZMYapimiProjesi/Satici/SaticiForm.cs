@@ -15,14 +15,20 @@ namespace YZMYapimiProjesi.Satici
     {
         private int _id;
         private string _saticiAdi;
+        public int _walletBalance;
+        
         private readonly DbEntity _db;
-        public SaticiForm(int id , string saticiAdi)
+
+        public SaticiForm( int id , string saticiAdi, int walletBalance)
         {
             InitializeComponent();
             _db = new DbEntity();
             _id = id;
             _saticiAdi = saticiAdi;
-            
+          
+            _walletBalance = walletBalance;
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -38,7 +44,7 @@ namespace YZMYapimiProjesi.Satici
            
 
             this.Hide();
-            UrunEkForm obj = new UrunEkForm(_id , _saticiAdi);
+            UrunEkForm obj = new UrunEkForm(_id , _saticiAdi ,_walletBalance);
             obj.Show();
             
           
@@ -51,36 +57,44 @@ namespace YZMYapimiProjesi.Satici
 
         private void SaticiForm_Load(object sender, EventArgs e)
         {
-
+            lblPara.Text = _walletBalance.ToString();
             isimlabel.Text = _saticiAdi;
+
+            
+            //TODO: This Solution Will Be Edited;
 
             //Onay Bekleyen
             var onayBekleyen = _db.SaticiRequest.ToList();
+            
 
             foreach (var l in onayBekleyen)
             {
-                if (l.StatueId == 2)
+                if(l.KullaniciId == _id)
                 {
-                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                    addStok.BackColor = Color.Red;
-                    addStok.ForeColor = Color.White;
-                    addStok.SubItems.Add(l.urnAdi);
-                    addStok.SubItems.Add(l.urnMiktari.ToString());
-                    addStok.SubItems.Add(l.urnFiyati.ToString());
+                    if (l.StatueId == 2)
+                    {
+                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                        addStok.BackColor = Color.Red;
+                        addStok.ForeColor = Color.White;
+                        addStok.SubItems.Add(l.urnAdi);
+                        addStok.SubItems.Add(l.urnMiktari.ToString());
+                        addStok.SubItems.Add(l.urnFiyati.ToString());
 
-                    onayBekleyenUrnLst.Items.Add(addStok);
+                        onayBekleyenUrnLst.Items.Add(addStok);
 
 
+                    }
+
+                    else if (l.StatueId == 3)
+                    {
+                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                        addStok.SubItems.Add(l.urnAdi);
+                        addStok.SubItems.Add(l.urnMiktari.ToString());
+                        addStok.SubItems.Add(l.urnFiyati.ToString());
+                        onayBekleyenUrnLst.Items.Add(addStok);
+                    }
                 }
-
-                else if (l.StatueId == 3)
-                {
-                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                    addStok.SubItems.Add(l.urnAdi);
-                    addStok.SubItems.Add(l.urnMiktari.ToString());
-                    addStok.SubItems.Add(l.urnFiyati.ToString());
-                    onayBekleyenUrnLst.Items.Add(addStok);
-                }
+              
 
             }
 
@@ -89,11 +103,15 @@ namespace YZMYapimiProjesi.Satici
             foreach (var l in stoktaUrn)
             {
 
-                ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                addStok.SubItems.Add(l.urnAdi.ToString());
-                addStok.SubItems.Add(l.urnMiktari.ToString());
-                addStok.SubItems.Add(l.urnFiyat.ToString());
-                stoktaLst.Items.Add(addStok);
+                if (l.KullaniciId == _id)
+                {
+                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                    addStok.SubItems.Add(l.urnAdi.ToString());
+                    addStok.SubItems.Add(l.urnMiktari.ToString());
+                    addStok.SubItems.Add(l.urnFiyat.ToString());
+                    stoktaLst.Items.Add(addStok);
+                }
+                
             }
 
 
@@ -106,7 +124,7 @@ namespace YZMYapimiProjesi.Satici
 
             if(reqDB.StatueId == 2)
             {
-                DuzetlmeFormu duzetlmeFormu = new DuzetlmeFormu(reqIds, _saticiAdi);
+                DuzetlmeFormu duzetlmeFormu = new DuzetlmeFormu(reqIds, _saticiAdi, _walletBalance);
                 duzetlmeFormu.Show();
                 Hide();
             }
@@ -125,28 +143,33 @@ namespace YZMYapimiProjesi.Satici
 
             foreach (var l in onayBekleyen)
             {
-                if (l.StatueId == 2)
+                if (l.KullaniciId == _id)
                 {
-                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                    addStok.BackColor = Color.Red;
-                    addStok.ForeColor = Color.White;
-                    addStok.SubItems.Add(l.urnAdi);
-                    addStok.SubItems.Add(l.urnMiktari.ToString());
-                    addStok.SubItems.Add(l.urnFiyati.ToString());
+                     if (l.StatueId == 2)
+                                    {
 
-                    onayBekleyenUrnLst.Items.Add(addStok);
+                                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                                        addStok.BackColor = Color.Red;
+                                        addStok.ForeColor = Color.White;
+                                        addStok.SubItems.Add(l.urnAdi);
+                                        addStok.SubItems.Add(l.urnMiktari.ToString());
+                                        addStok.SubItems.Add(l.urnFiyati.ToString());
+
+                                        onayBekleyenUrnLst.Items.Add(addStok);
 
 
+                                    }
+
+                                    else if (l.StatueId == 3)
+                                    {
+                                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                                        addStok.SubItems.Add(l.urnAdi);
+                                        addStok.SubItems.Add(l.urnMiktari.ToString());
+                                        addStok.SubItems.Add(l.urnFiyati.ToString());
+                                        onayBekleyenUrnLst.Items.Add(addStok);
+                                    }
                 }
-
-                else if (l.StatueId == 3)
-                {
-                    ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                    addStok.SubItems.Add(l.urnAdi);
-                    addStok.SubItems.Add(l.urnMiktari.ToString());
-                    addStok.SubItems.Add(l.urnFiyati.ToString());
-                    onayBekleyenUrnLst.Items.Add(addStok);
-                }
+                   
 
             }
 
@@ -161,12 +184,15 @@ namespace YZMYapimiProjesi.Satici
             var stoktaUrn = _db.SaticiVarliklari.ToList();
             foreach (var l in stoktaUrn)
             {
-
-                ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                addStok.SubItems.Add(l.urnAdi.ToString());
-                addStok.SubItems.Add(l.urnMiktari.ToString());
+                if (l.KullaniciId == _id)
+                {
+                     ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                 addStok.SubItems.Add(l.urnAdi.ToString());
+                     addStok.SubItems.Add(l.urnMiktari.ToString());
                 addStok.SubItems.Add(l.urnFiyat.ToString());
-                stoktaLst.Items.Add(addStok);
+                   stoktaLst.Items.Add(addStok);
+                }
+                   
             }
         }
         private void UrunSilbtn_Click(object sender, EventArgs e)
@@ -211,6 +237,13 @@ namespace YZMYapimiProjesi.Satici
                 }
 
             }
+        }
+
+        private void PbRefresh_Click(object sender, EventArgs e)
+        {
+
+            var user = _db.KullaniciTables.Find(_id);
+            lblPara.Text = user.WalletBalance.ToString();
         }
     }
 }

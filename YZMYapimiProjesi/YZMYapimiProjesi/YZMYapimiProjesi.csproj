@@ -149,6 +149,9 @@
     <Compile Include="Alici\ParaEkleForm.Designer.cs">
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\AlimSatimIslemler.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\database_firewall_rules.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>

@@ -58,11 +58,12 @@ namespace YZMYapimiProjesi.Login
                    else if (roleNm == "Satici")
                     {
                         this.Hide();
-                        SaticiForm satici = new SaticiForm(user.Id , user.Ad);
+                        SaticiForm satici = new SaticiForm(user.Id , user.Ad, Convert.ToInt32(user.WalletBalance));
                         satici.Show();
                     }
                    else if (roleNm == "Alici")
                     {
+                        
                         AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet) , user.Id);
                         
                         alici.Show();

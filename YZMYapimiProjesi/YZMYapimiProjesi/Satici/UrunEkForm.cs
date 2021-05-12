@@ -15,13 +15,15 @@ namespace YZMYapimiProjesi.Satici
     {
         private readonly DbEntity _db;
         private string _saticiAdi;
+        private int _walletBalance;
         public int _id;
         
-        public UrunEkForm(int id , string saticiAdi)
+        public UrunEkForm(int id , string saticiAdi ,int walletBalance)
         {
             InitializeComponent();
 
             _db = new DbEntity();
+            _walletBalance = walletBalance;
             _saticiAdi = saticiAdi;
             _id = id;
           
@@ -30,7 +32,7 @@ namespace YZMYapimiProjesi.Satici
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SaticiForm obj1 = new SaticiForm(_id ,_saticiAdi);
+            SaticiForm obj1 = new SaticiForm(_id ,_saticiAdi, _walletBalance);
             obj1.Show();
         }
 
