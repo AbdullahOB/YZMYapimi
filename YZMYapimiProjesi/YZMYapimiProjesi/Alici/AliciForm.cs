@@ -124,7 +124,7 @@ namespace YZMYapimiProjesi.Alici
             int islemSayi = 0;
             if(CbOnayla.CheckState == CheckState.Checked)
             {
-                if (_db.SaticiVarliklari.Count() != 0)
+                if (_db.SaticiVarliklari.Count() > 0)
                 {
                     int urnMik = Convert.ToInt32(TbMiktar.Text);
                     var Alici = _db.KullaniciTables.FirstOrDefault(q => q.Id == _id);
@@ -175,6 +175,7 @@ namespace YZMYapimiProjesi.Alici
                                     {
                                         _db.AlimSatimIslemler.Remove(alim);
                                     }
+                                   
 
                                 }
                                 else
@@ -188,19 +189,24 @@ namespace YZMYapimiProjesi.Alici
 
                             }
                         }
-
+                       
+                        
                     }
+                   
                     _db.SaveChanges();
+                    MessageBox.Show("Alim Islemi Başarıyla Gerçekleşti ...", "Alim Islemi Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AlimRapor alimRapor = new AlimRapor(_id, islemSayi);
+                    alimRapor.Show();
+
                 }
                 else
                 {
                     MessageBox.Show("Şuanda Herhangi Bir Satici Yoktur...", "Alim Islemi Başarsız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                MessageBox.Show("Alim Islemi Başarıyla Gerçekleşti ...", "Alim Islemi Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AlimRapor alimRapor = new AlimRapor(_id ,islemSayi);
-                alimRapor.Show();
+               
 
             }
+
             else
             {
                 MessageBox.Show("Onaylıyorum kısmını işaretleyiniz!", "Alim Islemi Başarsız", MessageBoxButtons.OK, MessageBoxIcon.Error);
