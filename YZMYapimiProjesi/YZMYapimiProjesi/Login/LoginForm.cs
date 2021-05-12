@@ -19,12 +19,18 @@ namespace YZMYapimiProjesi.Login
 {
     public partial class LoginForm : Form
     {
-        private readonly DBEntity1 _db;
-
+        private readonly DbEntity _db;
+ 
         public LoginForm()
         {
             InitializeComponent();
-            _db = new DBEntity1();
+            _db = new DbEntity();
+        }
+        public LoginForm(string name)
+        {
+            InitializeComponent();
+            _db = new DbEntity();
+            textBox1.Text = name;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -34,8 +40,6 @@ namespace YZMYapimiProjesi.Login
                 var kullanici = textBox1.Text.Trim();
                 var sifre = textBox2.Text;
                 var user = _db.KullaniciTables.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
-                
-                
                 if(user == null)
                 {
                     MessageBox.Show("Hatali Sifre Veya Kullanici Adi Girdiniz ...");
@@ -54,11 +58,12 @@ namespace YZMYapimiProjesi.Login
                    else if (roleNm == "Satici")
                     {
                         this.Hide();
-                        SaticiForm satici = new SaticiForm();
+                        SaticiForm satici = new SaticiForm(user.Id , user.Ad, Convert.ToInt32(user.WalletBalance));
                         satici.Show();
                     }
                    else if (roleNm == "Alici")
                     {
+                        
                         AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet) , user.Id);
                         
                         alici.Show();

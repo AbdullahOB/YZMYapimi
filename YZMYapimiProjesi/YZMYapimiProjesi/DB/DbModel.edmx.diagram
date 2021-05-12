@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4293d2455390482190bf55664e55c959" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciRole" Width="1.5" PointX="10.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciTable" Width="1.5" PointX="6.625" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.RequestTable" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.Role" Width="1.5" PointX="8.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.Statue" Width="1.5" PointX="9.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.sysdiagram" Width="1.5" PointX="23.125" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.database_firewall_rules" Width="1.5" PointX="24.625" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_KullaniciTable" ManuallyRouted="false" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_KullaniciTable" ManuallyRouted="false" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_Statue" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

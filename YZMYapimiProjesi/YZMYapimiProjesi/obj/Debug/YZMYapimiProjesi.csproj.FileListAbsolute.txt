@@ -124,3 +124,5 @@ C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\b
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\EntityFramework.xml
 C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Satici.Düzeltme_Form.resources
+C:\Users\Abdullah\OneDrive\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\obj\Debug\YZMYapimiProjesi.Satici.UrunEkForm.resources

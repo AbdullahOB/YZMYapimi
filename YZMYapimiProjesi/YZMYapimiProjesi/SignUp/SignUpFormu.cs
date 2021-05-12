@@ -9,23 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using YZMYapimiProjesi.Login;
 using System.Data.SqlClient;
+using YZMYapimiProjesi.DB;
 
 namespace YZMYapimiProjesi.SignUp
 {
     public partial class SignUpFormu : Form
     {
+        private readonly DbEntity _db;
+        
         public SignUpFormu()
         {
             InitializeComponent();
+            _db = new DbEntity();
         }
 
         string kullaniciTipi;
 
+        private void RBsatici_CheckedChanged(object sender, EventArgs e)
+        {
+            kullaniciTipi = "Satici";
+        }
 
-        //Build Data base connection
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mahmud\Desktop\YZMYapimi\YZMYapimiProjesi\YZMYapimiProjesi\Database1.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlCommand cmd = new SqlCommand();    
-
+        private void RBalici_CheckedChanged(object sender, EventArgs e)
+        {
+            kullaniciTipi = "Alici";
+        }
         private void btnSgnUp_Click(object sender, EventArgs e)
         {
             if (txtAd.Text == "" && txtSoyad.Text == "" && txtKullaniciAdi.Text == "" && txtTC.Text == "" && txtTelNo.Text == "" && txtEposta.Text == "" && txtSifre1.Text == "" && txtSifre2.Text == "")
@@ -34,17 +42,37 @@ namespace YZMYapimiProjesi.SignUp
             }
             else if (txtSifre1.Text == txtSifre2.Text)
             {
-                con.Open();
 
-                string query = "INSERT INTO [KullaniciTable](kullaniciAdi,Sifre,Adi,Soyadi,Email,TCKimlik,Tel,Adres,KullaniciTipi) VALUES('" + txtKullaniciAdi.Text+ "', '" + txtSifre1.Text + "', '" + txtAd.Text+ "',  '" + txtSoyad.Text+ "', '" +txtEposta.Text+ "', '" + txtTC.Text+ "', '" +txtTelNo.Text+ "',  '" +txtAdres.Text+ "', '" + kullaniciTipi+ "')";
-                cmd = new SqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                var user = _db.KullaniciTables.Create();
+                user.KullaniciAdi = txtKullaniciAdi.Text;
+                user.Sifre = txtSifre1.Text;
+                user.Ad = txtAd.Text;
+                user.Soyad = txtSoyad.Text;
+                user.Email = txtEposta.Text;
+                user.TCKimlikNo = long.Parse(txtTC.Text);
+                user.Tel = long.Parse(txtTelNo.Text);
+                user.Adres = txtAdres.Text;
+                user.KullaniciTipi = kullaniciTipi;
+                user.WalletBalance = 0;
+                _db.KullaniciTables.Add(user);
+                var role = _db.KullaniciRoles.Create();
+                role.KullaniciId = user.Id;
+                if (kullaniciTipi == "Alici")
+                {
+                    role.RoleId = 3;
+                }
+                else
+                {
+                    role.RoleId = 2;
+                }
+                _db.KullaniciRoles.Add(role);
+                _db.SaveChanges();
 
                 MessageBox.Show("Kayıdınız Başarıyla Tamamlanmıştır!", "Kayıt Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                LoginForm frm = new LoginForm();
+                LoginForm frm = new LoginForm(txtKullaniciAdi.Text);
                 frm.Show();
+                
             }
             else
             {
@@ -86,16 +114,6 @@ namespace YZMYapimiProjesi.SignUp
         {
             sart.denaySpace(e, txtKullaniciAdi, errProvKullaniciAdi);
         }
-        private void RBsatici_CheckedChanged(object sender, EventArgs e)
-        {
-            kullaniciTipi = "Satici";
-        }
-
-        private void RBalici_CheckedChanged(object sender, EventArgs e)
-        {
-            kullaniciTipi = "Alici";
-        }
-
 
     }
 }

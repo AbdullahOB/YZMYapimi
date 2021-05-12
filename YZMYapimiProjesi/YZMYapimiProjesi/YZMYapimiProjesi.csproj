@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
@@ -62,6 +65,12 @@
     </Reference>
     <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="linq2db, Version=3.3.0.0, Culture=neutral, PublicKeyToken=e41013125f9e410a, processorArchitecture=MSIL">
+      <HintPath>..\packages\linq2db.3.3.0\lib\net472\linq2db.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -81,8 +90,14 @@
     <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,9 +119,6 @@
     <Compile Include="Admin\Assets\TextStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Admin\backgroundStyle.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Admin\ParaEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,38 +137,71 @@
     <Compile Include="Alici\AliciForm.Designer.cs">
       <DependentUpon>AliciForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alici\AlimRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alici\AlimRapor.Designer.cs">
+      <DependentUpon>AlimRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alici\ParaEkleForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alici\ParaEkleForm.Designer.cs">
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\AlimSatimIslemler.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\database_firewall_rules.cs">
-      <DependentUpon>DBEntity.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\DBEntity.Context.cs">
+    <Compile Include="DB\DbModelYZM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntity.Context.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\DBEntity.cs">
+    <Compile Include="DB\DbModelYZM.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntity.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\DBEntity.Designer.cs">
+    <Compile Include="DB\DbModelYZM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntity.edmx</DependentUpon>
+      <DependentUpon>DbModelYZM.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\KullaniciRole.cs">
-      <DependentUpon>DBEntity.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\KullaniciTable.cs">
-      <DependentUpon>DBEntity.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\RequestTable.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
-      <DependentUpon>DBEntity.tt</DependentUpon>
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiRequest.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiStatueId.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SaticiVarliklari.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Statue.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagram.cs">
+      <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
@@ -171,11 +216,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Satici\cmb.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Satici\DuzetlmeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\DuzetlmeFormu.Designer.cs">
+      <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Satici\SaticiForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Satici\SaticiForm.Designer.cs">
       <DependentUpon>SaticiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satici\UrunEkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\UrunEkForm.Designer.cs">
+      <DependentUpon>UrunEkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp\SignUpFormu.cs">
       <SubType>Form</SubType>
@@ -196,6 +256,9 @@
     <EmbeddedResource Include="Alici\AliciForm.resx">
       <DependentUpon>AliciForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alici\AlimRapor.resx">
+      <DependentUpon>AlimRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alici\ParaEkleForm.resx">
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,18 +270,24 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Satici\DuzetlmeFormu.resx">
+      <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Satici\SaticiForm.resx">
       <DependentUpon>SaticiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\UrunEkForm.resx">
+      <DependentUpon>UrunEkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp\SignUpFormu.resx">
       <DependentUpon>SignUpFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\DBEntity.edmx">
+    <EntityDeploy Include="DB\DbModelYZM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBEntity.Designer.cs</LastGenOutput>
+      <LastGenOutput>DbModelYZM.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\DBEntity.edmx.diagram">
-      <DependentUpon>DBEntity.edmx</DependentUpon>
+    <None Include="DB\DbModelYZM.edmx.diagram">
+      <DependentUpon>DbModelYZM.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -239,21 +308,27 @@
     <Content Include="Admin\Assets\images\backGradient.png" />
     <Content Include="Admin\Assets\images\bg.jfif" />
     <Content Include="Admin\Assets\images\gradienta-ix_kUDzCczo-unsplash.jpg" />
+    <Content Include="Alici\Assets\diskette.png" />
     <Content Include="Alici\Assets\refresh.png" />
-    <Content Include="DB\DBEntity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBEntity.edmx</DependentUpon>
-      <LastGenOutput>DBEntity.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\DBEntity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBEntity.edmx</DependentUpon>
-      <LastGenOutput>DBEntity.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\icons8_refresh_64.png" />
     <None Include="Resources\icons8_right_64.png" />
     <None Include="Resources\icons8_downward_arrow_64.png" />
     <None Include="Resources\icons8_downward_arrow_48.png" />
+    <Content Include="DB\DbModelYZM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModelYZM.edmx</DependentUpon>
+      <LastGenOutput>DbModelYZM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\DbModelYZM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModelYZM.edmx</DependentUpon>
+      <LastGenOutput>DbModelYZM.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\icons8_refresh_641.png" />
+    <None Include="Resources\icons8_downward_arrow_641.png" />
+    <None Include="Resources\icons8_save_64.png" />
+    <None Include="Resources\icons8_save_32.png" />
+    <None Include="Resources\diskette.png" />
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>
