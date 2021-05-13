@@ -63,7 +63,7 @@ namespace YZMYapimiProjesi.Satici
 
         private void talepGonderBtnFun(object sender, EventArgs e)
         {
-            if(urnSecCmBox.Text != "")
+            if(urnSecCmBox.Text != "" && urnMiktarTxtBox.Text != "" && urnFiyatTxtBox.Text != "")
             {
                 var satReq = _db.SaticiRequest.Create();
                 var users = _db.KullaniciTables.Find(_id);
@@ -80,7 +80,7 @@ namespace YZMYapimiProjesi.Satici
             }
             else
             {
-                MessageBox.Show("Lütfet Ürün Seçiniz ...", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lütfet Tüm Boşlukları Doldurunuz ...", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
