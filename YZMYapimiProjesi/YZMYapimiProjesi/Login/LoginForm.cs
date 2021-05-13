@@ -32,15 +32,25 @@ namespace YZMYapimiProjesi.Login
             _db = new DbEntity();
             textBox1.Text = name;
         }
-        private void button3_Click(object sender, EventArgs e)
+        
+       
+        private void BtnSignUp_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            SignUpFormu sgnFrm = new SignUpFormu();
+            sgnFrm.ShowDialog();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+
             try
             {
-                
+
                 var kullanici = textBox1.Text.Trim();
-                var sifre = textBox2.Text;
+                var sifre = Login.Text;
                 var user = _db.KullaniciTables.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
-                if(user == null)
+                if (user == null)
                 {
                     MessageBox.Show("Hatali Sifre Veya Kullanici Adi Girdiniz ...");
                 }
@@ -55,35 +65,36 @@ namespace YZMYapimiProjesi.Login
                         AdminAraYuzu admin = new AdminAraYuzu();
                         admin.Show();
                     }
-                   else if (roleNm == "Satici")
+                    else if (roleNm == "Satici")
                     {
                         this.Hide();
-                        SaticiForm satici = new SaticiForm(user.Id , user.Ad, Convert.ToInt32(user.WalletBalance));
-                        satici.Show();
+                        saticiGiris saticiG = new saticiGiris(user.Id, user.Ad, Convert.ToInt32(user.WalletBalance));
+                        saticiG.Show();
+                        //SaticiForm satici = new SaticiForm(user.Id, user.Ad, Convert.ToInt32(user.WalletBalance));
+                        //satici.Show();
                     }
-                   else if (roleNm == "Alici")
+                    else if (roleNm == "Alici")
                     {
-                        
-                        AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet) , user.Id);
-                        
+
+                        AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet), user.Id);
+
                         alici.Show();
 
                         Hide();
                     }
-                    
+
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void button4_Click(object sender, EventArgs e)
+
+        private void Exit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SignUpFormu sgnFrm = new SignUpFormu();
-            sgnFrm.ShowDialog();
+            Application.Exit();
         }
     }
 }

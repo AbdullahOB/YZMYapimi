@@ -33,5 +33,16 @@ namespace YZMYapimiProjesi.Properties {
                 return ((string)(this["Connection"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=serverdbyzm.database.windows.net;Initial Catalog=YZMYapimiDB1;Persist" +
+            " Security Info=True;User ID=admin1234;Password=aboD192955")]
+        public string Dataset {
+            get {
+                return ((string)(this["Dataset"]));
+            }
+        }
     }
 }

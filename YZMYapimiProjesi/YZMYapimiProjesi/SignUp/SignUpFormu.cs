@@ -16,7 +16,6 @@ namespace YZMYapimiProjesi.SignUp
     public partial class SignUpFormu : Form
     {
         private readonly DbEntity _db;
-        
         public SignUpFormu()
         {
             InitializeComponent();
@@ -24,12 +23,10 @@ namespace YZMYapimiProjesi.SignUp
         }
 
         string kullaniciTipi;
-
         private void RBsatici_CheckedChanged(object sender, EventArgs e)
         {
             kullaniciTipi = "Satici";
         }
-
         private void RBalici_CheckedChanged(object sender, EventArgs e)
         {
             kullaniciTipi = "Alici";
@@ -82,37 +79,49 @@ namespace YZMYapimiProjesi.SignUp
                 txtSifre1.Focus();
             }
         }
-
-        private void PBimageGeriDon_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm frm = new LoginForm();
-            frm.Show();
-        }
-
+        
         readonly YaziSartlari sart = new YaziSartlari();
-        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+       
+        private void SignUpFormu_Load(object sender, EventArgs e)
         {
-            sart.AllowNumberOnly(e, txtTC, errorProvider1);
+
         }
 
-        private void txtTelNo_KeyPress(object sender, KeyPressEventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
-            sart.AllowNumberOnly(e, txtTelNo, errorProvider2);
+            Application.Exit();
         }
 
-        private void txtAd_KeyPress(object sender, KeyPressEventArgs e)
+        private void BackBtnPic_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            log.Show();
+            Hide();
+        }
+
+        private void txtAd_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             sart.AllowTextOnly(e, txtAd, errorProvider3);
         }
 
-        private void txtSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSoyad_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             sart.AllowTextOnly(e, txtSoyad, errorProvider3);
         }
-        private void txtKullaniciAdi_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void txtTC_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            sart.AllowNumberOnly(e, txtTC, errorProvider1);
+        }
+
+        private void txtKullaniciAdi_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             sart.denaySpace(e, txtKullaniciAdi, errProvKullaniciAdi);
+        }
+
+        private void txtTelNo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            sart.AllowNumberOnly(e, txtTelNo, errorProvider2);
         }
 
     }

@@ -32,47 +32,13 @@ namespace YZMYapimiProjesi.Alici
             InitializeComponent();
         }
 
-        private void PBimageGeriDon_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login.LoginForm log = new Login.LoginForm();
-            log.Show();
-        }
-
-        private void TbMiktar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            sart = new YaziSartlari();
-            sart.AllowNumberOnly(e, TbMiktar, errorProviderMiktar);
-        }
-
-        private void btnParaYukle_Click(object sender, EventArgs e)
-        {
-            var formPopup = new ParaEkleForm(_id, _ad);
-            formPopup.Show();
-        }
-
-        private void PbRefresh_Click(object sender, EventArgs e)
-        {
-            var user = _db.KullaniciTables.Find(_id);
-
-            lblPara.Text = user.WalletBalance.ToString();
-        }
-
         private void AliciForm_Load(object sender, EventArgs e)
         {
             lblName.Text = _ad;
 
-            lblPara.Text = _walletBalance.ToString();
+            Paralbl.Text = _walletBalance.ToString();
         }
 
-        private void CbOnayla_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
- 
-        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
@@ -117,6 +83,45 @@ namespace YZMYapimiProjesi.Alici
 
             }
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Uygulamadan Çıkmak Emin Misiniz ", "Uyarı", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BackBtnPic_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Hesaptan Çıkmak Emin Misiniz", "Uyarı", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Login.LoginForm log = new Login.LoginForm();
+                log.Show();
+                Hide();
+            }
+        }
+
+        private void refreshBtnNew_Click(object sender, EventArgs e)
+        {
+            var user = _db.KullaniciTables.Find(_id);
+
+            Paralbl.Text = user.WalletBalance.ToString();
+        }
+
+        private void paraYukleBtnNew_Click(object sender, EventArgs e)
+        {
+            var formPopup = new ParaEkleForm(_id, _ad);
+            formPopup.Show();
+        }
+
+        private void TbMiktar_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            sart = new YaziSartlari();
+            sart.AllowNumberOnly(e, TbMiktar, errorProviderMiktar);
         }
 
         private void btnAl_Click(object sender, EventArgs e)

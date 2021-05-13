@@ -17,7 +17,7 @@ namespace YZMYapimiProjesi.Admin
 {
     public partial class AdminAraYuzu : Form
     {
-     
+       
 
         private readonly DbEntity _db;
         
@@ -25,87 +25,16 @@ namespace YZMYapimiProjesi.Admin
         {
             InitializeComponent();
             _db = new DbEntity();
+          
 
         }
 
         private void AdminAraYuzu_Load(object sender, EventArgs e)
         {
-
-
-            var reqList = _db.RequestTables.ToList();
-            foreach(var l in reqList)
-            {
-                if(l.statueId == 3)
-                {
-                    ListViewItem addReq = new ListViewItem(l.Id.ToString());
-                    addReq.SubItems.Add(l.KullaniciId.ToString());
-                    addReq.SubItems.Add(l.MsgSubject);
-                    ParaEklemeLst.Items.Add(addReq);
-                }
-                
-             
-            }
-
-
-            var SatReq = _db.SaticiRequest.ToList();
-            foreach (var l in SatReq)
-            {
-                if (l.StatueId == 3)
-                {
-                    ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
-                    addReqSat.SubItems.Add(l.KullaniciId.ToString());
-                    addReqSat.SubItems.Add(l.Message);
-                    onayBekleyenUrnLst.Items.Add(addReqSat);
-                }
-
-
-            }
-
-        }
-
-        private void geriDonButonu(object sender, EventArgs e)
-        {
-            Login.LoginForm log = new Login.LoginForm();
-            log.Show();
-            Close();
-        }
-
-        private void kullanicilarListesiKaydet(object sender, EventArgs e)
-        {
-           
-           
-
-           
-        }
-
-
-        private void alimSatimRaporuKaydet(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
-
-        private void ExitBtnFun(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
-       
-        private void onayBekleyenUrnLst_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ParaEklemeLst_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+            // TODO: This line of code loads data into the 'appData.AlimSatimIslemler' table. You can move, or remove it, as needed.
+            this.alimSatimIslemlerTableAdapter.Fill(this.appData.AlimSatimIslemler);
+            // TODO: This line of code loads data into the 'appData.KullaniciTable' table. You can move, or remove it, as needed.
+            this.kullaniciTableTableAdapter.Fill(this.appData.KullaniciTable);
         }
 
         private void AdminAraYuzu_MouseMove(object sender, MouseEventArgs e)
@@ -124,29 +53,98 @@ namespace YZMYapimiProjesi.Admin
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void ParaEklemeLst_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
-            
-            int reqId = Convert.ToInt32(ParaEklemeLst.SelectedItems[0].Text) ;
-            
-           
+            DialogResult dialogResult = MessageBox.Show("Uygulamadan Çıkmak Emin Misiniz ", "Uyarı", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
 
-            ParaEkle paraekle = new ParaEkle(reqId);
-            paraekle.Show();
-            this.Hide();
-            
+        private void BackBtnPic_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Hesaptan Çıkmak Emin Misiniz", "Uyarı", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Login.LoginForm log = new Login.LoginForm();
+                log.Show();
+                Hide();
+
+            }
+        }
+
+        private void onayBekleyenBtn_Click(object sender, EventArgs e)
+        {
+            onayBekleyenLstFormAdmin onayBek = new onayBekleyenLstFormAdmin();
+            onayBek.Show();
+            Hide();
+        }
+
+        private void ParaEkTalepleriBtn_Click(object sender, EventArgs e)
+        {
+            ParaEklemeLstFromAdmin paraEkLst = new ParaEklemeLstFromAdmin();
+            paraEkLst.Show();
+            Hide();
+        }
+        private void KullanicilarBtn_Click(object sender, EventArgs e)
+        {
+
+
+
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+
+                            workbook.Worksheets.Add(this.appData.KullaniciTable.CopyToDataTable(), "Kullanıcılar Listesi");
+                            workbook.SaveAs(sfd.FileName);
+
+                        }
+                        MessageBox.Show("Islem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
+            }
 
         }
 
-        private void onayBekleyenUrnLst_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void alimSatimRaporBtn_Click(object sender, EventArgs e)
         {
-            int reqId = Convert.ToInt32(onayBekleyenUrnLst.SelectedItems[0].Text);
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+
+                            workbook.Worksheets.Add(this.appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
+                            workbook.SaveAs(sfd.FileName);
+
+                        }
+                        MessageBox.Show("Islem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
 
 
-
-            UrnBilgileri urnBilgiler = new UrnBilgileri(reqId);
-            urnBilgiler.Show();
-            this.Hide();
+            }
         }
     }
 }

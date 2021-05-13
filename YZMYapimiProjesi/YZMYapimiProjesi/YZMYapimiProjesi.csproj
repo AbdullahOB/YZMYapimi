@@ -119,11 +119,23 @@
     <Compile Include="Admin\Assets\TextStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Admin\onayBekleyenLstFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\onayBekleyenLstFormAdmin.Designer.cs">
+      <DependentUpon>onayBekleyenLstFormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ParaEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\ParaEkle.Designer.cs">
       <DependentUpon>ParaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ParaEklemeLstFromAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ParaEklemeLstFromAdmin.Designer.cs">
+      <DependentUpon>ParaEklemeLstFromAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\UrnBilgileri.cs">
       <SubType>Form</SubType>
@@ -148,6 +160,11 @@
     </Compile>
     <Compile Include="Alici\ParaEkleForm.Designer.cs">
       <DependentUpon>ParaEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppData.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB\AlimSatimIslemler.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
@@ -225,11 +242,23 @@
     <Compile Include="Satici\DuzetlmeFormu.Designer.cs">
       <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Satici\SaticiForm.cs">
+    <Compile Include="Satici\onayBekleyenFrom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Satici\SaticiForm.Designer.cs">
-      <DependentUpon>SaticiForm.cs</DependentUpon>
+    <Compile Include="Satici\onayBekleyenFrom.Designer.cs">
+      <DependentUpon>onayBekleyenFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satici\saticiGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\saticiGiris.Designer.cs">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satici\stokListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satici\stokListesi.Designer.cs">
+      <DependentUpon>stokListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="Satici\UrunEkForm.cs">
       <SubType>Form</SubType>
@@ -247,8 +276,14 @@
     <EmbeddedResource Include="Admin\AdminAraYuzu.resx">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\onayBekleyenLstFormAdmin.resx">
+      <DependentUpon>onayBekleyenLstFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ParaEkle.resx">
       <DependentUpon>ParaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ParaEklemeLstFromAdmin.resx">
+      <DependentUpon>ParaEklemeLstFromAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UrnBilgileri.resx">
       <DependentUpon>UrnBilgileri.cs</DependentUpon>
@@ -273,8 +308,14 @@
     <EmbeddedResource Include="Satici\DuzetlmeFormu.resx">
       <DependentUpon>DuzetlmeFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Satici\SaticiForm.resx">
-      <DependentUpon>SaticiForm.cs</DependentUpon>
+    <EmbeddedResource Include="Satici\onayBekleyenFrom.resx">
+      <DependentUpon>onayBekleyenFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\saticiGiris.resx">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satici\stokListesi.resx">
+      <DependentUpon>stokListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Satici\UrunEkForm.resx">
       <DependentUpon>UrunEkForm.cs</DependentUpon>
@@ -286,6 +327,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbModelYZM.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="AppData.xsc">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
+    <None Include="AppData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppData.xss">
+      <DependentUpon>AppData.xsd</DependentUpon>
+    </None>
     <None Include="DB\DbModelYZM.edmx.diagram">
       <DependentUpon>DbModelYZM.edmx</DependentUpon>
     </None>
@@ -309,6 +361,7 @@
     <Content Include="Admin\Assets\images\bg.jfif" />
     <Content Include="Admin\Assets\images\gradienta-ix_kUDzCczo-unsplash.jpg" />
     <Content Include="Alici\Assets\diskette.png" />
+    <Content Include="Alici\Assets\floppy-disk.png" />
     <Content Include="Alici\Assets\refresh.png" />
     <None Include="Resources\icons8_refresh_64.png" />
     <None Include="Resources\icons8_right_64.png" />
@@ -329,6 +382,15 @@
     <None Include="Resources\icons8_save_64.png" />
     <None Include="Resources\icons8_save_32.png" />
     <None Include="Resources\diskette.png" />
+    <Content Include="Login\Assets\cancel %281%29.png" />
+    <Content Include="Login\Assets\cancel.png" />
+    <Content Include="Login\Assets\cloud.png" />
+    <Content Include="Login\Assets\padlock.png" />
+    <Content Include="Login\Assets\png%40400x.png" />
+    <Content Include="Satici\Assets\previous.png" />
+    <Content Include="Login\Assets\profile-user %281%29.png" />
+    <Content Include="Login\Assets\profile-user.png" />
+    <Content Include="Satici\Assets\circular-refreshment-arrow.png" />
     <Content Include="SignUp\images\iconfinder_arrow_left_circle_1303871.png" />
   </ItemGroup>
   <ItemGroup>
