@@ -29,6 +29,7 @@ namespace YZMYapimiProjesi.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParaEkle));
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.urnBilgileriReddet = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@ namespace YZMYapimiProjesi.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.ExitBtn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BackBtnPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -46,7 +49,7 @@ namespace YZMYapimiProjesi.Admin
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
+            this.label6.ForeColor = System.Drawing.Color.LightCoral;
             this.label6.Location = new System.Drawing.Point(103, 336);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 22);
@@ -55,13 +58,15 @@ namespace YZMYapimiProjesi.Admin
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("D-DIN", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.Maroon;
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(107, 371);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(238, 84);
             this.richTextBox1.TabIndex = 49;
-            this.richTextBox1.Text = "Red Sebebi";
+            this.richTextBox1.Text = "";
             // 
             // urnBilgileriReddet
             // 
@@ -80,27 +85,28 @@ namespace YZMYapimiProjesi.Admin
             // 
             // urnBilgileriOnayla
             // 
-            this.urnBilgileriOnayla.BackColor = System.Drawing.Color.IndianRed;
+            this.urnBilgileriOnayla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
             this.urnBilgileriOnayla.FlatAppearance.BorderSize = 0;
             this.urnBilgileriOnayla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urnBilgileriOnayla.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnBilgileriOnayla.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.urnBilgileriOnayla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.urnBilgileriOnayla.Location = new System.Drawing.Point(107, 279);
             this.urnBilgileriOnayla.Name = "urnBilgileriOnayla";
             this.urnBilgileriOnayla.Size = new System.Drawing.Size(99, 33);
             this.urnBilgileriOnayla.TabIndex = 47;
             this.urnBilgileriOnayla.Text = "Onayla";
             this.urnBilgileriOnayla.UseVisualStyleBackColor = false;
-            this.urnBilgileriOnayla.Click += new System.EventHandler(this.urnBilgileriOnayla_Click);
+            this.urnBilgileriOnayla.Click += new System.EventHandler(this.ParaEklemeTalepiBtn);
             // 
             // paraMiklbl
             // 
             this.paraMiklbl.AutoSize = true;
             this.paraMiklbl.BackColor = System.Drawing.Color.Transparent;
-            this.paraMiklbl.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraMiklbl.Location = new System.Drawing.Point(312, 133);
+            this.paraMiklbl.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paraMiklbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.paraMiklbl.Location = new System.Drawing.Point(192, 133);
             this.paraMiklbl.Name = "paraMiklbl";
-            this.paraMiklbl.Size = new System.Drawing.Size(40, 22);
+            this.paraMiklbl.Size = new System.Drawing.Size(36, 20);
             this.paraMiklbl.TabIndex = 46;
             this.paraMiklbl.Text = "ccc";
             // 
@@ -108,10 +114,11 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.aliciAdlbl.AutoSize = true;
             this.aliciAdlbl.BackColor = System.Drawing.Color.Transparent;
-            this.aliciAdlbl.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aliciAdlbl.Location = new System.Drawing.Point(312, 178);
+            this.aliciAdlbl.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aliciAdlbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aliciAdlbl.Location = new System.Drawing.Point(117, 178);
             this.aliciAdlbl.Name = "aliciAdlbl";
-            this.aliciAdlbl.Size = new System.Drawing.Size(40, 22);
+            this.aliciAdlbl.Size = new System.Drawing.Size(36, 20);
             this.aliciAdlbl.TabIndex = 45;
             this.aliciAdlbl.Text = "ccc";
             // 
@@ -120,7 +127,8 @@ namespace YZMYapimiProjesi.Admin
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 178);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(25, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 22);
             this.label2.TabIndex = 44;
@@ -131,7 +139,8 @@ namespace YZMYapimiProjesi.Admin
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 133);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(25, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 22);
             this.label3.TabIndex = 43;
@@ -149,28 +158,40 @@ namespace YZMYapimiProjesi.Admin
             this.ExitBtn.Size = new System.Drawing.Size(53, 56);
             this.ExitBtn.TabIndex = 41;
             this.ExitBtn.Text = "X";
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtnFun);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("D-DIN", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(169, 16);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(143, 55);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(7);
             this.label1.Size = new System.Drawing.Size(147, 47);
             this.label1.TabIndex = 42;
             this.label1.Text = "Para Ekle";
             // 
+            // BackBtnPic
+            // 
+            this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
+            this.BackBtnPic.Location = new System.Drawing.Point(12, 12);
+            this.BackBtnPic.Name = "BackBtnPic";
+            this.BackBtnPic.Size = new System.Drawing.Size(48, 49);
+            this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackBtnPic.TabIndex = 51;
+            this.BackBtnPic.TabStop = false;
+            this.BackBtnPic.Click += new System.EventHandler(this.BackBtnPic_Click);
+            // 
             // ParaEkle
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(521, 509);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
+            this.ClientSize = new System.Drawing.Size(444, 526);
+            this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.urnBilgileriReddet);
@@ -183,10 +204,12 @@ namespace YZMYapimiProjesi.Admin
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ParaEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaEkle";
             this.Load += new System.EventHandler(this.ParaEkle_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ParaEkle_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ParaEkle_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +227,6 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label ExitBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox BackBtnPic;
     }
 }

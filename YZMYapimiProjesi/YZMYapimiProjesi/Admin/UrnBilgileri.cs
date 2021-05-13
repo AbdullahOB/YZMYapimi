@@ -22,8 +22,6 @@ namespace YZMYapimiProjesi.Admin
            
         }
 
-        
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             AdminAraYuzu admin = new AdminAraYuzu();
@@ -43,6 +41,10 @@ namespace YZMYapimiProjesi.Admin
             saticiVar.urnMiktari = req.urnMiktari;
             _db.SaticiVarliklari.Add(saticiVar);
             _db.SaveChanges();
+             MessageBox.Show("Onay Islemi Başarıyla Gerçekleşti ...", "Onay işelmi Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            onayBekleyenLstFormAdmin onayLst = new onayBekleyenLstFormAdmin();
+            onayLst.Show();
+            Hide();
         }
 
         private void UrnBilgileri_MouseMove(object sender, MouseEventArgs e)
@@ -97,28 +99,19 @@ namespace YZMYapimiProjesi.Admin
                 saticiVar.Message = req.MessageFromAdmin;
                 _db.SaticiVarliklari.Add(saticiVar);
                 _db.SaveChanges();
+                MessageBox.Show("Red Islemi Başarıyla Gerçekleşti ...", "Red işelmi Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                onayBekleyenLstFormAdmin onayLst = new onayBekleyenLstFormAdmin();
+                onayLst.Show();
+                Hide();
             }
            
         }
 
-        private void SaticiAdiLbl_Click(object sender, EventArgs e)
+        private void BackBtnPic_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void urnBirimFiyatiLbl_Click(object sender, EventArgs e)
-        {
-
+            onayBekleyenLstFormAdmin onayLst = new onayBekleyenLstFormAdmin();
+            onayLst.Show();
+            Hide();
         }
     }
 }

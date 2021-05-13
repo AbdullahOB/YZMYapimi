@@ -29,6 +29,7 @@ namespace YZMYapimiProjesi.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrnBilgileri));
             this.label6 = new System.Windows.Forms.Label();
             this.redSebebiTxt = new System.Windows.Forms.RichTextBox();
             this.urnBilgileriReddet = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@ namespace YZMYapimiProjesi.Admin
             this.label5 = new System.Windows.Forms.Label();
             this.SaticiAdiLbl = new System.Windows.Forms.Label();
             this.urnMiktariLbl = new System.Windows.Forms.Label();
+            this.BackBtnPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -50,8 +53,8 @@ namespace YZMYapimiProjesi.Admin
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(119, 374);
+            this.label6.ForeColor = System.Drawing.Color.LightCoral;
+            this.label6.Location = new System.Drawing.Point(106, 374);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 22);
             this.label6.TabIndex = 60;
@@ -59,9 +62,11 @@ namespace YZMYapimiProjesi.Admin
             // 
             // redSebebiTxt
             // 
-            this.redSebebiTxt.Font = new System.Drawing.Font("D-DIN", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redSebebiTxt.ForeColor = System.Drawing.Color.Maroon;
-            this.redSebebiTxt.Location = new System.Drawing.Point(123, 409);
+            this.redSebebiTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.redSebebiTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.redSebebiTxt.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redSebebiTxt.ForeColor = System.Drawing.Color.White;
+            this.redSebebiTxt.Location = new System.Drawing.Point(104, 412);
             this.redSebebiTxt.Name = "redSebebiTxt";
             this.redSebebiTxt.Size = new System.Drawing.Size(238, 84);
             this.redSebebiTxt.TabIndex = 59;
@@ -74,7 +79,7 @@ namespace YZMYapimiProjesi.Admin
             this.urnBilgileriReddet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urnBilgileriReddet.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnBilgileriReddet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.urnBilgileriReddet.Location = new System.Drawing.Point(233, 338);
+            this.urnBilgileriReddet.Location = new System.Drawing.Point(226, 314);
             this.urnBilgileriReddet.Name = "urnBilgileriReddet";
             this.urnBilgileriReddet.Size = new System.Drawing.Size(99, 33);
             this.urnBilgileriReddet.TabIndex = 58;
@@ -84,12 +89,12 @@ namespace YZMYapimiProjesi.Admin
             // 
             // urnBilgileriOnayla
             // 
-            this.urnBilgileriOnayla.BackColor = System.Drawing.Color.IndianRed;
+            this.urnBilgileriOnayla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
             this.urnBilgileriOnayla.FlatAppearance.BorderSize = 0;
             this.urnBilgileriOnayla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urnBilgileriOnayla.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnBilgileriOnayla.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.urnBilgileriOnayla.Location = new System.Drawing.Point(123, 338);
+            this.urnBilgileriOnayla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.urnBilgileriOnayla.Location = new System.Drawing.Point(104, 314);
             this.urnBilgileriOnayla.Name = "urnBilgileriOnayla";
             this.urnBilgileriOnayla.Size = new System.Drawing.Size(99, 33);
             this.urnBilgileriOnayla.TabIndex = 57;
@@ -102,7 +107,8 @@ namespace YZMYapimiProjesi.Admin
             this.urnBilgilerTipi.AutoSize = true;
             this.urnBilgilerTipi.BackColor = System.Drawing.Color.Transparent;
             this.urnBilgilerTipi.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnBilgilerTipi.Location = new System.Drawing.Point(271, 112);
+            this.urnBilgilerTipi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.urnBilgilerTipi.Location = new System.Drawing.Point(261, 123);
             this.urnBilgilerTipi.Name = "urnBilgilerTipi";
             this.urnBilgilerTipi.Size = new System.Drawing.Size(40, 22);
             this.urnBilgilerTipi.TabIndex = 56;
@@ -113,36 +119,36 @@ namespace YZMYapimiProjesi.Admin
             this.urnBirimFiyatiLbl.AutoSize = true;
             this.urnBirimFiyatiLbl.BackColor = System.Drawing.Color.Transparent;
             this.urnBirimFiyatiLbl.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnBirimFiyatiLbl.Location = new System.Drawing.Point(271, 198);
+            this.urnBirimFiyatiLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.urnBirimFiyatiLbl.Location = new System.Drawing.Point(261, 209);
             this.urnBirimFiyatiLbl.Name = "urnBirimFiyatiLbl";
             this.urnBirimFiyatiLbl.Size = new System.Drawing.Size(40, 22);
             this.urnBirimFiyatiLbl.TabIndex = 55;
             this.urnBirimFiyatiLbl.Text = "ccc";
-            this.urnBirimFiyatiLbl.Click += new System.EventHandler(this.urnBirimFiyatiLbl_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 239);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(100, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 22);
             this.label2.TabIndex = 54;
             this.label2.Text = "Satıcının Adı: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 198);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(100, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 22);
             this.label3.TabIndex = 53;
             this.label3.Text = "Birim Fiyatı (TL) : ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // ExitBtn
             // 
@@ -163,8 +169,8 @@ namespace YZMYapimiProjesi.Admin
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("D-DIN", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(169, 9);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(104, 45);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(7);
             this.label1.Size = new System.Drawing.Size(192, 47);
@@ -176,7 +182,8 @@ namespace YZMYapimiProjesi.Admin
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 112);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(100, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 22);
             this.label4.TabIndex = 53;
@@ -187,7 +194,8 @@ namespace YZMYapimiProjesi.Admin
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(110, 155);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(100, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 22);
             this.label5.TabIndex = 53;
@@ -198,29 +206,44 @@ namespace YZMYapimiProjesi.Admin
             this.SaticiAdiLbl.AutoSize = true;
             this.SaticiAdiLbl.BackColor = System.Drawing.Color.Transparent;
             this.SaticiAdiLbl.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaticiAdiLbl.Location = new System.Drawing.Point(271, 239);
+            this.SaticiAdiLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaticiAdiLbl.Location = new System.Drawing.Point(261, 250);
             this.SaticiAdiLbl.Name = "SaticiAdiLbl";
             this.SaticiAdiLbl.Size = new System.Drawing.Size(40, 22);
             this.SaticiAdiLbl.TabIndex = 55;
             this.SaticiAdiLbl.Text = "ccc";
-            this.SaticiAdiLbl.Click += new System.EventHandler(this.SaticiAdiLbl_Click);
             // 
             // urnMiktariLbl
             // 
             this.urnMiktariLbl.AutoSize = true;
             this.urnMiktariLbl.BackColor = System.Drawing.Color.Transparent;
             this.urnMiktariLbl.Font = new System.Drawing.Font("D-DIN", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnMiktariLbl.Location = new System.Drawing.Point(271, 155);
+            this.urnMiktariLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.urnMiktariLbl.Location = new System.Drawing.Point(261, 166);
             this.urnMiktariLbl.Name = "urnMiktariLbl";
             this.urnMiktariLbl.Size = new System.Drawing.Size(40, 22);
             this.urnMiktariLbl.TabIndex = 55;
             this.urnMiktariLbl.Text = "ccc";
             // 
+            // BackBtnPic
+            // 
+            this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
+            this.BackBtnPic.Location = new System.Drawing.Point(12, 12);
+            this.BackBtnPic.Name = "BackBtnPic";
+            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackBtnPic.TabIndex = 61;
+            this.BackBtnPic.TabStop = false;
+            this.BackBtnPic.Click += new System.EventHandler(this.BackBtnPic_Click);
+            // 
             // UrnBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 527);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
+            this.ClientSize = new System.Drawing.Size(409, 537);
+            this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.redSebebiTxt);
             this.Controls.Add(this.urnBilgileriReddet);
@@ -238,10 +261,12 @@ namespace YZMYapimiProjesi.Admin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(500, 500);
             this.Name = "UrnBilgileri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrnBilgileri";
             this.Load += new System.EventHandler(this.UrnBilgileri_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UrnBilgileri_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UrnBilgileri_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +288,6 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label SaticiAdiLbl;
         private System.Windows.Forms.Label urnMiktariLbl;
+        private System.Windows.Forms.PictureBox BackBtnPic;
     }
 }

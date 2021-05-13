@@ -29,51 +29,60 @@ namespace YZMYapimiProjesi.Satici
           
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            SaticiForm obj1 = new SaticiForm(_id ,_saticiAdi, _walletBalance);
-            obj1.Show();
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void UrunEkForm_Load(object sender, EventArgs e)
-        {
-        
-        }
-
-        public void button1_Click(object sender, EventArgs e)
-        {
-
-            
-            var satReq = _db.SaticiRequest.Create();
-            var users = _db.KullaniciTables.Find(_id);
-            satReq.KullaniciId = _id;
-            satReq.urnAdi = comboBox1.Text;
-            satReq.urnMiktari = Convert.ToInt32(textBox1.Text);
-            satReq.urnFiyati = Convert.ToInt32(textBox2.Text);
-            satReq.StatueId = 3;
-            satReq.Message = users.KullaniciAdi + " Urun Ekleme Telpi Gonderdi ";
-            _db.SaticiRequest.Add(satReq);
-            _db.SaveChanges();
-
-
-        }
         YaziSartlari yaz = new YaziSartlari();
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void urnMiktarTxtBox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             ErrorProvider err = new ErrorProvider();
-            yaz.AllowNumberOnly(e, textBox1, err);
+            yaz.AllowNumberOnly(e, urnMiktarTxtBox, err);
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void urnFiyatTxtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             ErrorProvider err = new ErrorProvider();
-            yaz.AllowNumberOnly(e, textBox2, err);
+            yaz.AllowNumberOnly(e, urnFiyatTxtBox, err);
+        }
+
+
+        private void Exit_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Uygulamadan Çıkmak Emin Misiniz ", "Uyarı", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BackBtnPic_Click_1(object sender, EventArgs e)
+        {
+            saticiGiris saticiG = new saticiGiris(_id, _saticiAdi, _walletBalance);
+            saticiG.Show();
+            Hide();
+
+        }
+
+        private void talepGonderBtnFun(object sender, EventArgs e)
+        {
+            if(urnSecCmBox.Text != "")
+            {
+                var satReq = _db.SaticiRequest.Create();
+                var users = _db.KullaniciTables.Find(_id);
+                satReq.KullaniciId = _id;
+                satReq.urnAdi = urnSecCmBox.Text;
+                satReq.urnMiktari = Convert.ToInt32(urnMiktarTxtBox.Text);
+                satReq.urnFiyati = Convert.ToInt32(urnFiyatTxtBox.Text);
+                satReq.StatueId = 3;
+                satReq.Message = users.KullaniciAdi + " Urun Ekleme Telpi Gonderdi ";
+                _db.SaticiRequest.Add(satReq);
+                _db.SaveChanges();
+
+                MessageBox.Show("Talepinizi Başarıyla Göndermiştir ...", "Talep Gönderme Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lütfet Ürün Seçiniz ...", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }

@@ -29,126 +29,68 @@ namespace YZMYapimiProjesi.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAraYuzu));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.KullaniciLstBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ExitBtn = new System.Windows.Forms.Label();
+            this.onayBekleyenBtn = new System.Windows.Forms.Button();
+            this.ParaEkTalepleriBtn = new System.Windows.Forms.Button();
+            this.KullanicilarBtn = new System.Windows.Forms.Button();
+            this.alimSatimRaporBtn = new System.Windows.Forms.Button();
+            this.BackBtnPic = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ParaEklemeLst = new System.Windows.Forms.ListView();
-            this.ReqId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.KullaniciIdCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MesajCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.onayBekleyenUrnLst = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kullaniciTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kullaniciAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sifreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tCKimlikNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kullaniciTipiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.walletBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new YZMYapimiProjesi.AppData();
+            this.kullaniciTableTableAdapter = new YZMYapimiProjesi.AppDataTableAdapters.KullaniciTableTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.alimSatimIslemlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alimSatimIslemlerTableAdapter = new YZMYapimiProjesi.AppDataTableAdapters.AlimSatimIslemlerTableAdapter();
+            this.ıdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aliciAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aliciIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saticiAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saticiIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fiyatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miktarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urnAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.islemZamaniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullaniciTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alimSatimIslemlerBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(588, 232);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(7);
-            this.label3.Size = new System.Drawing.Size(294, 40);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Alıcı Para Ekleme Talepleri";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(25, 232);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(7);
-            this.label2.Size = new System.Drawing.Size(301, 40);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Onay Bekleyen Ürün Listesi";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("D-DIN Condensed", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(519, 12);
+            this.label1.Font = new System.Drawing.Font("D-DIN", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(94, 40);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(7);
-            this.label1.Size = new System.Drawing.Size(218, 52);
+            this.label1.Size = new System.Drawing.Size(258, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Merhaba, Admin";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // KullaniciLstBtn
-            // 
-            this.KullaniciLstBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.KullaniciLstBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.KullaniciLstBtn.FlatAppearance.BorderSize = 0;
-            this.KullaniciLstBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.KullaniciLstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KullaniciLstBtn.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KullaniciLstBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.KullaniciLstBtn.Location = new System.Drawing.Point(952, 152);
-            this.KullaniciLstBtn.Name = "KullaniciLstBtn";
-            this.KullaniciLstBtn.Size = new System.Drawing.Size(263, 43);
-            this.KullaniciLstBtn.TabIndex = 12;
-            this.KullaniciLstBtn.Text = "Kullanıcılar Listesi";
-            this.KullaniciLstBtn.UseVisualStyleBackColor = false;
-            this.KullaniciLstBtn.Click += new System.EventHandler(this.kullanicilarListesiKaydet);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(952, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 43);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Alım Satım Raporu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.alimSatimRaporuKaydet);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(145, 87);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(7);
-            this.label4.Size = new System.Drawing.Size(387, 47);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "*Listeki elemanını onaylamak için";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(254, 134);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(7);
-            this.label5.Size = new System.Drawing.Size(120, 47);
-            this.label5.TabIndex = 1;
-            this.label5.Text = " çift tıkla";
             // 
             // ExitBtn
             // 
@@ -161,112 +103,335 @@ namespace YZMYapimiProjesi.Admin
             this.ExitBtn.Size = new System.Drawing.Size(42, 45);
             this.ExitBtn.TabIndex = 13;
             this.ExitBtn.Text = "X";
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtnFun);
+            // 
+            // onayBekleyenBtn
+            // 
+            this.onayBekleyenBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
+            this.onayBekleyenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.onayBekleyenBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
+            this.onayBekleyenBtn.FlatAppearance.BorderSize = 2;
+            this.onayBekleyenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.onayBekleyenBtn.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onayBekleyenBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.onayBekleyenBtn.Location = new System.Drawing.Point(53, 132);
+            this.onayBekleyenBtn.Name = "onayBekleyenBtn";
+            this.onayBekleyenBtn.Size = new System.Drawing.Size(334, 46);
+            this.onayBekleyenBtn.TabIndex = 38;
+            this.onayBekleyenBtn.Text = "Onay Bekleyen Listesi";
+            this.onayBekleyenBtn.UseVisualStyleBackColor = false;
+            this.onayBekleyenBtn.Click += new System.EventHandler(this.onayBekleyenBtn_Click);
+            // 
+            // ParaEkTalepleriBtn
+            // 
+            this.ParaEkTalepleriBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
+            this.ParaEkTalepleriBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ParaEkTalepleriBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
+            this.ParaEkTalepleriBtn.FlatAppearance.BorderSize = 2;
+            this.ParaEkTalepleriBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ParaEkTalepleriBtn.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParaEkTalepleriBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.ParaEkTalepleriBtn.Location = new System.Drawing.Point(53, 209);
+            this.ParaEkTalepleriBtn.Name = "ParaEkTalepleriBtn";
+            this.ParaEkTalepleriBtn.Size = new System.Drawing.Size(334, 46);
+            this.ParaEkTalepleriBtn.TabIndex = 38;
+            this.ParaEkTalepleriBtn.Text = "Para Ekleme Talepleri";
+            this.ParaEkTalepleriBtn.UseVisualStyleBackColor = false;
+            this.ParaEkTalepleriBtn.Click += new System.EventHandler(this.ParaEkTalepleriBtn_Click);
+            // 
+            // KullanicilarBtn
+            // 
+            this.KullanicilarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
+            this.KullanicilarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KullanicilarBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
+            this.KullanicilarBtn.FlatAppearance.BorderSize = 2;
+            this.KullanicilarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KullanicilarBtn.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KullanicilarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.KullanicilarBtn.Location = new System.Drawing.Point(53, 288);
+            this.KullanicilarBtn.Name = "KullanicilarBtn";
+            this.KullanicilarBtn.Size = new System.Drawing.Size(334, 46);
+            this.KullanicilarBtn.TabIndex = 38;
+            this.KullanicilarBtn.Text = "Kullanıcılar Listesi";
+            this.KullanicilarBtn.UseVisualStyleBackColor = false;
+            this.KullanicilarBtn.Click += new System.EventHandler(this.KullanicilarBtn_Click);
+            // 
+            // alimSatimRaporBtn
+            // 
+            this.alimSatimRaporBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
+            this.alimSatimRaporBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alimSatimRaporBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
+            this.alimSatimRaporBtn.FlatAppearance.BorderSize = 2;
+            this.alimSatimRaporBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alimSatimRaporBtn.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alimSatimRaporBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.alimSatimRaporBtn.Location = new System.Drawing.Point(53, 361);
+            this.alimSatimRaporBtn.Name = "alimSatimRaporBtn";
+            this.alimSatimRaporBtn.Size = new System.Drawing.Size(334, 46);
+            this.alimSatimRaporBtn.TabIndex = 38;
+            this.alimSatimRaporBtn.Text = "Alım Satım Raporu";
+            this.alimSatimRaporBtn.UseVisualStyleBackColor = false;
+            this.alimSatimRaporBtn.Click += new System.EventHandler(this.alimSatimRaporBtn_Click);
+            // 
+            // BackBtnPic
+            // 
+            this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
+            this.BackBtnPic.Location = new System.Drawing.Point(12, 12);
+            this.BackBtnPic.Name = "BackBtnPic";
+            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BackBtnPic.TabIndex = 36;
+            this.BackBtnPic.TabStop = false;
+            this.BackBtnPic.Click += new System.EventHandler(this.BackBtnPic_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+            this.Exit.Location = new System.Drawing.Point(393, 12);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(39, 36);
+            this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Exit.TabIndex = 37;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(444, 526);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.geriDonButonu);
             // 
-            // ParaEklemeLst
+            // dataGridView1
             // 
-            this.ParaEklemeLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ReqId,
-            this.KullaniciIdCol,
-            this.MesajCol});
-            this.ParaEklemeLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParaEklemeLst.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.ParaEklemeLst.FullRowSelect = true;
-            this.ParaEklemeLst.HideSelection = false;
-            this.ParaEklemeLst.Location = new System.Drawing.Point(593, 275);
-            this.ParaEklemeLst.Name = "ParaEklemeLst";
-            this.ParaEklemeLst.Size = new System.Drawing.Size(594, 258);
-            this.ParaEklemeLst.TabIndex = 14;
-            this.ParaEklemeLst.UseCompatibleStateImageBehavior = false;
-            this.ParaEklemeLst.View = System.Windows.Forms.View.Details;
-            this.ParaEklemeLst.SelectedIndexChanged += new System.EventHandler(this.ParaEklemeLst_SelectedIndexChanged);
-            this.ParaEklemeLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ParaEklemeLst_MouseDoubleClick);
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ıdDataGridViewTextBoxColumn,
+            this.kullaniciAdiDataGridViewTextBoxColumn,
+            this.sifreDataGridViewTextBoxColumn,
+            this.adDataGridViewTextBoxColumn,
+            this.soyadDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.tCKimlikNoDataGridViewTextBoxColumn,
+            this.telDataGridViewTextBoxColumn,
+            this.adresDataGridViewTextBoxColumn,
+            this.kullaniciTipiDataGridViewTextBoxColumn,
+            this.walletBalanceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.kullaniciTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(53, 340);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(347, 91);
+            this.dataGridView1.TabIndex = 39;
             // 
-            // ReqId
+            // kullaniciTableBindingSource
             // 
-            this.ReqId.Text = "Request Id";
-            this.ReqId.Width = 89;
+            this.kullaniciTableBindingSource.DataMember = "KullaniciTable";
+            this.kullaniciTableBindingSource.DataSource = this.appDataBindingSource;
             // 
-            // KullaniciIdCol
+            // ıdDataGridViewTextBoxColumn
             // 
-            this.KullaniciIdCol.Text = "Kullanici Id";
-            this.KullaniciIdCol.Width = 93;
+            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.ıdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
+            this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // MesajCol
+            // kullaniciAdiDataGridViewTextBoxColumn
             // 
-            this.MesajCol.Text = "Mesaj";
-            this.MesajCol.Width = 378;
+            this.kullaniciAdiDataGridViewTextBoxColumn.DataPropertyName = "KullaniciAdi";
+            this.kullaniciAdiDataGridViewTextBoxColumn.HeaderText = "KullaniciAdi";
+            this.kullaniciAdiDataGridViewTextBoxColumn.Name = "kullaniciAdiDataGridViewTextBoxColumn";
             // 
-            // onayBekleyenUrnLst
+            // sifreDataGridViewTextBoxColumn
             // 
-            this.onayBekleyenUrnLst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.onayBekleyenUrnLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onayBekleyenUrnLst.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.onayBekleyenUrnLst.FullRowSelect = true;
-            this.onayBekleyenUrnLst.HideSelection = false;
-            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(30, 275);
-            this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
-            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(537, 258);
-            this.onayBekleyenUrnLst.TabIndex = 15;
-            this.onayBekleyenUrnLst.UseCompatibleStateImageBehavior = false;
-            this.onayBekleyenUrnLst.View = System.Windows.Forms.View.Details;
-            this.onayBekleyenUrnLst.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.onayBekleyenUrnLst_MouseDoubleClick);
+            this.sifreDataGridViewTextBoxColumn.DataPropertyName = "Sifre";
+            this.sifreDataGridViewTextBoxColumn.HeaderText = "Sifre";
+            this.sifreDataGridViewTextBoxColumn.Name = "sifreDataGridViewTextBoxColumn";
             // 
-            // columnHeader1
+            // adDataGridViewTextBoxColumn
             // 
-            this.columnHeader1.Text = "Request Id";
-            this.columnHeader1.Width = 89;
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "Ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
             // 
-            // columnHeader2
+            // soyadDataGridViewTextBoxColumn
             // 
-            this.columnHeader2.Text = "Kullanici Id";
-            this.columnHeader2.Width = 93;
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "Soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
             // 
-            // columnHeader3
+            // emailDataGridViewTextBoxColumn
             // 
-            this.columnHeader3.Text = "Mesaj";
-            this.columnHeader3.Width = 315;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // tCKimlikNoDataGridViewTextBoxColumn
+            // 
+            this.tCKimlikNoDataGridViewTextBoxColumn.DataPropertyName = "TCKimlikNo";
+            this.tCKimlikNoDataGridViewTextBoxColumn.HeaderText = "TCKimlikNo";
+            this.tCKimlikNoDataGridViewTextBoxColumn.Name = "tCKimlikNoDataGridViewTextBoxColumn";
+            // 
+            // telDataGridViewTextBoxColumn
+            // 
+            this.telDataGridViewTextBoxColumn.DataPropertyName = "Tel";
+            this.telDataGridViewTextBoxColumn.HeaderText = "Tel";
+            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            // 
+            // adresDataGridViewTextBoxColumn
+            // 
+            this.adresDataGridViewTextBoxColumn.DataPropertyName = "Adres";
+            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
+            // 
+            // kullaniciTipiDataGridViewTextBoxColumn
+            // 
+            this.kullaniciTipiDataGridViewTextBoxColumn.DataPropertyName = "KullaniciTipi";
+            this.kullaniciTipiDataGridViewTextBoxColumn.HeaderText = "KullaniciTipi";
+            this.kullaniciTipiDataGridViewTextBoxColumn.Name = "kullaniciTipiDataGridViewTextBoxColumn";
+            // 
+            // walletBalanceDataGridViewTextBoxColumn
+            // 
+            this.walletBalanceDataGridViewTextBoxColumn.DataPropertyName = "WalletBalance";
+            this.walletBalanceDataGridViewTextBoxColumn.HeaderText = "WalletBalance";
+            this.walletBalanceDataGridViewTextBoxColumn.Name = "walletBalanceDataGridViewTextBoxColumn";
+            // 
+            // appDataBindingSource
+            // 
+            this.appDataBindingSource.DataSource = this.appData;
+            this.appDataBindingSource.Position = 0;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kullaniciTableTableAdapter
+            // 
+            this.kullaniciTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ıdDataGridViewTextBoxColumn1,
+            this.aliciAdiDataGridViewTextBoxColumn,
+            this.aliciIdDataGridViewTextBoxColumn,
+            this.saticiAdiDataGridViewTextBoxColumn,
+            this.saticiIdDataGridViewTextBoxColumn,
+            this.fiyatDataGridViewTextBoxColumn,
+            this.miktarDataGridViewTextBoxColumn,
+            this.urnAdiDataGridViewTextBoxColumn,
+            this.islemZamaniDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.alimSatimIslemlerBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(63, 413);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(84, 65);
+            this.dataGridView2.TabIndex = 40;
+            // 
+            // alimSatimIslemlerBindingSource
+            // 
+            this.alimSatimIslemlerBindingSource.DataMember = "AlimSatimIslemler";
+            this.alimSatimIslemlerBindingSource.DataSource = this.appDataBindingSource;
+            // 
+            // alimSatimIslemlerTableAdapter
+            // 
+            this.alimSatimIslemlerTableAdapter.ClearBeforeFill = true;
+            // 
+            // ıdDataGridViewTextBoxColumn1
+            // 
+            this.ıdDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.ıdDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.ıdDataGridViewTextBoxColumn1.Name = "ıdDataGridViewTextBoxColumn1";
+            this.ıdDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // aliciAdiDataGridViewTextBoxColumn
+            // 
+            this.aliciAdiDataGridViewTextBoxColumn.DataPropertyName = "AliciAdi";
+            this.aliciAdiDataGridViewTextBoxColumn.HeaderText = "AliciAdi";
+            this.aliciAdiDataGridViewTextBoxColumn.Name = "aliciAdiDataGridViewTextBoxColumn";
+            // 
+            // aliciIdDataGridViewTextBoxColumn
+            // 
+            this.aliciIdDataGridViewTextBoxColumn.DataPropertyName = "AliciId";
+            this.aliciIdDataGridViewTextBoxColumn.HeaderText = "AliciId";
+            this.aliciIdDataGridViewTextBoxColumn.Name = "aliciIdDataGridViewTextBoxColumn";
+            // 
+            // saticiAdiDataGridViewTextBoxColumn
+            // 
+            this.saticiAdiDataGridViewTextBoxColumn.DataPropertyName = "SaticiAdi";
+            this.saticiAdiDataGridViewTextBoxColumn.HeaderText = "SaticiAdi";
+            this.saticiAdiDataGridViewTextBoxColumn.Name = "saticiAdiDataGridViewTextBoxColumn";
+            // 
+            // saticiIdDataGridViewTextBoxColumn
+            // 
+            this.saticiIdDataGridViewTextBoxColumn.DataPropertyName = "SaticiId";
+            this.saticiIdDataGridViewTextBoxColumn.HeaderText = "SaticiId";
+            this.saticiIdDataGridViewTextBoxColumn.Name = "saticiIdDataGridViewTextBoxColumn";
+            // 
+            // fiyatDataGridViewTextBoxColumn
+            // 
+            this.fiyatDataGridViewTextBoxColumn.DataPropertyName = "Fiyat";
+            this.fiyatDataGridViewTextBoxColumn.HeaderText = "Fiyat";
+            this.fiyatDataGridViewTextBoxColumn.Name = "fiyatDataGridViewTextBoxColumn";
+            // 
+            // miktarDataGridViewTextBoxColumn
+            // 
+            this.miktarDataGridViewTextBoxColumn.DataPropertyName = "Miktar";
+            this.miktarDataGridViewTextBoxColumn.HeaderText = "Miktar";
+            this.miktarDataGridViewTextBoxColumn.Name = "miktarDataGridViewTextBoxColumn";
+            // 
+            // urnAdiDataGridViewTextBoxColumn
+            // 
+            this.urnAdiDataGridViewTextBoxColumn.DataPropertyName = "urnAdi";
+            this.urnAdiDataGridViewTextBoxColumn.HeaderText = "urnAdi";
+            this.urnAdiDataGridViewTextBoxColumn.Name = "urnAdiDataGridViewTextBoxColumn";
+            // 
+            // islemZamaniDataGridViewTextBoxColumn
+            // 
+            this.islemZamaniDataGridViewTextBoxColumn.DataPropertyName = "islemZamani";
+            this.islemZamaniDataGridViewTextBoxColumn.HeaderText = "islemZamani";
+            this.islemZamaniDataGridViewTextBoxColumn.Name = "islemZamaniDataGridViewTextBoxColumn";
             // 
             // AdminAraYuzu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1243, 628);
-            this.Controls.Add(this.onayBekleyenUrnLst);
-            this.Controls.Add(this.ParaEklemeLst);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
+            this.ClientSize = new System.Drawing.Size(444, 526);
+            this.Controls.Add(this.alimSatimRaporBtn);
+            this.Controls.Add(this.KullanicilarBtn);
+            this.Controls.Add(this.ParaEkTalepleriBtn);
+            this.Controls.Add(this.onayBekleyenBtn);
+            this.Controls.Add(this.BackBtnPic);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.ExitBtn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.KullaniciLstBtn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminAraYuzu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAraYuzu";
             this.Load += new System.EventHandler(this.AdminAraYuzu_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminAraYuzu_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminAraYuzu_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.BackBtnPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kullaniciTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alimSatimIslemlerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,21 +439,41 @@ namespace YZMYapimiProjesi.Admin
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button KullaniciLstBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label ExitBtn;
-        public System.Windows.Forms.ListView ParaEklemeLst;
-        private System.Windows.Forms.ColumnHeader KullaniciIdCol;
-        private System.Windows.Forms.ColumnHeader MesajCol;
-        private System.Windows.Forms.ColumnHeader ReqId;
-        public System.Windows.Forms.ListView onayBekleyenUrnLst;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BackBtnPic;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.Button onayBekleyenBtn;
+        private System.Windows.Forms.Button ParaEkTalepleriBtn;
+        private System.Windows.Forms.Button KullanicilarBtn;
+        private System.Windows.Forms.Button alimSatimRaporBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource appDataBindingSource;
+        private AppData appData;
+        private System.Windows.Forms.BindingSource kullaniciTableBindingSource;
+        private AppDataTableAdapters.KullaniciTableTableAdapter kullaniciTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kullaniciAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sifreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tCKimlikNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kullaniciTipiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn walletBalanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource alimSatimIslemlerBindingSource;
+        private AppDataTableAdapters.AlimSatimIslemlerTableAdapter alimSatimIslemlerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aliciAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aliciIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saticiAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saticiIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fiyatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miktarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urnAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn islemZamaniDataGridViewTextBoxColumn;
     }
 }
