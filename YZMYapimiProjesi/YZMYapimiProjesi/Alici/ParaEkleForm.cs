@@ -14,30 +14,57 @@ namespace YZMYapimiProjesi.Alici
 {
     public partial class ParaEkleForm : Form
     {
-        private readonly DBEntity1 _db;
-        private int ParaMiktari;
-        public ParaEkleForm()
+        private readonly DbEntity _db;
+        private int ParaMiktari = 0;
+        public int _id;
+        public string _ad;
+        public ParaEkleForm(int UserId , string ad)
         {
             InitializeComponent();
-            _db = new DBEntity1();
+            _db = new DbEntity();
+            _ad = ad;
+            _id = UserId;
+
         }
-        
         private void btnYukle_Click(object sender, EventArgs e)
         {
-            ParaMiktari = Int32.Parse(TbPara.Text);
-            if (ParaMiktari > 1000)
+
+            if (TbPara.Text != "")
             {
-                MessageBox.Show("Günlük limit üstünde bir yükleme yapamazsınız!", "Yükleme Başarsız" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ParaMiktari = Int32.Parse(TbPara.Text);
+            }
+
+            if (CbOnaylaPara.CheckState == CheckState.Checked)
+            {
+                
+                if (ParaMiktari< 1000 && ParaMiktari>0)
+                {
+
+                    var req = _db.RequestTables.Create();
+                    req.KullaniciId = _id;
+                    req.statueId = 3;
+                    req.MsgSubject = _ad + " isimli kullanici " + ParaMiktari + " TL Para Talepi Gonderdi";
+                    req.ParaMiktari = ParaMiktari;
+                    _db.RequestTables.Add(req);
+
+
+                    MessageBox.Show("Talebiniz Alinmistir", "Yükleme Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    _db.SaveChanges();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Günlük limit dışında bir yükleme yapamazsınız!", "Yükleme Başarsız" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-
-                Alici.AliciForm frm = new Alici.AliciForm();
-                MessageBox.Show("Paranız Yüklendi!", "Yükleme Başarlı", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
-                this.Hide();
-
+                MessageBox.Show("Onaylıyorum kısmını işaretleyiniz!", "Yükleme Başarsız", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         readonly YaziSartlari sart = new YaziSartlari();
         private void TbPara_KeyPress(object sender, KeyPressEventArgs e)
