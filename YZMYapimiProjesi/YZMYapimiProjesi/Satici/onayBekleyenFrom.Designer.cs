@@ -48,9 +48,10 @@ namespace YZMYapimiProjesi.Satici
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(454, 526);
+            this.pictureBox1.Size = new System.Drawing.Size(605, 647);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -64,13 +65,14 @@ namespace YZMYapimiProjesi.Satici
             this.urnAdiCol,
             this.urnMiktari,
             this.urnFiyat});
-            this.onayBekleyenLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onayBekleyenLst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onayBekleyenLst.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.onayBekleyenLst.FullRowSelect = true;
             this.onayBekleyenLst.HideSelection = false;
-            this.onayBekleyenLst.Location = new System.Drawing.Point(29, 125);
+            this.onayBekleyenLst.Location = new System.Drawing.Point(45, 154);
+            this.onayBekleyenLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.onayBekleyenLst.Name = "onayBekleyenLst";
-            this.onayBekleyenLst.Size = new System.Drawing.Size(396, 299);
+            this.onayBekleyenLst.Size = new System.Drawing.Size(514, 368);
             this.onayBekleyenLst.TabIndex = 18;
             this.onayBekleyenLst.UseCompatibleStateImageBehavior = false;
             this.onayBekleyenLst.View = System.Windows.Forms.View.Details;
@@ -79,31 +81,32 @@ namespace YZMYapimiProjesi.Satici
             // ReqId
             // 
             this.ReqId.Text = "Request Id";
-            this.ReqId.Width = 94;
+            this.ReqId.Width = 125;
             // 
             // urnAdiCol
             // 
             this.urnAdiCol.Text = "Urun Adi";
-            this.urnAdiCol.Width = 79;
+            this.urnAdiCol.Width = 121;
             // 
             // urnMiktari
             // 
             this.urnMiktari.Text = "Urun Miktari";
-            this.urnMiktari.Width = 100;
+            this.urnMiktari.Width = 132;
             // 
             // urnFiyat
             // 
             this.urnFiyat.Text = "Urun Fiyat";
-            this.urnFiyat.Width = 94;
+            this.urnFiyat.Width = 138;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(76, 80);
+            this.label1.Location = new System.Drawing.Point(101, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 29);
+            this.label1.Size = new System.Drawing.Size(437, 39);
             this.label1.TabIndex = 20;
             this.label1.Text = "Onay Bekleyen Ürün Listesi";
             // 
@@ -111,9 +114,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(29, 26);
+            this.BackBtnPic.Location = new System.Drawing.Point(45, 39);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackBtnPic.Name = "BackBtnPic";
-            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackBtnPic.TabIndex = 38;
             this.BackBtnPic.TabStop = false;
@@ -123,9 +127,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(386, 26);
+            this.Exit.Location = new System.Drawing.Point(507, 38);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(39, 36);
+            this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Exit.TabIndex = 39;
             this.Exit.TabStop = false;
@@ -138,11 +143,12 @@ namespace YZMYapimiProjesi.Satici
             this.urnSilBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
             this.urnSilBtn.FlatAppearance.BorderSize = 2;
             this.urnSilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.urnSilBtn.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnSilBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.urnSilBtn.Location = new System.Drawing.Point(59, 442);
+            this.urnSilBtn.Location = new System.Drawing.Point(79, 544);
+            this.urnSilBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urnSilBtn.Name = "urnSilBtn";
-            this.urnSilBtn.Size = new System.Drawing.Size(334, 34);
+            this.urnSilBtn.Size = new System.Drawing.Size(445, 42);
             this.urnSilBtn.TabIndex = 40;
             this.urnSilBtn.Text = "Ürün Sil";
             this.urnSilBtn.UseVisualStyleBackColor = false;
@@ -150,10 +156,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             // onayBekleyenFrom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(454, 526);
+            this.ClientSize = new System.Drawing.Size(605, 647);
             this.Controls.Add(this.urnSilBtn);
             this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.Exit);
@@ -161,6 +167,7 @@ namespace YZMYapimiProjesi.Satici
             this.Controls.Add(this.onayBekleyenLst);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "onayBekleyenFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "onayBekleyenFrom";

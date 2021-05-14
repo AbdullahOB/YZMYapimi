@@ -50,7 +50,7 @@ namespace YZMYapimiProjesi.Alici
             this.PbClose.BackColor = System.Drawing.Color.Transparent;
             this.PbClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PbClose.ErrorImage")));
             this.PbClose.Image = global::YZMYapimiProjesi.Properties.Resources.close_window_32px;
-            this.PbClose.Location = new System.Drawing.Point(403, 12);
+            this.PbClose.Location = new System.Drawing.Point(402, 13);
             this.PbClose.Name = "PbClose";
             this.PbClose.Size = new System.Drawing.Size(32, 32);
             this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

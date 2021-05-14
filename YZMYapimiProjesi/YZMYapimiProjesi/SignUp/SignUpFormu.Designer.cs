@@ -73,7 +73,7 @@ namespace YZMYapimiProjesi.SignUp
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(135, 9);
+            this.label1.Location = new System.Drawing.Point(116, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 46);
             this.label1.TabIndex = 0;
@@ -380,7 +380,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(409, 12);
+            this.Exit.Location = new System.Drawing.Point(397, 19);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(39, 36);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,7 +392,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(12, 12);
+            this.BackBtnPic.Location = new System.Drawing.Point(27, 20);
             this.BackBtnPic.Name = "BackBtnPic";
             this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

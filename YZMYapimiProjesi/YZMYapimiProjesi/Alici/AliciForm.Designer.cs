@@ -282,7 +282,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(16, 15);
+            this.BackBtnPic.Location = new System.Drawing.Point(19, 17);
             this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4);
             this.BackBtnPic.Name = "BackBtnPic";
             this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
@@ -295,7 +295,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(501, 15);
+            this.Exit.Location = new System.Drawing.Point(498, 18);
             this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(52, 44);

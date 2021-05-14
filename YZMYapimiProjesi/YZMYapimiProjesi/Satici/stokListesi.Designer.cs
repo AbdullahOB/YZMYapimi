@@ -54,13 +54,14 @@ namespace YZMYapimiProjesi.Satici
             this.urnAdiCol,
             this.urnMiktari,
             this.urnFiyat});
-            this.stoktaLst.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stoktaLst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stoktaLst.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.stoktaLst.FullRowSelect = true;
             this.stoktaLst.HideSelection = false;
-            this.stoktaLst.Location = new System.Drawing.Point(23, 116);
+            this.stoktaLst.Location = new System.Drawing.Point(48, 143);
+            this.stoktaLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stoktaLst.Name = "stoktaLst";
-            this.stoktaLst.Size = new System.Drawing.Size(424, 340);
+            this.stoktaLst.Size = new System.Drawing.Size(532, 418);
             this.stoktaLst.TabIndex = 17;
             this.stoktaLst.UseCompatibleStateImageBehavior = false;
             this.stoktaLst.View = System.Windows.Forms.View.Details;
@@ -68,31 +69,32 @@ namespace YZMYapimiProjesi.Satici
             // ReqId
             // 
             this.ReqId.Text = "Request Id";
-            this.ReqId.Width = 94;
+            this.ReqId.Width = 124;
             // 
             // urnAdiCol
             // 
             this.urnAdiCol.Text = "Urun Adi";
-            this.urnAdiCol.Width = 79;
+            this.urnAdiCol.Width = 142;
             // 
             // urnMiktari
             // 
             this.urnMiktari.Text = "Urun Miktari";
-            this.urnMiktari.Width = 100;
+            this.urnMiktari.Width = 149;
             // 
             // urnFiyat
             // 
             this.urnFiyat.Text = "Urun Fiyat";
-            this.urnFiyat.Width = 94;
+            this.urnFiyat.Width = 114;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(141, 70);
+            this.label1.Location = new System.Drawing.Point(188, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
+            this.label1.Size = new System.Drawing.Size(234, 39);
             this.label1.TabIndex = 19;
             this.label1.Text = "Stokta Ürünler";
             // 
@@ -103,11 +105,12 @@ namespace YZMYapimiProjesi.Satici
             this.urnSilBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
             this.urnSilBtn.FlatAppearance.BorderSize = 2;
             this.urnSilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.urnSilBtn.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnSilBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.urnSilBtn.Location = new System.Drawing.Point(65, 462);
+            this.urnSilBtn.Location = new System.Drawing.Point(87, 569);
+            this.urnSilBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urnSilBtn.Name = "urnSilBtn";
-            this.urnSilBtn.Size = new System.Drawing.Size(334, 34);
+            this.urnSilBtn.Size = new System.Drawing.Size(445, 42);
             this.urnSilBtn.TabIndex = 39;
             this.urnSilBtn.Text = "Ürün Sil";
             this.urnSilBtn.UseVisualStyleBackColor = false;
@@ -117,9 +120,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(23, 24);
+            this.BackBtnPic.Location = new System.Drawing.Point(48, 30);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackBtnPic.Name = "BackBtnPic";
-            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackBtnPic.TabIndex = 36;
             this.BackBtnPic.TabStop = false;
@@ -129,9 +133,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(408, 24);
+            this.Exit.Location = new System.Drawing.Point(528, 30);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(39, 36);
+            this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Exit.TabIndex = 37;
             this.Exit.TabStop = false;
@@ -142,18 +147,19 @@ namespace YZMYapimiProjesi.Satici
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(470, 550);
+            this.pictureBox1.Size = new System.Drawing.Size(627, 677);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // stokListesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(470, 550);
+            this.ClientSize = new System.Drawing.Size(627, 677);
             this.Controls.Add(this.urnSilBtn);
             this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.Exit);
@@ -161,6 +167,7 @@ namespace YZMYapimiProjesi.Satici
             this.Controls.Add(this.stoktaLst);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "stokListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v";

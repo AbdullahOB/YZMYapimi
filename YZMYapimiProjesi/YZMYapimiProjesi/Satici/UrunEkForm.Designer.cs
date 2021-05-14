@@ -53,11 +53,12 @@ namespace YZMYapimiProjesi.Satici
             this.gonderBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.gonderBtn.FlatAppearance.BorderSize = 2;
             this.gonderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gonderBtn.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gonderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gonderBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.gonderBtn.Location = new System.Drawing.Point(40, 387);
+            this.gonderBtn.Location = new System.Drawing.Point(53, 476);
+            this.gonderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gonderBtn.Name = "gonderBtn";
-            this.gonderBtn.Size = new System.Drawing.Size(334, 44);
+            this.gonderBtn.Size = new System.Drawing.Size(445, 54);
             this.gonderBtn.TabIndex = 3;
             this.gonderBtn.Text = "Talep Gönder";
             this.gonderBtn.UseVisualStyleBackColor = false;
@@ -66,33 +67,36 @@ namespace YZMYapimiProjesi.Satici
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(121, 286);
+            this.label3.Location = new System.Drawing.Point(161, 352);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.Size = new System.Drawing.Size(214, 31);
             this.label3.TabIndex = 16;
             this.label3.Text = "Ürün Birim Fiyati";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(145, 181);
+            this.label2.Location = new System.Drawing.Point(193, 223);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 24);
+            this.label2.Size = new System.Drawing.Size(160, 31);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ürün Miktarı";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(148, 85);
+            this.label1.Location = new System.Drawing.Point(197, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(148, 31);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ürün Seçin";
             // 
@@ -100,16 +104,17 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.urnSecCmBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.urnSecCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.urnSecCmBox.Font = new System.Drawing.Font("D-DIN", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnSecCmBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnSecCmBox.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.urnSecCmBox.FormattingEnabled = true;
             this.urnSecCmBox.Items.AddRange(new object[] {
             "Buğday",
             "Pamuk",
             "Yulaf"});
-            this.urnSecCmBox.Location = new System.Drawing.Point(125, 112);
+            this.urnSecCmBox.Location = new System.Drawing.Point(167, 138);
+            this.urnSecCmBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urnSecCmBox.Name = "urnSecCmBox";
-            this.urnSecCmBox.Size = new System.Drawing.Size(152, 31);
+            this.urnSecCmBox.Size = new System.Drawing.Size(201, 39);
             this.urnSecCmBox.Sorted = true;
             this.urnSecCmBox.TabIndex = 14;
             // 
@@ -118,8 +123,9 @@ namespace YZMYapimiProjesi.Satici
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(429, 511);
+            this.pictureBox1.Size = new System.Drawing.Size(572, 629);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
@@ -128,9 +134,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(21, 26);
+            this.BackBtnPic.Location = new System.Drawing.Point(41, 32);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackBtnPic.Name = "BackBtnPic";
-            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackBtnPic.TabIndex = 43;
             this.BackBtnPic.TabStop = false;
@@ -140,9 +147,10 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(365, 26);
+            this.Exit.Location = new System.Drawing.Point(478, 32);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(39, 36);
+            this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Exit.TabIndex = 44;
             this.Exit.TabStop = false;
@@ -152,13 +160,14 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.urnMiktarTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.urnMiktarTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.urnMiktarTxtBox.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnMiktarTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnMiktarTxtBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.urnMiktarTxtBox.Location = new System.Drawing.Point(125, 208);
-            this.urnMiktarTxtBox.MaximumSize = new System.Drawing.Size(500, 500);
+            this.urnMiktarTxtBox.Location = new System.Drawing.Point(167, 256);
+            this.urnMiktarTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.urnMiktarTxtBox.MaximumSize = new System.Drawing.Size(666, 500);
             this.urnMiktarTxtBox.MinimumSize = new System.Drawing.Size(2, 26);
             this.urnMiktarTxtBox.Name = "urnMiktarTxtBox";
-            this.urnMiktarTxtBox.Size = new System.Drawing.Size(152, 25);
+            this.urnMiktarTxtBox.Size = new System.Drawing.Size(202, 30);
             this.urnMiktarTxtBox.TabIndex = 45;
             this.urnMiktarTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.urnMiktarTxtBox_KeyPress_1);
             // 
@@ -166,22 +175,23 @@ namespace YZMYapimiProjesi.Satici
             // 
             this.urnFiyatTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.urnFiyatTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.urnFiyatTxtBox.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urnFiyatTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urnFiyatTxtBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.urnFiyatTxtBox.Location = new System.Drawing.Point(125, 322);
-            this.urnFiyatTxtBox.MaximumSize = new System.Drawing.Size(500, 500);
+            this.urnFiyatTxtBox.Location = new System.Drawing.Point(167, 396);
+            this.urnFiyatTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.urnFiyatTxtBox.MaximumSize = new System.Drawing.Size(666, 500);
             this.urnFiyatTxtBox.MinimumSize = new System.Drawing.Size(2, 26);
             this.urnFiyatTxtBox.Name = "urnFiyatTxtBox";
-            this.urnFiyatTxtBox.Size = new System.Drawing.Size(152, 25);
+            this.urnFiyatTxtBox.Size = new System.Drawing.Size(202, 30);
             this.urnFiyatTxtBox.TabIndex = 46;
             this.urnFiyatTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.urnFiyatTxtBox_KeyPress);
             // 
             // UrunEkForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(429, 511);
+            this.ClientSize = new System.Drawing.Size(572, 629);
             this.Controls.Add(this.urnFiyatTxtBox);
             this.Controls.Add(this.urnMiktarTxtBox);
             this.Controls.Add(this.BackBtnPic);
@@ -193,6 +203,7 @@ namespace YZMYapimiProjesi.Satici
             this.Controls.Add(this.gonderBtn);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UrunEkForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrunEkForm";
