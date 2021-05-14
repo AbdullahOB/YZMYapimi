@@ -38,17 +38,19 @@ namespace YZMYapimiProjesi.Admin
 
         private void onayBekleyenLstFormAdmin_Load(object sender, EventArgs e)
         {
+   
             var SatReq = _db.SaticiRequest.ToList();
             foreach (var l in SatReq)
             {
-                if (l.StatueId == 3)
-                {
-                    ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
-                    addReqSat.SubItems.Add(l.KullaniciId.ToString());
-                    addReqSat.SubItems.Add(l.Message);
-                    onayBekleyenUrnLst.Items.Add(addReqSat);
-                }
+                            if (l.StatueId == 3)
+                            {   
+                              ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
+                              addReqSat.SubItems.Add(l.KullaniciId.ToString());
+                              addReqSat.SubItems.Add(l.Message);
+                              onayBekleyenUrnLst.Items.Add(addReqSat);
+                            }
             }
+
         }
 
         private void onayBekleyenUrnLst_MouseDoubleClick(object sender, MouseEventArgs e)

@@ -103,10 +103,5 @@ namespace YZMYapimiProjesi.Alici
             }
             this.Hide();
         }
-
-        private void TbUrunBilgi_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

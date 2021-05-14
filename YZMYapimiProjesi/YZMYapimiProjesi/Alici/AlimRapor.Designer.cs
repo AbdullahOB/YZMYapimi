@@ -101,7 +101,6 @@ namespace YZMYapimiProjesi.Alici
             this.TbUrunBilgi.Size = new System.Drawing.Size(231, 237);
             this.TbUrunBilgi.TabIndex = 4;
             this.TbUrunBilgi.Text = "Alım Bilgileri ";
-            this.TbUrunBilgi.Click += new System.EventHandler(this.TbUrunBilgi_Click);
             // 
             // label2
             // 

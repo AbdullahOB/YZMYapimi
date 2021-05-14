@@ -71,110 +71,110 @@ namespace YZMYapimiProjesi.SignUp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(135, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 35);
+            this.label1.Size = new System.Drawing.Size(245, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kayıt Formu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(61, 65);
+            this.label2.Location = new System.Drawing.Point(55, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 21);
+            this.label2.Size = new System.Drawing.Size(44, 29);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(230, 65);
+            this.label3.Location = new System.Drawing.Point(226, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 21);
+            this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Soyad";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 209);
+            this.label4.Location = new System.Drawing.Point(54, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 21);
+            this.label4.Size = new System.Drawing.Size(158, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Kullanıcı Adı";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(55, 139);
+            this.label5.Location = new System.Drawing.Point(52, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 21);
+            this.label5.Size = new System.Drawing.Size(252, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "T.C Kimlik Numarası";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(55, 348);
+            this.label6.Location = new System.Drawing.Point(51, 347);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 21);
+            this.label6.Size = new System.Drawing.Size(177, 29);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tel. Numarası";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(55, 416);
+            this.label7.Location = new System.Drawing.Point(51, 412);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 21);
+            this.label7.Size = new System.Drawing.Size(185, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "E-posta Adresi";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(55, 280);
+            this.label8.Location = new System.Drawing.Point(55, 276);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 21);
+            this.label8.Size = new System.Drawing.Size(81, 29);
             this.label8.TabIndex = 7;
             this.label8.Text = "Adres";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(61, 488);
+            this.label9.Location = new System.Drawing.Point(54, 480);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 21);
+            this.label9.Size = new System.Drawing.Size(68, 29);
             this.label9.TabIndex = 8;
             this.label9.Text = "Şifre";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(230, 489);
+            this.label10.Location = new System.Drawing.Point(226, 480);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 21);
+            this.label10.Size = new System.Drawing.Size(159, 29);
             this.label10.TabIndex = 9;
             this.label10.Text = "Şifre Tekrarı";
             // 
@@ -211,22 +211,22 @@ namespace YZMYapimiProjesi.SignUp
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(90, 567);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 21);
+            this.label11.Size = new System.Drawing.Size(118, 29);
             this.label11.TabIndex = 10;
             this.label11.Text = "Üye Tipi:";
             // 
             // RBalici
             // 
             this.RBalici.AutoSize = true;
-            this.RBalici.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBalici.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBalici.ForeColor = System.Drawing.Color.White;
             this.RBalici.Location = new System.Drawing.Point(277, 566);
             this.RBalici.Name = "RBalici";
-            this.RBalici.Size = new System.Drawing.Size(65, 25);
+            this.RBalici.Size = new System.Drawing.Size(84, 33);
             this.RBalici.TabIndex = 14;
             this.RBalici.TabStop = true;
             this.RBalici.Text = "Alıcı";
@@ -236,11 +236,11 @@ namespace YZMYapimiProjesi.SignUp
             // RBsatici
             // 
             this.RBsatici.AutoSize = true;
-            this.RBsatici.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBsatici.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBsatici.ForeColor = System.Drawing.Color.White;
             this.RBsatici.Location = new System.Drawing.Point(185, 566);
             this.RBsatici.Name = "RBsatici";
-            this.RBsatici.Size = new System.Drawing.Size(75, 25);
+            this.RBsatici.Size = new System.Drawing.Size(99, 33);
             this.RBsatici.TabIndex = 13;
             this.RBsatici.TabStop = true;
             this.RBsatici.Text = "Satıcı";
@@ -256,13 +256,13 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAd.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAd.ForeColor = System.Drawing.SystemColors.Window;
             this.txtAd.Location = new System.Drawing.Point(59, 91);
             this.txtAd.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtAd.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(155, 25);
+            this.txtAd.Size = new System.Drawing.Size(155, 30);
             this.txtAd.TabIndex = 32;
             this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAd_KeyPress_1);
             // 
@@ -270,13 +270,13 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoyad.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoyad.ForeColor = System.Drawing.SystemColors.Window;
             this.txtSoyad.Location = new System.Drawing.Point(231, 91);
             this.txtSoyad.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtSoyad.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(173, 25);
+            this.txtSoyad.Size = new System.Drawing.Size(173, 30);
             this.txtSoyad.TabIndex = 32;
             this.txtSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyad_KeyPress_1);
             // 
@@ -284,13 +284,13 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtTC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTC.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTC.ForeColor = System.Drawing.SystemColors.Window;
             this.txtTC.Location = new System.Drawing.Point(59, 163);
             this.txtTC.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtTC.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtTC.Name = "txtTC";
-            this.txtTC.Size = new System.Drawing.Size(346, 25);
+            this.txtTC.Size = new System.Drawing.Size(346, 30);
             this.txtTC.TabIndex = 32;
             this.txtTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTC_KeyPress_1);
             // 
@@ -298,13 +298,13 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.SystemColors.Window;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(57, 234);
             this.txtKullaniciAdi.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtKullaniciAdi.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(348, 25);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(348, 30);
             this.txtKullaniciAdi.TabIndex = 32;
             this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciAdi_KeyPress_1);
             // 
@@ -312,67 +312,67 @@ namespace YZMYapimiProjesi.SignUp
             // 
             this.txtAdres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtAdres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAdres.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdres.ForeColor = System.Drawing.SystemColors.Window;
             this.txtAdres.Location = new System.Drawing.Point(57, 303);
             this.txtAdres.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtAdres.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(347, 25);
+            this.txtAdres.Size = new System.Drawing.Size(347, 30);
             this.txtAdres.TabIndex = 32;
             // 
             // txtEposta
             // 
             this.txtEposta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtEposta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEposta.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEposta.ForeColor = System.Drawing.SystemColors.Window;
             this.txtEposta.Location = new System.Drawing.Point(57, 440);
             this.txtEposta.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtEposta.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtEposta.Name = "txtEposta";
-            this.txtEposta.Size = new System.Drawing.Size(347, 25);
+            this.txtEposta.Size = new System.Drawing.Size(347, 30);
             this.txtEposta.TabIndex = 32;
             // 
             // txtSifre1
             // 
             this.txtSifre1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtSifre1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifre1.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSifre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifre1.ForeColor = System.Drawing.SystemColors.Window;
             this.txtSifre1.Location = new System.Drawing.Point(56, 512);
             this.txtSifre1.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtSifre1.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtSifre1.Name = "txtSifre1";
             this.txtSifre1.PasswordChar = '*';
-            this.txtSifre1.Size = new System.Drawing.Size(169, 25);
+            this.txtSifre1.Size = new System.Drawing.Size(169, 30);
             this.txtSifre1.TabIndex = 32;
             // 
             // txtSifre2
             // 
             this.txtSifre2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtSifre2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifre2.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSifre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifre2.ForeColor = System.Drawing.SystemColors.Window;
             this.txtSifre2.Location = new System.Drawing.Point(231, 512);
             this.txtSifre2.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtSifre2.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtSifre2.Name = "txtSifre2";
             this.txtSifre2.PasswordChar = '*';
-            this.txtSifre2.Size = new System.Drawing.Size(173, 25);
+            this.txtSifre2.Size = new System.Drawing.Size(173, 30);
             this.txtSifre2.TabIndex = 32;
             // 
             // txtTelNo
             // 
             this.txtTelNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.txtTelNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelNo.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelNo.ForeColor = System.Drawing.SystemColors.Window;
             this.txtTelNo.Location = new System.Drawing.Point(59, 379);
             this.txtTelNo.MaximumSize = new System.Drawing.Size(500, 500);
             this.txtTelNo.MinimumSize = new System.Drawing.Size(2, 26);
             this.txtTelNo.Name = "txtTelNo";
-            this.txtTelNo.Size = new System.Drawing.Size(346, 25);
+            this.txtTelNo.Size = new System.Drawing.Size(346, 30);
             this.txtTelNo.TabIndex = 32;
             this.txtTelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelNo_KeyPress_1);
             // 
@@ -402,7 +402,7 @@ namespace YZMYapimiProjesi.SignUp
             // 
             // SignUpFormu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(460, 697);

@@ -47,12 +47,12 @@ namespace YZMYapimiProjesi.Alici
             this.Paralbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.paraYukleBtnNew = new System.Windows.Forms.Button();
             this.btnAl = new System.Windows.Forms.Button();
             this.BackBtnPic = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TbMiktar = new System.Windows.Forms.TextBox();
-            this.paraYukleBtnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMiktar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -65,36 +65,33 @@ namespace YZMYapimiProjesi.Alici
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(95, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(127, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 21);
+            this.label1.Size = new System.Drawing.Size(152, 29);
             this.label1.TabIndex = 19;
             this.label1.Text = "Merhabalar,";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("D-DIN", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblName.Location = new System.Drawing.Point(210, 27);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(280, 33);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(96, 21);
+            this.lblName.Size = new System.Drawing.Size(133, 29);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "{Kullanici}";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(89, 251);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(119, 309);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(233, 20);
+            this.label5.Size = new System.Drawing.Size(337, 26);
             this.label5.TabIndex = 22;
             this.label5.Text = "Almak İstediğiniz Ürün Seçiniz";
             // 
@@ -102,40 +99,39 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.CbUrun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.CbUrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbUrun.Font = new System.Drawing.Font("D-DIN", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbUrun.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbUrun.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.CbUrun.FormattingEnabled = true;
             this.CbUrun.Items.AddRange(new object[] {
             "Pamuk",
             "Yulaf",
             "Buğday"});
-            this.CbUrun.Location = new System.Drawing.Point(66, 273);
-            this.CbUrun.Margin = new System.Windows.Forms.Padding(2);
+            this.CbUrun.Location = new System.Drawing.Point(88, 336);
+            this.CbUrun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbUrun.Name = "CbUrun";
-            this.CbUrun.Size = new System.Drawing.Size(271, 29);
+            this.CbUrun.Size = new System.Drawing.Size(360, 37);
             this.CbUrun.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(163, 337);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(217, 415);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 20);
+            this.label6.Size = new System.Drawing.Size(129, 26);
             this.label6.TabIndex = 24;
             this.label6.Text = "Miktar (Kg)";
             // 
             // CbOnayla
             // 
             this.CbOnayla.AutoSize = true;
-            this.CbOnayla.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbOnayla.ForeColor = System.Drawing.Color.White;
-            this.CbOnayla.Location = new System.Drawing.Point(66, 401);
-            this.CbOnayla.Margin = new System.Windows.Forms.Padding(2);
+            this.CbOnayla.Location = new System.Drawing.Point(88, 494);
+            this.CbOnayla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbOnayla.Name = "CbOnayla";
-            this.CbOnayla.Size = new System.Drawing.Size(256, 21);
+            this.CbOnayla.Size = new System.Drawing.Size(332, 29);
             this.CbOnayla.TabIndex = 26;
             this.CbOnayla.Text = "Girdiğim ürün ve miktardan eminim";
             this.CbOnayla.UseVisualStyleBackColor = true;
@@ -145,10 +141,9 @@ namespace YZMYapimiProjesi.Alici
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(322, 399);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(429, 491);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 29);
+            this.label7.Size = new System.Drawing.Size(24, 36);
             this.label7.TabIndex = 27;
             this.label7.Text = "*";
             // 
@@ -160,12 +155,11 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("D-DIN", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(179, 515);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(186, 625);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(197, 20);
+            this.label9.Size = new System.Drawing.Size(277, 26);
             this.label9.TabIndex = 22;
             this.label9.Text = "Tüm İşlemlerim Geçmeşi";
             // 
@@ -177,9 +171,10 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(381, 508);
+            this.pictureBox2.Location = new System.Drawing.Point(501, 609);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -192,11 +187,13 @@ namespace YZMYapimiProjesi.Alici
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.paraYukleBtnNew);
-            this.groupBox1.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(42, 79);
+            this.groupBox1.Location = new System.Drawing.Point(56, 97);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(334, 158);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(445, 194);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cüzdanım";
@@ -205,9 +202,10 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.refreshBtnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtnNew.Image = ((System.Drawing.Image)(resources.GetObject("refreshBtnNew.Image")));
-            this.refreshBtnNew.Location = new System.Drawing.Point(285, 14);
+            this.refreshBtnNew.Location = new System.Drawing.Point(380, 17);
+            this.refreshBtnNew.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtnNew.Name = "refreshBtnNew";
-            this.refreshBtnNew.Size = new System.Drawing.Size(43, 36);
+            this.refreshBtnNew.Size = new System.Drawing.Size(57, 44);
             this.refreshBtnNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.refreshBtnNew.TabIndex = 1;
             this.refreshBtnNew.TabStop = false;
@@ -216,32 +214,52 @@ namespace YZMYapimiProjesi.Alici
             // Paralbl
             // 
             this.Paralbl.AutoSize = true;
-            this.Paralbl.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Paralbl.Location = new System.Drawing.Point(167, 63);
+            this.Paralbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paralbl.Location = new System.Drawing.Point(223, 78);
+            this.Paralbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Paralbl.Name = "Paralbl";
-            this.Paralbl.Size = new System.Drawing.Size(48, 26);
+            this.Paralbl.Size = new System.Drawing.Size(66, 36);
             this.Paralbl.TabIndex = 0;
             this.Paralbl.Text = "000";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(248, 63);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(331, 78);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 26);
+            this.label10.Size = new System.Drawing.Size(50, 36);
             this.label10.TabIndex = 0;
             this.label10.Text = "TL";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("D-DIN", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 63);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(25, 78);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 26);
+            this.label11.Size = new System.Drawing.Size(197, 36);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mevcut Para: ";
+            // 
+            // paraYukleBtnNew
+            // 
+            this.paraYukleBtnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
+            this.paraYukleBtnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
+            this.paraYukleBtnNew.FlatAppearance.BorderSize = 2;
+            this.paraYukleBtnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paraYukleBtnNew.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paraYukleBtnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.paraYukleBtnNew.Location = new System.Drawing.Point(135, 137);
+            this.paraYukleBtnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.paraYukleBtnNew.Name = "paraYukleBtnNew";
+            this.paraYukleBtnNew.Size = new System.Drawing.Size(169, 39);
+            this.paraYukleBtnNew.TabIndex = 28;
+            this.paraYukleBtnNew.Text = "Para Yükle";
+            this.paraYukleBtnNew.UseVisualStyleBackColor = false;
+            this.paraYukleBtnNew.Click += new System.EventHandler(this.paraYukleBtnNew_Click);
             // 
             // btnAl
             // 
@@ -251,10 +269,10 @@ namespace YZMYapimiProjesi.Alici
             this.btnAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.btnAl.Location = new System.Drawing.Point(54, 446);
-            this.btnAl.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAl.Location = new System.Drawing.Point(72, 549);
+            this.btnAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAl.Name = "btnAl";
-            this.btnAl.Size = new System.Drawing.Size(302, 32);
+            this.btnAl.Size = new System.Drawing.Size(403, 39);
             this.btnAl.TabIndex = 28;
             this.btnAl.Text = "Ürün Al";
             this.btnAl.UseVisualStyleBackColor = false;
@@ -264,9 +282,10 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(12, 12);
+            this.BackBtnPic.Location = new System.Drawing.Point(16, 15);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4);
             this.BackBtnPic.Name = "BackBtnPic";
-            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
+            this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackBtnPic.TabIndex = 36;
             this.BackBtnPic.TabStop = false;
@@ -276,9 +295,10 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(376, 12);
+            this.Exit.Location = new System.Drawing.Point(501, 15);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(39, 36);
+            this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Exit.TabIndex = 37;
             this.Exit.TabStop = false;
@@ -289,8 +309,9 @@ namespace YZMYapimiProjesi.Alici
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(427, 554);
+            this.pictureBox1.Size = new System.Drawing.Size(569, 682);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -299,39 +320,23 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.TbMiktar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
             this.TbMiktar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbMiktar.Font = new System.Drawing.Font("D-DIN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbMiktar.ForeColor = System.Drawing.SystemColors.Window;
-            this.TbMiktar.Location = new System.Drawing.Point(66, 360);
-            this.TbMiktar.MaximumSize = new System.Drawing.Size(500, 500);
+            this.TbMiktar.Location = new System.Drawing.Point(88, 443);
+            this.TbMiktar.Margin = new System.Windows.Forms.Padding(4);
+            this.TbMiktar.MaximumSize = new System.Drawing.Size(666, 500);
             this.TbMiktar.MinimumSize = new System.Drawing.Size(2, 26);
             this.TbMiktar.Name = "TbMiktar";
-            this.TbMiktar.Size = new System.Drawing.Size(271, 25);
+            this.TbMiktar.Size = new System.Drawing.Size(361, 30);
             this.TbMiktar.TabIndex = 50;
             this.TbMiktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbMiktar_KeyPress_1);
             // 
-            // paraYukleBtnNew
-            // 
-            this.paraYukleBtnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(216)))), ((int)(((byte)(104)))));
-            this.paraYukleBtnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(166)))), ((int)(((byte)(82)))));
-            this.paraYukleBtnNew.FlatAppearance.BorderSize = 2;
-            this.paraYukleBtnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.paraYukleBtnNew.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraYukleBtnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.paraYukleBtnNew.Location = new System.Drawing.Point(101, 111);
-            this.paraYukleBtnNew.Margin = new System.Windows.Forms.Padding(2);
-            this.paraYukleBtnNew.Name = "paraYukleBtnNew";
-            this.paraYukleBtnNew.Size = new System.Drawing.Size(127, 32);
-            this.paraYukleBtnNew.TabIndex = 28;
-            this.paraYukleBtnNew.Text = "Para Yükle";
-            this.paraYukleBtnNew.UseVisualStyleBackColor = false;
-            this.paraYukleBtnNew.Click += new System.EventHandler(this.paraYukleBtnNew_Click);
-            // 
             // AliciForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(427, 554);
+            this.ClientSize = new System.Drawing.Size(569, 682);
             this.Controls.Add(this.TbMiktar);
             this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.Exit);
@@ -349,7 +354,7 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AliciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALICI";
