@@ -17,18 +17,12 @@ namespace YZMYapimiProjesi.Admin
 {
     public partial class AdminAraYuzu : Form
     {
-       
-
-        private readonly DbEntity _db;
-        
+        private readonly DbEntity _db; 
         public AdminAraYuzu()
         {
             InitializeComponent();
             _db = new DbEntity();
-          
-
         }
-
         private void AdminAraYuzu_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'appData.AlimSatimIslemler' table. You can move, or remove it, as needed.
@@ -89,9 +83,6 @@ namespace YZMYapimiProjesi.Admin
         }
         private void KullanicilarBtn_Click(object sender, EventArgs e)
         {
-
-
-
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
@@ -121,30 +112,8 @@ namespace YZMYapimiProjesi.Admin
 
         private void alimSatimRaporBtn_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-
-                    try
-                    {
-                        using (XLWorkbook workbook = new XLWorkbook())
-                        {
-
-                            workbook.Worksheets.Add(this.appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
-                            workbook.SaveAs(sfd.FileName);
-
-                        }
-                        MessageBox.Show("Islem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-
-
-            }
+            Alim_Satim_Rapor_Formu af = new Alim_Satim_Rapor_Formu(this.appData);
+            af.Show();
         }
     }
 }
