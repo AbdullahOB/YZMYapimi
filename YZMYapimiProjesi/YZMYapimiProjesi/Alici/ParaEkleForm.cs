@@ -24,7 +24,6 @@ namespace YZMYapimiProjesi.Alici
             _db = new DbEntity();
             _ad = ad;
             _id = UserId;
-
         }
         private void btnYukle_Click(object sender, EventArgs e)
         {
@@ -39,19 +38,23 @@ namespace YZMYapimiProjesi.Alici
                 
                 if (ParaMiktari< 1000 && ParaMiktari>0)
                 {
-
-                    var req = _db.RequestTables.Create();
-                    req.KullaniciId = _id;
-                    req.statueId = 3;
-                    req.MsgSubject = _ad + " isimli kullanici " + ParaMiktari + " TL Para Talepi Gonderdi";
-                    req.ParaMiktari = ParaMiktari;
-                    _db.RequestTables.Add(req);
-
-
-                    MessageBox.Show("Talebiniz Alinmistir", "Yükleme Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    _db.SaveChanges();
-                    this.Hide();
+                    if (CB_Doviz.Text == "" || CB_Doviz.Text == "Para Birimi")
+                    {
+                        MessageBox.Show("Para Birimi Seçiniz..", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        var req = _db.RequestTable.Create();
+                        req.KullaniciId = _id;
+                        req.statueId = 3;
+                        req.MsgSubject = _ad + " isimli kullanici " + ParaMiktari + " " + CB_Doviz.Text + " Para Talepi Gonderdi";
+                        req.ParaMiktari = ParaMiktari;
+                        req.ParaBirimi = CB_Doviz.Text;
+                        _db.RequestTable.Add(req);
+                        MessageBox.Show("Talebiniz Alinmistir", "Yükleme Beklemede", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _db.SaveChanges();
+                        this.Hide();
+                    }
                 }
                 else
                 {
@@ -76,5 +79,7 @@ namespace YZMYapimiProjesi.Alici
         {
             this.Close();
         }
+
+
     }
 }

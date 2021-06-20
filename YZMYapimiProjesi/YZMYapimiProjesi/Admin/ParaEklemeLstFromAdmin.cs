@@ -39,7 +39,7 @@ namespace YZMYapimiProjesi.Admin
 
         private void ParaEklemeLstFromAdmin_Load(object sender, EventArgs e)
         {
-            var reqList = _db.RequestTables.ToList();
+            var reqList = _db.RequestTable.ToList();
             foreach (var l in reqList)
             {
                 if (l.statueId == 3)

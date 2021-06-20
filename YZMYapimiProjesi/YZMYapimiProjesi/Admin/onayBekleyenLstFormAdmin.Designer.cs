@@ -48,7 +48,7 @@ namespace YZMYapimiProjesi.Admin
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(76, 110);
+            this.label1.Location = new System.Drawing.Point(214, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(437, 39);
@@ -66,10 +66,10 @@ namespace YZMYapimiProjesi.Admin
             this.onayBekleyenUrnLst.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.onayBekleyenUrnLst.FullRowSelect = true;
             this.onayBekleyenUrnLst.HideSelection = false;
-            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(43, 174);
-            this.onayBekleyenUrnLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onayBekleyenUrnLst.Location = new System.Drawing.Point(49, 99);
+            this.onayBekleyenUrnLst.Margin = new System.Windows.Forms.Padding(4);
             this.onayBekleyenUrnLst.Name = "onayBekleyenUrnLst";
-            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(496, 389);
+            this.onayBekleyenUrnLst.Size = new System.Drawing.Size(773, 464);
             this.onayBekleyenUrnLst.TabIndex = 43;
             this.onayBekleyenUrnLst.UseCompatibleStateImageBehavior = false;
             this.onayBekleyenUrnLst.View = System.Windows.Forms.View.Details;
@@ -78,12 +78,12 @@ namespace YZMYapimiProjesi.Admin
             // columnHeader1
             // 
             this.columnHeader1.Text = "Request Id";
-            this.columnHeader1.Width = 89;
+            this.columnHeader1.Width = 123;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Kullanici Id";
-            this.columnHeader2.Width = 93;
+            this.columnHeader2.Width = 117;
             // 
             // columnHeader3
             // 
@@ -94,8 +94,8 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(57, 32);
-            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackBtnPic.Location = new System.Drawing.Point(49, 32);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4);
             this.BackBtnPic.Name = "BackBtnPic";
             this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,8 +107,8 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(477, 32);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit.Location = new System.Drawing.Point(770, 32);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,10 +121,10 @@ namespace YZMYapimiProjesi.Admin
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(584, 599);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(872, 599);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
@@ -133,14 +133,14 @@ namespace YZMYapimiProjesi.Admin
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(584, 599);
+            this.ClientSize = new System.Drawing.Size(872, 599);
             this.Controls.Add(this.onayBekleyenUrnLst);
             this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "onayBekleyenLstFormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "onayBekleyenLstFormAdmin";

@@ -176,7 +176,7 @@
     <Compile Include="DB\AlimSatimIslemler.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\database_firewall_rules.cs">
+    <Compile Include="DB\BeklyenIslemlerTable.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DbModelYZM.Context.cs">
@@ -224,7 +224,7 @@
     <Compile Include="DB\Statue.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\sysdiagram.cs">
+    <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>DbModelYZM.tt</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginForm.cs">
@@ -417,5 +417,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

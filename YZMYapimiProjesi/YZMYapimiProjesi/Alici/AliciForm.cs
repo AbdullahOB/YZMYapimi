@@ -35,8 +35,15 @@ namespace YZMYapimiProjesi.Alici
         private void AliciForm_Load(object sender, EventArgs e)
         {
             lblName.Text = _ad;
-
             Paralbl.Text = _walletBalance.ToString();
+            var alici = _db.RequestTable.Where(q=> q.KullaniciId == _id && q.statueId == 3).ToList();
+            foreach (var req in alici)
+            {
+                ListViewItem addReq = new ListViewItem(req.ParaBirimi);
+                addReq.SubItems.Add(req.ParaMiktari.ToString());
+                LV_BekleyenOdeme.Items.Add(addReq);
+            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -107,9 +114,16 @@ namespace YZMYapimiProjesi.Alici
 
         private void refreshBtnNew_Click(object sender, EventArgs e)
         {
-            var user = _db.KullaniciTables.Find(_id);
-
+            var user = _db.KullaniciTable.Find(_id);
             Paralbl.Text = user.WalletBalance.ToString();
+            LV_BekleyenOdeme.Items.Clear();
+            var alici = _db.RequestTable.Where(q => q.KullaniciId == _id && q.statueId == 3).ToList();
+            foreach (var req in alici)
+            {
+                ListViewItem addReq = new ListViewItem(req.ParaBirimi);
+                addReq.SubItems.Add(req.ParaMiktari.ToString());
+                LV_BekleyenOdeme.Items.Add(addReq);
+            }
         }
 
         private void paraYukleBtnNew_Click(object sender, EventArgs e)
@@ -132,13 +146,13 @@ namespace YZMYapimiProjesi.Alici
                 if (_db.SaticiVarliklari.Count() > 0)
                 {
                     int urnMik = Convert.ToInt32(TbMiktar.Text);
-                    var Alici = _db.KullaniciTables.FirstOrDefault(q => q.Id == _id);
+                    var Alici = _db.KullaniciTable.FirstOrDefault(q => q.Id == _id);
                     var saticiMinFiyat = _db.SaticiVarliklari.OrderBy(d => d.urnFiyat);
                     foreach (var l in saticiMinFiyat)
                     {
                         if (l.urnAdi == CbUrun.Text)
                         {
-                            var Satici = _db.KullaniciTables.FirstOrDefault(p => p.Id == l.KullaniciId);
+                            var Satici = _db.KullaniciTable.FirstOrDefault(p => p.Id == l.KullaniciId);
                             var alim = _db.AlimSatimIslemler.Create();
                             alim.AliciId = _id;
                             alim.AliciAdi = Alici.KullaniciAdi;

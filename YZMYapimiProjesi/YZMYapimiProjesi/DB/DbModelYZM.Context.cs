@@ -27,17 +27,17 @@ namespace YZMYapimiProjesi.DB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<KullaniciRole> KullaniciRoles { get; set; }
-        public virtual DbSet<KullaniciTable> KullaniciTables { get; set; }
-        public virtual DbSet<RequestTable> RequestTables { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Statue> Statues { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<AlimSatimIslemler> AlimSatimIslemler { get; set; }
+        public virtual DbSet<BeklyenIslemlerTable> BeklyenIslemlerTable { get; set; }
+        public virtual DbSet<KullaniciRole> KullaniciRole { get; set; }
+        public virtual DbSet<KullaniciTable> KullaniciTable { get; set; }
+        public virtual DbSet<RequestTable> RequestTable { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<SaticiRequest> SaticiRequest { get; set; }
         public virtual DbSet<SaticiStatueId> SaticiStatueId { get; set; }
         public virtual DbSet<SaticiVarliklari> SaticiVarliklari { get; set; }
-        public virtual DbSet<SaticiRequest> SaticiRequest { get; set; }
-        public virtual DbSet<AlimSatimIslemler> AlimSatimIslemler { get; set; }
+        public virtual DbSet<Statue> Statue { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

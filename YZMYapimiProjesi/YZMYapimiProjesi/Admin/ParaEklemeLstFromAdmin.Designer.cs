@@ -47,8 +47,8 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(63, 27);
-            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackBtnPic.Location = new System.Drawing.Point(45, 27);
+            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4);
             this.BackBtnPic.Name = "BackBtnPic";
             this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -60,8 +60,8 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(433, 27);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit.Location = new System.Drawing.Point(955, 27);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(52, 44);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,10 +74,10 @@ namespace YZMYapimiProjesi.Admin
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(545, 551);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(1049, 617);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
@@ -92,10 +92,10 @@ namespace YZMYapimiProjesi.Admin
             this.paraEklemeTalepleriLst.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.paraEklemeTalepleriLst.FullRowSelect = true;
             this.paraEklemeTalepleriLst.HideSelection = false;
-            this.paraEklemeTalepleriLst.Location = new System.Drawing.Point(48, 151);
-            this.paraEklemeTalepleriLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paraEklemeTalepleriLst.Location = new System.Drawing.Point(45, 92);
+            this.paraEklemeTalepleriLst.Margin = new System.Windows.Forms.Padding(4);
             this.paraEklemeTalepleriLst.Name = "paraEklemeTalepleriLst";
-            this.paraEklemeTalepleriLst.Size = new System.Drawing.Size(436, 365);
+            this.paraEklemeTalepleriLst.Size = new System.Drawing.Size(962, 497);
             this.paraEklemeTalepleriLst.TabIndex = 45;
             this.paraEklemeTalepleriLst.UseCompatibleStateImageBehavior = false;
             this.paraEklemeTalepleriLst.View = System.Windows.Forms.View.Details;
@@ -104,24 +104,24 @@ namespace YZMYapimiProjesi.Admin
             // columnHeader1
             // 
             this.columnHeader1.Text = "Request Id";
-            this.columnHeader1.Width = 89;
+            this.columnHeader1.Width = 114;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Kullanici Id";
-            this.columnHeader2.Width = 93;
+            this.columnHeader2.Width = 114;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Mesaj";
-            this.columnHeader3.Width = 376;
+            this.columnHeader3.Width = 500;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(95, 91);
+            this.label1.Location = new System.Drawing.Point(347, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(353, 39);
@@ -133,14 +133,14 @@ namespace YZMYapimiProjesi.Admin
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(545, 551);
+            this.ClientSize = new System.Drawing.Size(1049, 617);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.paraEklemeTalepleriLst);
             this.Controls.Add(this.BackBtnPic);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ParaEklemeLstFromAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaEklemeLstFromAdmin";

@@ -35,7 +35,7 @@ namespace YZMYapimiProjesi.Satici
         private void TalepGonderBtn(object sender, EventArgs e)
         {
             var satReq = _db.SaticiRequest.Find(_id);
-            var users = _db.KullaniciTables.Find(satReq.KullaniciId);
+            var users = _db.KullaniciTable.Find(satReq.KullaniciId);
             satReq.urnAdi = urnTipiCmb.Text;
             satReq.urnMiktari = Convert.ToInt32(urnMiktariTxt.Text);
             satReq.urnFiyati = Convert.ToInt32(urnFiyatiTxt.Text);

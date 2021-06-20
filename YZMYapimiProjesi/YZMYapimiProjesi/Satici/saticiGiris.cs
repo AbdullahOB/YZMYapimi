@@ -38,7 +38,7 @@ namespace YZMYapimiProjesi.Satici
 
         private void RefreshBtn(object sender, EventArgs e)
         {
-            var user = _db.KullaniciTables.Find(_id);
+            var user = _db.KullaniciTable.Find(_id);
             Paralbl.Text = user.WalletBalance.ToString();
         }
 
