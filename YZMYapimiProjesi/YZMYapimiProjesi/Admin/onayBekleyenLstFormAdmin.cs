@@ -38,7 +38,6 @@ namespace YZMYapimiProjesi.Admin
 
         private void onayBekleyenLstFormAdmin_Load(object sender, EventArgs e)
         {
-   
             var SatReq = _db.SaticiRequest.ToList();
             foreach (var l in SatReq)
             {

@@ -67,7 +67,7 @@ namespace YZMYapimiProjesi.Admin
         {
             
             var req = _db.SaticiRequest.Find(_id);
-            var user = _db.KullaniciTables.Find(req.KullaniciId);
+            var user = _db.KullaniciTable.Find(req.KullaniciId);
             var adi = user.KullaniciAdi;
             var urnTipi = req.urnAdi;
             var urnMiktari = req.urnMiktari;

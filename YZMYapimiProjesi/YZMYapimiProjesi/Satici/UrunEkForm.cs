@@ -66,7 +66,7 @@ namespace YZMYapimiProjesi.Satici
             if(urnSecCmBox.Text != "" && urnMiktarTxtBox.Text != "" && urnFiyatTxtBox.Text != "")
             {
                 var satReq = _db.SaticiRequest.Create();
-                var users = _db.KullaniciTables.Find(_id);
+                var users = _db.KullaniciTable.Find(_id);
                 satReq.KullaniciId = _id;
                 satReq.urnAdi = urnSecCmBox.Text;
                 satReq.urnMiktari = Convert.ToInt32(urnMiktarTxtBox.Text);

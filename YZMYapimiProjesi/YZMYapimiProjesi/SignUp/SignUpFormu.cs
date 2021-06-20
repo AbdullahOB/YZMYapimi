@@ -40,7 +40,7 @@ namespace YZMYapimiProjesi.SignUp
             else if (txtSifre1.Text == txtSifre2.Text)
             {
 
-                var user = _db.KullaniciTables.Create();
+                var user = _db.KullaniciTable.Create();
                 user.KullaniciAdi = txtKullaniciAdi.Text;
                 user.Sifre = txtSifre1.Text;
                 user.Ad = txtAd.Text;
@@ -51,8 +51,8 @@ namespace YZMYapimiProjesi.SignUp
                 user.Adres = txtAdres.Text;
                 user.KullaniciTipi = kullaniciTipi;
                 user.WalletBalance = 0;
-                _db.KullaniciTables.Add(user);
-                var role = _db.KullaniciRoles.Create();
+                _db.KullaniciTable.Add(user);
+                var role = _db.KullaniciRole.Create();
                 role.KullaniciId = user.Id;
                 if (kullaniciTipi == "Alici")
                 {
@@ -62,7 +62,7 @@ namespace YZMYapimiProjesi.SignUp
                 {
                     role.RoleId = 2;
                 }
-                _db.KullaniciRoles.Add(role);
+                _db.KullaniciRole.Add(role);
                 _db.SaveChanges();
 
                 MessageBox.Show("Kayıdınız Başarıyla Tamamlanmıştır!", "Kayıt Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);

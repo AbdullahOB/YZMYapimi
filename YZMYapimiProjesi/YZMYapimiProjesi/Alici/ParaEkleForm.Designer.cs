@@ -35,12 +35,14 @@ namespace YZMYapimiProjesi.Alici
             this.label1 = new System.Windows.Forms.Label();
             this.TbPara = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.CbOnaylaPara = new System.Windows.Forms.CheckBox();
             this.btnYukle = new System.Windows.Forms.Button();
             this.errProvParaEkle = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.CB_Doviz = new System.Windows.Forms.ComboBox();
+            this.imageListBayraklar = new System.Windows.Forms.ImageList(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvParaEkle)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +79,7 @@ namespace YZMYapimiProjesi.Alici
             this.TbPara.ForeColor = System.Drawing.Color.Black;
             this.TbPara.Location = new System.Drawing.Point(58, 164);
             this.TbPara.Name = "TbPara";
-            this.TbPara.Size = new System.Drawing.Size(323, 34);
+            this.TbPara.Size = new System.Drawing.Size(187, 34);
             this.TbPara.TabIndex = 2;
             this.TbPara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbPara_KeyPress);
             // 
@@ -88,18 +90,6 @@ namespace YZMYapimiProjesi.Alici
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 4);
             this.panel1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(332, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 34);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "TL   ";
             // 
             // CbOnaylaPara
             // 
@@ -132,13 +122,13 @@ namespace YZMYapimiProjesi.Alici
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(53, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 30);
+            this.label3.Size = new System.Drawing.Size(181, 30);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Günlük limit: 1000 TL";
+            this.label3.Text = "Günlük Hacim: 1000 ";
             // 
             // label4
             // 
@@ -151,15 +141,50 @@ namespace YZMYapimiProjesi.Alici
             this.label4.TabIndex = 26;
             this.label4.Text = "*";
             // 
+            // CB_Doviz
+            // 
+            this.CB_Doviz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Doviz.FormattingEnabled = true;
+            this.CB_Doviz.Items.AddRange(new object[] {
+            "TL",
+            "USD",
+            "EUR",
+            "GBP"});
+            this.CB_Doviz.Location = new System.Drawing.Point(251, 164);
+            this.CB_Doviz.Name = "CB_Doviz";
+            this.CB_Doviz.Size = new System.Drawing.Size(127, 33);
+            this.CB_Doviz.TabIndex = 27;
+            this.CB_Doviz.Text = "Para Birimi";
+            // 
+            // imageListBayraklar
+            // 
+            this.imageListBayraklar.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBayraklar.ImageStream")));
+            this.imageListBayraklar.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListBayraklar.Images.SetKeyName(0, "dolar.png");
+            this.imageListBayraklar.Images.SetKeyName(1, "euro.png");
+            this.imageListBayraklar.Images.SetKeyName(2, "sterlin.png");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myanmar Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(228, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "(TL, USD vb...)";
+            // 
             // ParaEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(449, 327);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CB_Doviz);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnYukle);
             this.Controls.Add(this.CbOnaylaPara);
             this.Controls.Add(this.panel1);
@@ -182,11 +207,13 @@ namespace YZMYapimiProjesi.Alici
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TbPara;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox CbOnaylaPara;
         private System.Windows.Forms.Button btnYukle;
         private System.Windows.Forms.ErrorProvider errProvParaEkle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox CB_Doviz;
+        private System.Windows.Forms.ImageList imageListBayraklar;
+        private System.Windows.Forms.Label label2;
     }
 }

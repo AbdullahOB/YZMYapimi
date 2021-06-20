@@ -17,8 +17,9 @@ namespace YZMYapimiProjesi.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KullaniciTable()
         {
-            this.KullaniciRoles = new HashSet<KullaniciRole>();
-            this.RequestTables = new HashSet<RequestTable>();
+            this.BeklyenIslemlerTable = new HashSet<BeklyenIslemlerTable>();
+            this.KullaniciRole = new HashSet<KullaniciRole>();
+            this.RequestTable = new HashSet<RequestTable>();
             this.SaticiRequest = new HashSet<SaticiRequest>();
             this.SaticiVarliklari = new HashSet<SaticiVarliklari>();
         }
@@ -33,12 +34,14 @@ namespace YZMYapimiProjesi.DB
         public long Tel { get; set; }
         public string Adres { get; set; }
         public string KullaniciTipi { get; set; }
-        public Nullable<int> WalletBalance { get; set; }
+        public Nullable<double> WalletBalance { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KullaniciRole> KullaniciRoles { get; set; }
+        public virtual ICollection<BeklyenIslemlerTable> BeklyenIslemlerTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RequestTable> RequestTables { get; set; }
+        public virtual ICollection<KullaniciRole> KullaniciRole { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestTable> RequestTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaticiRequest> SaticiRequest { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

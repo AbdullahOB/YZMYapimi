@@ -5,24 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="63c8fb8b73524222820137498b451077" Name="Diagram1" ZoomLevel="85">
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciRole" Width="1.5" PointX="9.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciTable" Width="1.5" PointX="6.375" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.RequestTable" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.Role" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.Statue" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.sysdiagram" Width="1.5" PointX="12.125" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.database_firewall_rules" Width="1.5" PointX="12.125" PointY="4.375" IsExpanded="true" />
-        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_KullaniciTable" ManuallyRouted="false" />
-        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_Role" ManuallyRouted="false" />
-        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_KullaniciTable" ManuallyRouted="false" />
-        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_Statue" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiStatueId" Width="1.5" PointX="2.875" PointY="6" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiVarliklari" Width="1.5" PointX="4.875" PointY="4.75" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiRequest" Width="1.5" PointX="6.125" PointY="7.5" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.AlimSatimIslemler" Width="1.5" PointX="14.5" PointY="0.75" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.BeklyenIslemlerTable" Width="1.5" PointX="3.5" PointY="3.75" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciRole" Width="1.5" PointX="8.125" PointY="0.875" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.KullaniciTable" Width="1.5" PointX="5.875" PointY="3.75" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.RequestTable" Width="1.5" PointX="8.125" PointY="4.5" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.Role" Width="1.5" PointX="5.875" PointY="1" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiRequest" Width="1.5" PointX="10.375" PointY="3" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiStatueId" Width="1.5" PointX="13.5" PointY="4.375" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.SaticiVarliklari" Width="1.5" PointX="3.5" PointY="6.5" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.Statue" Width="1.5" PointX="10.25" PointY="6.5" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.sysdiagrams" Width="1.5" PointX="12.875" PointY="0.75" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_BeklyenIslemlerTable_KullaniciTable" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_KullaniciTable" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_KullaniciRole_Role" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_KullaniciTable" />
         <AssociationConnector Association="YZMYapimiDB1Model.FK_SaticiRequest_KullaniciTable" />
         <AssociationConnector Association="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable" />
+        <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_Statue" />
         <AssociationConnector Association="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId" />
-        <EntityTypeShape EntityType="YZMYapimiDB1Model.AlimSatimIslemler" Width="1.5" PointX="0.875" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

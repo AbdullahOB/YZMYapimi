@@ -49,14 +49,14 @@ namespace YZMYapimiProjesi.Login
 
                 var kullanici = textBox1.Text.Trim();
                 var sifre = Login.Text;
-                var user = _db.KullaniciTables.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
+                var user = _db.KullaniciTable.FirstOrDefault(q => q.KullaniciAdi == kullanici && q.Sifre == sifre);
                 if (user == null)
                 {
                     MessageBox.Show("Hatali Sifre Veya Kullanici Adi Girdiniz ...");
                 }
                 else
                 {
-                    var role = user.KullaniciRoles.FirstOrDefault();
+                    var role = user.KullaniciRole.FirstOrDefault();
                     var roleNm = role.Role.KullaniciTipi;
                     var userWallet = user.WalletBalance;
                     if (roleNm == "Admin")

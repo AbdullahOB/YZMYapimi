@@ -19,6 +19,8 @@ namespace YZMYapimiProjesi.DB
         public string MsgSubject { get; set; }
         public int statueId { get; set; }
         public int ParaMiktari { get; set; }
+        public string ParaBirimi { get; set; }
+        public string DovizBilgileri { get; set; }
     
         public virtual KullaniciTable KullaniciTable { get; set; }
         public virtual Statue Statue { get; set; }
