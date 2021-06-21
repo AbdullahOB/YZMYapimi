@@ -52,7 +52,7 @@ namespace YZMYapimiProjesi.Alici
             this.PbClose.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PbClose.ErrorImage")));
             this.PbClose.Image = global::YZMYapimiProjesi.Properties.Resources.close_window_32px;
             this.PbClose.Location = new System.Drawing.Point(302, 11);
-            this.PbClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PbClose.Margin = new System.Windows.Forms.Padding(2);
             this.PbClose.Name = "PbClose";
             this.PbClose.Size = new System.Drawing.Size(32, 32);
             this.PbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -79,7 +79,7 @@ namespace YZMYapimiProjesi.Alici
             this.TbPara.Font = new System.Drawing.Font("Myanmar Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbPara.ForeColor = System.Drawing.Color.Black;
             this.TbPara.Location = new System.Drawing.Point(44, 133);
-            this.TbPara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbPara.Margin = new System.Windows.Forms.Padding(2);
             this.TbPara.Name = "TbPara";
             this.TbPara.Size = new System.Drawing.Size(140, 27);
             this.TbPara.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Location = new System.Drawing.Point(44, 77);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 3);
             this.panel1.TabIndex = 3;
@@ -98,7 +98,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             this.CbOnaylaPara.AutoSize = true;
             this.CbOnaylaPara.Location = new System.Drawing.Point(44, 166);
-            this.CbOnaylaPara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbOnaylaPara.Margin = new System.Windows.Forms.Padding(2);
             this.CbOnaylaPara.Name = "CbOnaylaPara";
             this.CbOnaylaPara.Size = new System.Drawing.Size(83, 17);
             this.CbOnaylaPara.TabIndex = 5;
@@ -111,7 +111,7 @@ namespace YZMYapimiProjesi.Alici
             this.btnYukle.Font = new System.Drawing.Font("Myanmar Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYukle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnYukle.Location = new System.Drawing.Point(44, 201);
-            this.btnYukle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYukle.Margin = new System.Windows.Forms.Padding(2);
             this.btnYukle.Name = "btnYukle";
             this.btnYukle.Size = new System.Drawing.Size(242, 38);
             this.btnYukle.TabIndex = 24;
@@ -150,6 +150,7 @@ namespace YZMYapimiProjesi.Alici
             // 
             // CB_Doviz
             // 
+            this.CB_Doviz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_Doviz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_Doviz.FormattingEnabled = true;
             this.CB_Doviz.Items.AddRange(new object[] {
@@ -158,11 +159,10 @@ namespace YZMYapimiProjesi.Alici
             "EUR",
             "GBP"});
             this.CB_Doviz.Location = new System.Drawing.Point(188, 133);
-            this.CB_Doviz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Doviz.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Doviz.Name = "CB_Doviz";
             this.CB_Doviz.Size = new System.Drawing.Size(96, 28);
             this.CB_Doviz.TabIndex = 27;
-            this.CB_Doviz.Text = "Para Birimi";
             // 
             // label2
             // 
@@ -193,7 +193,7 @@ namespace YZMYapimiProjesi.Alici
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PbClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ParaEkleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.PbClose)).EndInit();

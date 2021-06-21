@@ -42,11 +42,15 @@ namespace YZMYapimiProjesi.Admin
             foreach (var l in SatReq)
             {
                             if (l.StatueId == 3)
-                            {   
-                              ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
-                              addReqSat.SubItems.Add(l.KullaniciId.ToString());
-                              addReqSat.SubItems.Add(l.Message);
-                              onayBekleyenUrnLst.Items.Add(addReqSat);
+                            {
+                                    if (l.urnMiktari > 0)
+                                    {
+                                        ListViewItem addReqSat = new ListViewItem(l.Id.ToString());
+                                        addReqSat.SubItems.Add(l.KullaniciId.ToString());
+                                        addReqSat.SubItems.Add(l.Message);
+                                        onayBekleyenUrnLst.Items.Add(addReqSat);
+                                    }
+                             
                             }
             }
 

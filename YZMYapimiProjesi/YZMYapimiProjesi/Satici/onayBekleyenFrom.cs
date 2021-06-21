@@ -52,25 +52,32 @@ namespace YZMYapimiProjesi.Satici
                 {
                     if (l.StatueId == 2)
                     {
-                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                        addStok.BackColor = Color.Red;
-                        addStok.ForeColor = Color.White;
-                        addStok.SubItems.Add(l.urnAdi);
-                        addStok.SubItems.Add(l.urnMiktari.ToString());
-                        addStok.SubItems.Add(l.urnFiyati.ToString());
+                        if (l.urnMiktari > 0)
+                        {
+                            ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                            addStok.BackColor = Color.Red;
+                            addStok.ForeColor = Color.White;
+                            addStok.SubItems.Add(l.urnAdi);
+                            addStok.SubItems.Add(l.urnMiktari.ToString());
+                            addStok.SubItems.Add(l.urnFiyati.ToString());
 
-                        onayBekleyenLst.Items.Add(addStok);
+                            onayBekleyenLst.Items.Add(addStok);
 
+                        }
 
                     }
 
                     else if (l.StatueId == 3)
                     {
-                        ListViewItem addStok = new ListViewItem(l.Id.ToString());
-                        addStok.SubItems.Add(l.urnAdi);
-                        addStok.SubItems.Add(l.urnMiktari.ToString());
-                        addStok.SubItems.Add(l.urnFiyati.ToString());
-                        onayBekleyenLst.Items.Add(addStok);
+                        if (l.urnMiktari > 0)
+                        {
+                            ListViewItem addStok = new ListViewItem(l.Id.ToString());
+                            addStok.SubItems.Add(l.urnAdi);
+                            addStok.SubItems.Add(l.urnMiktari.ToString());
+                            addStok.SubItems.Add(l.urnFiyati.ToString());
+                            onayBekleyenLst.Items.Add(addStok);
+                        }
+                            
                     }
                 }
 
