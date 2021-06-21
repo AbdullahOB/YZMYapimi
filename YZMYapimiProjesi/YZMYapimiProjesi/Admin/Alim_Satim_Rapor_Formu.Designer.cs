@@ -173,8 +173,9 @@ namespace YZMYapimiProjesi.Admin
             this.CB_urunTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_urunTipi.FormattingEnabled = true;
             this.CB_urunTipi.Items.AddRange(new object[] {
-            "Alım",
-            "Satım"});
+            "Buğday",
+            "Pamuk",
+            "Yulaf"});
             this.CB_urunTipi.Location = new System.Drawing.Point(56, 267);
             this.CB_urunTipi.Name = "CB_urunTipi";
             this.CB_urunTipi.Size = new System.Drawing.Size(334, 28);
