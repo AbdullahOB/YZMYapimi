@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using iTextSharp.text.pdf;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,15 +35,39 @@ namespace YZMYapimiProjesi.Admin
             {
                 try
                 {
-                    using (XLWorkbook workbook = new XLWorkbook())
+                   string s = Path.GetFullPath(sfd.FileName);
+
+                    if(sfd.FilterIndex == 1)
                     {
-                        workbook.Worksheets.Add(_appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
-                        workbook.SaveAs(sfd.FileName);
-                        MessageBox.Show("İslem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            
+                            workbook.Worksheets.Add(_appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
+                            workbook.SaveAs(sfd.FileName);
+                            MessageBox.Show("İslem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                        }
                     }
-                    
-                    
+                    else if(sfd.FilterIndex == 2){
+                        using (StreamWriter sw = new StreamWriter(new FileStream(sfd.FileName,
+                        FileMode.Create), Encoding.UTF8))
+                        {
+                            StringBuilder sb = new StringBuilder();
+                            foreach (var p in _appData.AlimSatimIslemler)
+                            {
+                                sb.AppendLine($"{p.Id},{p.AliciAdi},{p.AliciId},{p.SaticiAdi},{p.SaticiId},{p.Fiyat},{p.Miktar},{p.urnAdi},{p.islemZamani}");
+                            }
+                            sw.Write(sb.ToString());
+                        }
+                    }
+                    else if (sfd.FilterIndex==3)
+                    {
+                         
+                    }
+                   
+                   
+
+
                 }
                 catch (Exception ex)
                 {
@@ -59,7 +85,50 @@ namespace YZMYapimiProjesi.Admin
             }
             else
             {
-                
+                SaveFileDialog sfd = new SaveFileDialog() { Title = "Dosyaya yaz", FileName = "Rapor", Filter = "Excel File|*.xlsx|CSV File|*.csv|PDF File|*.pdf" };
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string s = Path.GetFullPath(sfd.FileName);
+
+                        if (sfd.FilterIndex == 1)
+                        {
+                            using (XLWorkbook workbook = new XLWorkbook())
+                            {
+                                workbook.Worksheets.Add(_appData.AlimSatimIslemler.Where(q => q.islemZamani <= DTP_BaslangicTarih.Value && q.islemZamani >= DTP_BitisTarih.Value &&q.urnAdi ==  CB_urunTipi.Text ).CopyToDataTable(), "Alım Satım İşlemler");
+                                workbook.SaveAs(sfd.FileName);
+                                MessageBox.Show("İslem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                            }
+                        }
+                        else if (sfd.FilterIndex == 2)
+                        {
+                            using (StreamWriter sw = new StreamWriter(new FileStream(sfd.FileName,
+                            FileMode.Create), Encoding.UTF8))
+                            {
+                                StringBuilder sb = new StringBuilder();
+                                foreach (var p in _appData.AlimSatimIslemler.Where(q => q.islemZamani <= DTP_BaslangicTarih.Value && q.islemZamani >= DTP_BitisTarih.Value && q.urnAdi == CB_urunTipi.Text))
+                                {
+                                    sb.AppendLine($"{p.Id},{p.AliciAdi},{p.AliciId},{p.SaticiAdi},{p.SaticiId},{p.Fiyat},{p.Miktar},{p.urnAdi},{p.islemZamani}");
+                                }
+                                sw.Write(sb.ToString());
+                            }
+                        }
+                        else if (sfd.FilterIndex == 3)
+                        {
+
+                        }
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

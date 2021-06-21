@@ -61,7 +61,7 @@
           <Property Name="KullaniciId" Type="int" Nullable="false" />
           <Property Name="MsgSubject" Type="nvarchar(max)" Nullable="false" />
           <Property Name="statueId" Type="int" Nullable="false" />
-          <Property Name="ParaMiktari" Type="int" Nullable="false" />
+          <Property Name="ParaMiktari" Type="float" Nullable="false" />
           <Property Name="ParaBirimi" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DovizBilgileri" Type="nvarchar(max)" />
         </EntityType>
