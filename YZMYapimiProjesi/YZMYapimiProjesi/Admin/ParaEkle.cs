@@ -86,28 +86,28 @@ namespace YZMYapimiProjesi.Admin
                 if (req.ParaBirimi == "USD")
                 {
                     string dolarAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
-                    float usd = float.Parse(dolarAlis);
+                    
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * usd);
+                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(dolarAlis));
                     alisFiyat = dolarAlis;
                 }
                 else if (req.ParaBirimi == "EUR")
                 {
                     string euroAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteBuying").InnerXml;
-                    float eur = float.Parse(euroAlis);
+                    
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * eur);
+                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(euroAlis));
                     alisFiyat = euroAlis;
                 }
                 else if (req.ParaBirimi == "GBP")
                 {
                     string sterlinAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='GBP']/BanknoteBuying").InnerXml;
-                    float gbp = float.Parse(sterlinAlis);
+                    
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance =  user.WalletBalance + (req.ParaMiktari * gbp);
+                    user.WalletBalance =  user.WalletBalance + (req.ParaMiktari * float.Parse(sterlinAlis));
                     alisFiyat = sterlinAlis;
                 }
                 string alisBilgileri = DateTime.Now.ToString() + " Tarihinde "+ req.ParaMiktari +" "+ req.ParaBirimi+ " { " + alisFiyat + " TL  } karşılığında yükleme yapıldı ";
