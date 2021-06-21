@@ -86,10 +86,10 @@ namespace YZMYapimiProjesi.Admin
                 if (req.ParaBirimi == "USD")
                 {
                     string dolarAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
-                    
+                    MessageBox.Show("Dolar : " + dolarAlis);
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(dolarAlis));
+                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(dolarAlis, System.Globalization.CultureInfo.InvariantCulture));
                     alisFiyat = dolarAlis;
                 }
                 else if (req.ParaBirimi == "EUR")
@@ -98,7 +98,7 @@ namespace YZMYapimiProjesi.Admin
                     
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(euroAlis));
+                    user.WalletBalance = user.WalletBalance + (req.ParaMiktari * float.Parse(euroAlis , System.Globalization.CultureInfo.InvariantCulture));
                     alisFiyat = euroAlis;
                 }
                 else if (req.ParaBirimi == "GBP")
@@ -107,12 +107,13 @@ namespace YZMYapimiProjesi.Admin
                     
                     req.statueId = 1;
                     _db.Entry(req).State = System.Data.Entity.EntityState.Modified;
-                    user.WalletBalance =  user.WalletBalance + (req.ParaMiktari * float.Parse(sterlinAlis));
+                    user.WalletBalance =  user.WalletBalance + (req.ParaMiktari * float.Parse(sterlinAlis , System.Globalization.CultureInfo.InvariantCulture));
                     alisFiyat = sterlinAlis;
                 }
-                string alisBilgileri = DateTime.Now.ToString() + " Tarihinde "+ req.ParaMiktari +" "+ req.ParaBirimi+ " { " + alisFiyat + " TL  } karşılığında yükleme yapıldı ";
+                string alisBilgileri = DateTime.Now.ToString() + " Tarihinde "+ req.ParaMiktari +" "+ req.ParaBirimi+ " { " + alisFiyat + " TL  } karşılığında yükleme yapıldı  Toplam= "+ float.Parse(alisFiyat , System.Globalization.CultureInfo.InvariantCulture) *req.ParaMiktari + " TL";
                 req.DovizBilgileri = alisBilgileri;
             }
+            
             _db.SaveChanges();
             MessageBox.Show("Para Ekleme Islemi Başarıyla Gerçekleşti ...", "Para Ekleme işelmi Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ParaEklemeLstFromAdmin ParaAdmin = new ParaEklemeLstFromAdmin();
