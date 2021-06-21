@@ -213,7 +213,7 @@ namespace YZMYapimiProjesi.Alici
                     try
                     {
                         using (XLWorkbook workbook = new XLWorkbook())
-                        {
+                        {//aaaaddaa
                             
                             workbook.Worksheets.Add(this.requestDataSet1.RequestTable.Where(q => q.KullaniciId == _id).CopyToDataTable(), "YüklemeListesi");
                             workbook.SaveAs(sfd.FileName);
