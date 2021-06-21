@@ -14,6 +14,7 @@ using YZMYapimiProjesi.Alici;
 using YZMYapimiProjesi.Admin;
 using YZMYapimiProjesi.Satici;
 using YZMYapimiProjesi.DB;
+using YZMYapimiProjesi.Muhabe_Kullanicisi;
 
 namespace YZMYapimiProjesi.Login
 {
@@ -79,6 +80,15 @@ namespace YZMYapimiProjesi.Login
                         AliciForm alici = new AliciForm(this, user.Ad, Convert.ToInt32(userWallet), user.Id);
 
                         alici.Show();
+
+                        Hide();
+                    }
+                    else if (roleNm == "Muhasebeci")
+                    {
+
+                        muhasebe_kullanicisi_form muhasebeci = new muhasebe_kullanicisi_form();
+
+                        muhasebeci.Show();
 
                         Hide();
                     }

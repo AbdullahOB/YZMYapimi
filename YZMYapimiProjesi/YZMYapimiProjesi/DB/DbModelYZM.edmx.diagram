@@ -24,6 +24,7 @@
         <AssociationConnector Association="YZMYapimiDB1Model.FK_SaticiVarliklari_KullaniciTable" />
         <AssociationConnector Association="YZMYapimiDB1Model.FK_RequestTable_Statue" />
         <AssociationConnector Association="YZMYapimiDB1Model.FK_SaticiRequest_SaticiStatueId" />
+        <EntityTypeShape EntityType="YZMYapimiDB1Model.database_firewall_rules" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

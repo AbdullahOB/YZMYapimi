@@ -38,6 +38,7 @@ namespace YZMYapimiProjesi.DB
         public virtual DbSet<SaticiVarliklari> SaticiVarliklari { get; set; }
         public virtual DbSet<Statue> Statue { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

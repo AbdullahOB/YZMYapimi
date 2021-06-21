@@ -85,11 +85,10 @@ namespace YZMYapimiProjesi.Admin
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(125, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(94, 40);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.label1.Size = new System.Drawing.Size(344, 66);
+            this.label1.Padding = new System.Windows.Forms.Padding(7);
+            this.label1.Size = new System.Drawing.Size(280, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "Merhaba, Admin";
             // 
@@ -99,10 +98,9 @@ namespace YZMYapimiProjesi.Admin
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.IndianRed;
-            this.ExitBtn.Location = new System.Drawing.Point(1585, 11);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ExitBtn.Location = new System.Drawing.Point(1189, 9);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(51, 55);
+            this.ExitBtn.Size = new System.Drawing.Size(42, 45);
             this.ExitBtn.TabIndex = 13;
             this.ExitBtn.Text = "X";
             // 
@@ -115,10 +113,9 @@ namespace YZMYapimiProjesi.Admin
             this.onayBekleyenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.onayBekleyenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onayBekleyenBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.onayBekleyenBtn.Location = new System.Drawing.Point(71, 162);
-            this.onayBekleyenBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onayBekleyenBtn.Location = new System.Drawing.Point(53, 132);
             this.onayBekleyenBtn.Name = "onayBekleyenBtn";
-            this.onayBekleyenBtn.Size = new System.Drawing.Size(445, 57);
+            this.onayBekleyenBtn.Size = new System.Drawing.Size(334, 46);
             this.onayBekleyenBtn.TabIndex = 38;
             this.onayBekleyenBtn.Text = "Onay Bekleyen Listesi";
             this.onayBekleyenBtn.UseVisualStyleBackColor = false;
@@ -133,10 +130,9 @@ namespace YZMYapimiProjesi.Admin
             this.ParaEkTalepleriBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ParaEkTalepleriBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ParaEkTalepleriBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.ParaEkTalepleriBtn.Location = new System.Drawing.Point(71, 257);
-            this.ParaEkTalepleriBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ParaEkTalepleriBtn.Location = new System.Drawing.Point(53, 209);
             this.ParaEkTalepleriBtn.Name = "ParaEkTalepleriBtn";
-            this.ParaEkTalepleriBtn.Size = new System.Drawing.Size(445, 57);
+            this.ParaEkTalepleriBtn.Size = new System.Drawing.Size(334, 46);
             this.ParaEkTalepleriBtn.TabIndex = 38;
             this.ParaEkTalepleriBtn.Text = "Para Ekleme Talepleri";
             this.ParaEkTalepleriBtn.UseVisualStyleBackColor = false;
@@ -151,10 +147,9 @@ namespace YZMYapimiProjesi.Admin
             this.KullanicilarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KullanicilarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KullanicilarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.KullanicilarBtn.Location = new System.Drawing.Point(71, 354);
-            this.KullanicilarBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KullanicilarBtn.Location = new System.Drawing.Point(53, 288);
             this.KullanicilarBtn.Name = "KullanicilarBtn";
-            this.KullanicilarBtn.Size = new System.Drawing.Size(445, 57);
+            this.KullanicilarBtn.Size = new System.Drawing.Size(334, 46);
             this.KullanicilarBtn.TabIndex = 38;
             this.KullanicilarBtn.Text = "Kullanıcılar Listesi";
             this.KullanicilarBtn.UseVisualStyleBackColor = false;
@@ -169,10 +164,9 @@ namespace YZMYapimiProjesi.Admin
             this.alimSatimRaporBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alimSatimRaporBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alimSatimRaporBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.alimSatimRaporBtn.Location = new System.Drawing.Point(71, 444);
-            this.alimSatimRaporBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alimSatimRaporBtn.Location = new System.Drawing.Point(53, 361);
             this.alimSatimRaporBtn.Name = "alimSatimRaporBtn";
-            this.alimSatimRaporBtn.Size = new System.Drawing.Size(445, 57);
+            this.alimSatimRaporBtn.Size = new System.Drawing.Size(334, 46);
             this.alimSatimRaporBtn.TabIndex = 38;
             this.alimSatimRaporBtn.Text = "Alım Satım Raporu";
             this.alimSatimRaporBtn.UseVisualStyleBackColor = false;
@@ -182,10 +176,9 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.BackBtnPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtnPic.Image = ((System.Drawing.Image)(resources.GetObject("BackBtnPic.Image")));
-            this.BackBtnPic.Location = new System.Drawing.Point(17, 16);
-            this.BackBtnPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackBtnPic.Location = new System.Drawing.Point(13, 13);
             this.BackBtnPic.Name = "BackBtnPic";
-            this.BackBtnPic.Size = new System.Drawing.Size(52, 44);
+            this.BackBtnPic.Size = new System.Drawing.Size(39, 36);
             this.BackBtnPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackBtnPic.TabIndex = 36;
             this.BackBtnPic.TabStop = false;
@@ -195,10 +188,9 @@ namespace YZMYapimiProjesi.Admin
             // 
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-            this.Exit.Location = new System.Drawing.Point(523, 16);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit.Location = new System.Drawing.Point(392, 13);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(52, 44);
+            this.Exit.Size = new System.Drawing.Size(39, 36);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Exit.TabIndex = 37;
             this.Exit.TabStop = false;
@@ -209,9 +201,8 @@ namespace YZMYapimiProjesi.Admin
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(592, 647);
+            this.pictureBox1.Size = new System.Drawing.Size(444, 526);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -233,11 +224,10 @@ namespace YZMYapimiProjesi.Admin
             this.kullaniciTipiDataGridViewTextBoxColumn,
             this.walletBalanceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.kullaniciTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 418);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 340);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(463, 112);
+            this.dataGridView1.Size = new System.Drawing.Size(347, 91);
             this.dataGridView1.TabIndex = 39;
             // 
             // ıdDataGridViewTextBoxColumn
@@ -363,11 +353,10 @@ namespace YZMYapimiProjesi.Admin
             this.urnAdiDataGridViewTextBoxColumn,
             this.islemZamaniDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.alimSatimIslemlerBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(84, 508);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(63, 413);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(112, 80);
+            this.dataGridView2.Size = new System.Drawing.Size(84, 65);
             this.dataGridView2.TabIndex = 40;
             // 
             // ıdDataGridViewTextBoxColumn1
@@ -454,10 +443,10 @@ namespace YZMYapimiProjesi.Admin
             // 
             // AdminAraYuzu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(592, 647);
+            this.ClientSize = new System.Drawing.Size(444, 526);
             this.Controls.Add(this.alimSatimRaporBtn);
             this.Controls.Add(this.KullanicilarBtn);
             this.Controls.Add(this.ParaEkTalepleriBtn);
@@ -470,7 +459,6 @@ namespace YZMYapimiProjesi.Admin
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminAraYuzu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAraYuzu";
