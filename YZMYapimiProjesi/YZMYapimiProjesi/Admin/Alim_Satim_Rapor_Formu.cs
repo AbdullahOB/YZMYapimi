@@ -28,7 +28,7 @@ namespace YZMYapimiProjesi.Admin
 
         private void alimSatimRaporBtn_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog() { Title = "Dosyaya yaz", FileName = "Rapor", Filter = "Excel File|*.xlsx|CSV File|*.csv" };
+            SaveFileDialog sfd = new SaveFileDialog() { Title = "Dosyaya yaz", FileName = "Rapor", Filter = "Excel File|*.xlsx|CSV File|*.csv|PDF File|*.pdf" };
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -40,6 +40,8 @@ namespace YZMYapimiProjesi.Admin
                         MessageBox.Show("İslem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                     }
+                    
+                    
                 }
                 catch (Exception ex)
                 {
@@ -51,28 +53,13 @@ namespace YZMYapimiProjesi.Admin
         private void ozlListle_btn_Click(object sender, EventArgs e)
         {
 
-            if (CB_islemTipi.Text == "" || CB_urunTipi.Text == "" )
+            if (  CB_urunTipi.Text == "" )
             {
                 MessageBox.Show("Lütfen boş alanları doldurunuz", "Boş Alan", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (CB_islemTipi.Text == "Alim")
-                {
-
-
-
-                    
-
-
-                }
-                else if (CB_islemTipi.Text == "Satim")
-                {
-
-                    
-
-
-                }
+                
             }
         }
     }
