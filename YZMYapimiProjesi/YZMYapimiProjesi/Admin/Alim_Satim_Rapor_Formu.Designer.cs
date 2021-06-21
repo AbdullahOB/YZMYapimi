@@ -35,14 +35,14 @@ namespace YZMYapimiProjesi.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.alimSatimRaporBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.urnTipiCmb = new System.Windows.Forms.ComboBox();
+            this.CB_islemTipi = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.DTP_BaslangicTarih = new System.Windows.Forms.DateTimePicker();
             this.DTP_BitisTarih = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB_urunTipi = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ozlListle_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,19 +110,19 @@ namespace YZMYapimiProjesi.Admin
             this.panel1.Size = new System.Drawing.Size(365, 3);
             this.panel1.TabIndex = 42;
             // 
-            // urnTipiCmb
+            // CB_islemTipi
             // 
-            this.urnTipiCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.urnTipiCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urnTipiCmb.FormattingEnabled = true;
-            this.urnTipiCmb.Items.AddRange(new object[] {
-            "Alım",
-            "Satım"});
-            this.urnTipiCmb.Location = new System.Drawing.Point(56, 121);
-            this.urnTipiCmb.Name = "urnTipiCmb";
-            this.urnTipiCmb.Size = new System.Drawing.Size(334, 28);
-            this.urnTipiCmb.Sorted = true;
-            this.urnTipiCmb.TabIndex = 43;
+            this.CB_islemTipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_islemTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_islemTipi.FormattingEnabled = true;
+            this.CB_islemTipi.Items.AddRange(new object[] {
+            "Alim",
+            "Satim"});
+            this.CB_islemTipi.Location = new System.Drawing.Point(56, 140);
+            this.CB_islemTipi.Name = "CB_islemTipi";
+            this.CB_islemTipi.Size = new System.Drawing.Size(334, 28);
+            this.CB_islemTipi.Sorted = true;
+            this.CB_islemTipi.TabIndex = 43;
             // 
             // panel2
             // 
@@ -137,7 +137,7 @@ namespace YZMYapimiProjesi.Admin
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 91);
+            this.label2.Location = new System.Drawing.Point(53, 110);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(7);
             this.label2.Size = new System.Drawing.Size(133, 27);
@@ -149,7 +149,7 @@ namespace YZMYapimiProjesi.Admin
             this.DTP_BaslangicTarih.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_BaslangicTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_BaslangicTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_BaslangicTarih.Location = new System.Drawing.Point(56, 182);
+            this.DTP_BaslangicTarih.Location = new System.Drawing.Point(56, 201);
             this.DTP_BaslangicTarih.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.DTP_BaslangicTarih.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.DTP_BaslangicTarih.Name = "DTP_BaslangicTarih";
@@ -162,7 +162,7 @@ namespace YZMYapimiProjesi.Admin
             this.DTP_BitisTarih.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_BitisTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_BitisTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_BitisTarih.Location = new System.Drawing.Point(56, 244);
+            this.DTP_BitisTarih.Location = new System.Drawing.Point(56, 263);
             this.DTP_BitisTarih.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.DTP_BitisTarih.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.DTP_BitisTarih.Name = "DTP_BitisTarih";
@@ -176,7 +176,7 @@ namespace YZMYapimiProjesi.Admin
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(53, 152);
+            this.label3.Location = new System.Drawing.Point(53, 171);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(7);
             this.label3.Size = new System.Drawing.Size(135, 27);
@@ -189,26 +189,26 @@ namespace YZMYapimiProjesi.Admin
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(53, 214);
+            this.label4.Location = new System.Drawing.Point(53, 233);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(7);
             this.label4.Size = new System.Drawing.Size(108, 27);
             this.label4.TabIndex = 44;
             this.label4.Text = "İşlem Tarihi ( Bitiş )";
             // 
-            // comboBox1
+            // CB_urunTipi
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CB_urunTipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_urunTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_urunTipi.FormattingEnabled = true;
+            this.CB_urunTipi.Items.AddRange(new object[] {
             "Alım",
             "Satım"});
-            this.comboBox1.Location = new System.Drawing.Point(56, 306);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(334, 28);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 43;
+            this.CB_urunTipi.Location = new System.Drawing.Point(56, 325);
+            this.CB_urunTipi.Name = "CB_urunTipi";
+            this.CB_urunTipi.Size = new System.Drawing.Size(334, 28);
+            this.CB_urunTipi.Sorted = true;
+            this.CB_urunTipi.TabIndex = 43;
             // 
             // label5
             // 
@@ -216,7 +216,7 @@ namespace YZMYapimiProjesi.Admin
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(53, 276);
+            this.label5.Location = new System.Drawing.Point(53, 295);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(7);
             this.label5.Size = new System.Drawing.Size(64, 27);
@@ -251,9 +251,9 @@ namespace YZMYapimiProjesi.Admin
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CB_urunTipi);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.urnTipiCmb);
+            this.Controls.Add(this.CB_islemTipi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ozlListle_btn);
             this.Controls.Add(this.alimSatimRaporBtn);
@@ -278,14 +278,14 @@ namespace YZMYapimiProjesi.Admin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button alimSatimRaporBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox urnTipiCmb;
+        private System.Windows.Forms.ComboBox CB_islemTipi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DTP_BaslangicTarih;
         private System.Windows.Forms.DateTimePicker DTP_BitisTarih;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CB_urunTipi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ozlListle_btn;
     }
