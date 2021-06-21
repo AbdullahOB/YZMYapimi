@@ -113,8 +113,8 @@ namespace YZMYapimiProjesi.Admin
 
         private void alimSatimRaporBtn_Click(object sender, EventArgs e)
         {
-            //Alim_Satim_Rapor_Formu af = new Alim_Satim_Rapor_Formu(this.appData);
-            //af.Show();
+            Alim_Satim_Rapor_Formu af = new Alim_Satim_Rapor_Formu(this.appData);
+            af.Show();
         }
 
       

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,43 +28,39 @@ namespace YZMYapimiProjesi.Admin
 
         private void alimSatimRaporBtn_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            SaveFileDialog sfd = new SaveFileDialog() { Title = "Dosyaya yaz", FileName = "Rapor", Filter = "Excel File|*.xlsx|CSV File|*.csv|PDF File|*.pdf" };
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                if (sfd.ShowDialog() == DialogResult.OK)
+                try
                 {
-
-                    try
+                    using (XLWorkbook workbook = new XLWorkbook())
                     {
-                        using (XLWorkbook workbook = new XLWorkbook())
-                        {
-
-                            workbook.Worksheets.Add(_appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
-                            workbook.SaveAs(sfd.FileName);
-
-                        }
-                        MessageBox.Show("Islem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        workbook.Worksheets.Add(_appData.AlimSatimIslemler.CopyToDataTable(), "Alım Satım İşlemler");
+                        workbook.SaveAs(sfd.FileName);
+                        MessageBox.Show("İslem Başarıyla Gerçekleşti", "Kaydetme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    
+                    
                 }
-
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void ozlListle_btn_Click(object sender, EventArgs e)
         {
-            
 
-
-
-
-
-
-
-
+            if (  CB_urunTipi.Text == "" )
+            {
+                MessageBox.Show("Lütfen boş alanları doldurunuz", "Boş Alan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+            }
         }
     }
 }
