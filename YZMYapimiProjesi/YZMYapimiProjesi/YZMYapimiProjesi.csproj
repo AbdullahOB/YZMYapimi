@@ -123,6 +123,12 @@
     <Compile Include="Admin\AdminAraYuzu.Designer.cs">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Alim_Satim_Rapor_Formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Alim_Satim_Rapor_Formu.Designer.cs">
+      <DependentUpon>Alim_Satim_Rapor_Formu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Assets\TextStyle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     <Compile Include="YaziSartlari.cs" />
     <EmbeddedResource Include="Admin\AdminAraYuzu.resx">
       <DependentUpon>AdminAraYuzu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Alim_Satim_Rapor_Formu.resx">
+      <DependentUpon>Alim_Satim_Rapor_Formu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\onayBekleyenLstFormAdmin.resx">
       <DependentUpon>onayBekleyenLstFormAdmin.cs</DependentUpon>
